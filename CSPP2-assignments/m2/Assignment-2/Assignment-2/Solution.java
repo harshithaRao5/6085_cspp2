@@ -5,7 +5,7 @@ import java.util.Scanner;
 */
 public class Solution {
     /*
-    *Do not modify this main function.
+    Do not modify this main function.
     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -20,7 +20,7 @@ public class Solution {
     */
     public static void roots(final int a, final int b, final int c) {
         /*
-        *function to get the results
+        function to get the results.
         */
         double descriminant = Math.sqrt(b * b - 2 * 2 * a * c);
         double result1 = (-b + descriminant) / (2 * a);
