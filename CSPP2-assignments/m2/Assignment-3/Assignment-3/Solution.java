@@ -4,13 +4,13 @@ public class Solution {
     Do not modify this main function.
     */
     public final static void main(final String[] args) {
-        /* 
+        /*
         *main method
         */
-        Scanner s = new Scanner(System.in); 
+        Scanner s = new Scanner(System.in);
         long base = s.nextInt();
         long exponent = s.nextInt();
-        long result = power(base,exponent);
+        long result = power(base, exponent);
         System.out.println(result);
     }
     /*
