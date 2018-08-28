@@ -2,11 +2,11 @@ import java.util.Scanner;
 /**
 *code to return the powers.
 */
-public class Solution {
+public final class Solution {
     /**
     *default constructor.
     */
-    private Solution(){
+    private Solution() {
 
     }
     /**
