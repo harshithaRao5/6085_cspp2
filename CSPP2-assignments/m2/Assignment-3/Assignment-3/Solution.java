@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Solution {
     /**
     *Do not modify this main function.
+    *@param args string
     */
     public final static void main(final String[] args) {
         /**
@@ -15,6 +16,8 @@ public class Solution {
     }
     /**
     *Need to write the power function and print the output.
+    *@param base long
+    *@param exponent long
     */
     public static long power(final long base, final long exponent) {
         /**
