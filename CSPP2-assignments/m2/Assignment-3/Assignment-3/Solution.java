@@ -13,7 +13,7 @@ public final class Solution {
     *Do not modify this main function.
     *@param args string
     */
-    public final static void main(final String[] args) {
+    public static void main(final String[] args) {
         /**
         *main method
         */
