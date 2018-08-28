@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import java.lang.Math;
+/*
+*java code to print the quadractic values
+*/
 public class Solution {
 	/*
 	Do not modify this main function.
@@ -16,8 +19,11 @@ public class Solution {
 	*/
 	public static void rootsOfQuadraticEquation(int a, int b, int c)
 	{
-		double result1 = (-b + (Math.sqrt(b*b - 4*a*c))) / (2*a);
-		double result2 = (-b - (Math.sqrt(b*b - 4*a*c))) / (2*a);
+		/*
+		*function to get the results
+		*/
+		double result1 = (-b + (Math.sqrt(b * b - 4 * a * c))) / (2*a);
+		double result2 = (-b - (Math.sqrt(b * b - 4 * a * c))) / (2*a);
 		System.out.println(result1+" "+result2);
 
 	}
