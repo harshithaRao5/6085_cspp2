@@ -5,7 +5,7 @@ import java.util.Scanner;
 */
 public class Solution {
     /*
-    Do not modify this main function.
+    *Do not modify this main function.
     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
