@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+*code to return the powers.
+*/
 public class Solution {
     /**
     *Do not modify this main function.
