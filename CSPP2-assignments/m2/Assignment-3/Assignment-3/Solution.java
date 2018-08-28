@@ -3,7 +3,7 @@ public class Solution {
     /*
     Do not modify this main function.
     */
-    public static void main(final String[] args) {
+    public final static void main(final String[] args) {
         /* 
         *main method
         */
@@ -20,7 +20,7 @@ public class Solution {
         /*
         *sub method
         */
-        if(exponent == 0){
+        if (exponent == 0) {
             return 1;
         }
         else {
