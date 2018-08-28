@@ -5,6 +5,12 @@ import java.util.Scanner;
 */
 public final class Solution {
     /**
+    *default constructor.
+    */
+    private Solution() {
+
+    }
+    /**
     *Do not modify this main function.
     *@param args string
     */
