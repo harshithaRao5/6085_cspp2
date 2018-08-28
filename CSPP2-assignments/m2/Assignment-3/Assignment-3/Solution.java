@@ -18,6 +18,7 @@ public class Solution {
     *Need to write the power function and print the output.
     *@param base long
     *@param exponent long
+    *@return power
     */
     public static long power(final long base, final long exponent) {
         /**
@@ -25,8 +26,7 @@ public class Solution {
         */
         if (exponent == 0) {
             return 1;
-        }
-        else {
+        } else {
             return base * power(base, exponent - 1);
         }
     }
