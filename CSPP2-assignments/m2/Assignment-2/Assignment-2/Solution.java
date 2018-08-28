@@ -15,16 +15,16 @@ public class Solution {
 		roots(a, b, c);
 	}
 	/*
-	Need to write the rootsOfQuadraticEquation function and print the output.
+	*Need to write the rootsOfQuadraticEquation
+	*function and print the output.
 	*/
-	public static void roots(final int a, final int b, final int c)
-	{
+	public static void roots(final int a, final int b, final int c) {
 		/*
 		*function to get the results
 		*/
 		double descriminant = Math.sqrt(b * b - 2 * 2 * a * c);
-		double result1 = (-b + descriminant ) / (2 * a);
-		double result2 = (-b - descriminant ) / (2 * a);
+		double result1 = (-b + descriminant) / (2 * a);
+		double result2 = (-b - descriminant) / (2 * a);
 		System.out.println(result1 + " " + result2);
 
 	}
