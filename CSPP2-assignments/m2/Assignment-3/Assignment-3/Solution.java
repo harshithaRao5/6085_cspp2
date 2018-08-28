@@ -1,10 +1,10 @@
 import java.util.Scanner;
 public class Solution {
-    /*
-    Do not modify this main function.
+    /**
+    *Do not modify this main function.
     */
     public final static void main(final String[] args) {
-        /*
+        /**
         *main method
         */
         Scanner s = new Scanner(System.in);
@@ -13,11 +13,11 @@ public class Solution {
         long result = power(base, exponent);
         System.out.println(result);
     }
-    /*
-    Need to write the power function and print the output.
+    /**
+    *Need to write the power function and print the output.
     */
     public static long power(final long base, final long exponent) {
-        /*
+        /**
         *sub method
         */
         if (exponent == 0) {
