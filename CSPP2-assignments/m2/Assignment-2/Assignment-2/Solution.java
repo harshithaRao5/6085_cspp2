@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.lang.Math;
+// import java.lang.Math;
 /*
 *java code to print the quadractic values
 */
@@ -12,18 +12,19 @@ public class Solution {
 		int a = scan.nextInt();
 		int b = scan.nextInt();
 		int c = scan.nextInt();
-		rootsOfQuadraticEquation(a, b, c);
+		roots(a, b, c);
 	}
 	/*
 	Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
-	public static void rootsOfQuadraticEquation(final int a, final int b, final int c)
+	public static void roots(final int a, final int b, final int c)
 	{
 		/*
 		*function to get the results
 		*/
-		double result1 = (-b + (Math.sqrt(b * b - 2 * 2 * a * c))) / (2 * a);
-		double result2 = (-b - (Math.sqrt(b * b - 2 * 2 * a * c))) / (2 * a);
+		double descriminant = Math.sqrt(b * b - 2 * 2 * a * c);
+		double result1 = (-b + descriminant ) / (2 * a);
+		double result2 = (-b - descriminant ) / (2 * a);
 		System.out.println(result1 + " " + result2);
 
 	}
