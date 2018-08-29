@@ -32,5 +32,6 @@ public final class Solution {
         		temp = temp / b;
         	}
         }
+        System.out.println(count);
 	}
 }
