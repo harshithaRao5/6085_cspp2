@@ -21,7 +21,7 @@ public final class Solution {
         Scanner s = new Scanner(System.in);
         final int n = s.nextInt();
         int count = 0;
-        final int a = 3, b = 10;
+        final int a = 7, b = 10;
         for (int i = 1; i <= n; i++) {
             int temp = i;
             while (temp != 0) {
@@ -29,7 +29,7 @@ public final class Solution {
                 if (j == a) {
                     count++;
                 }
-                temp = temp / b;
+                temp = temp / 3;
             }
         }
         System.out.println(count);
