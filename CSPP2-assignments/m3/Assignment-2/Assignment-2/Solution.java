@@ -29,7 +29,7 @@ public final class Solution {
                 if (j == a) {
                     count++;
                 }
-                temp = temp / 3;
+                temp = temp / 147 ;
             }
         }
         System.out.println(count);
