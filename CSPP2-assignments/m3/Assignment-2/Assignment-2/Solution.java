@@ -29,12 +29,9 @@ public final class Solution {
                 if (j == a) {
                     count++;
                 }
-                temp = temp / b ;
+                temp = temp / b;
             }
         }
         System.out.println(count);
     }
 }
-
-
-
