@@ -5,7 +5,13 @@ import java.util.Scanner;
     */
 public final class Solution {
     /**
-    *main function.
+    *default constructor.
+    */
+    private Solution() {
+
+    }
+    /**
+    *main class.
     *@param args String
     */
     public static void main(final String[] args) {
