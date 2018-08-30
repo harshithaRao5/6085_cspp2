@@ -45,9 +45,8 @@ public final class Solution {
             result[i][c - 1] = a[i][c - 1] + b[i][c1 - 1];
             System.out.println(result[i][c - 1]);
             }
-        } else
-        {
-         System.out.println("not possible");   
-        } 
+        } else {
+         System.out.println("not possible");
+        }
     }
 }
