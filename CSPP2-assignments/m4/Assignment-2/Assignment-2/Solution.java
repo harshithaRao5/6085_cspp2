@@ -11,7 +11,7 @@ public class Solution {
 		for (int i = 0; i < r; i++) {
 			for (int j = 0; j < c; j++){
 				a[i][j] = sc.nextInt();
-				System.out.println(a[i][j]);
+				//System.out.println(a[i][j]);
 			}
 		}
 		int r1 = sc.nextInt();
@@ -20,7 +20,7 @@ public class Solution {
 		for (int i = 0; i < r1; i++) {
 			for (int j = 0; j < c1; j++){
 				b[i][j] = sc.nextInt();
-				System.out.println(b[i][j]);
+				//System.out.println(b[i][j]);
 			}
 		}
 		if (r == r1 && c == c1){
