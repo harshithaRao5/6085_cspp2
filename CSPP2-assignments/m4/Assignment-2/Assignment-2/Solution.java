@@ -29,10 +29,10 @@ public class Solution {
 				// if(a[r][c] == b[r][c]){
 				// 	System.out.println("hello");
 					result[i][j] = a[i][j] + b[i][j];
-					System.out.print(result[i][j]+" ");
+					System.out.print(result[i][j] + " ");
 				}
-			result[r][c-1]= a[r][c-1] + b[r1][c1-1];
-			System.out.println(result[r][c-1]+" ");
+			result[i][c - 1]= a[i][c - 1] + b[i][c1 - 1];
+			System.out.println(result[i][c - 1]);
 			}
 		}
 		else System.out.println("not possible");
