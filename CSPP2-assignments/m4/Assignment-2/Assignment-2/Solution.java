@@ -17,7 +17,7 @@ public final class Solution {
         Scanner sc = new Scanner(System.in);
         int r = sc.nextInt();
         int c = sc.nextInt();
-        int[][] a = new int[r][c];      
+        int[][] a = new int[r][c];
         int[][] result = new int[r][c];
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
@@ -36,7 +36,7 @@ public final class Solution {
         }
         if (r == r1 && c == c1) {
             for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c-1; j++) {
+            for (int j = 0; j < c - 1; j++) {
                 // if(a[r][c] == b[r][c]){
                 //  System.out.println("hello");
                     result[i][j] = a[i][j] + b[i][j];
@@ -45,7 +45,9 @@ public final class Solution {
             result[i][c - 1] = a[i][c - 1] + b[i][c1 - 1];
             System.out.println(result[i][c - 1]);
             }
-        }
-        else System.out.println("not possible");
+        } else
+        {
+         System.out.println("not possible");   
+        } 
     }
 }
