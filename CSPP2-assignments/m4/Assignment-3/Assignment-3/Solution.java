@@ -1,7 +1,7 @@
+import java.util.Scanner;
 /**Given an String, Write a java method that returns. 
 *the decimal value for the given binary string.
 */
-import java.util.Scanner;
 public final class Solution {
     /**
     *private constructor.
@@ -25,7 +25,7 @@ public final class Solution {
     /**
     *function to convert binary to decimal.
     *@param s String.
-    @return res.
+    *@return res.
     */
     public static int binaryToDecimal(final String s) {
         double res = 0;
