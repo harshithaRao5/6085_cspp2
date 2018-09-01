@@ -22,24 +22,24 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    public static int[][] roundHundred(final int[][] a, final int rows,
+    static int[][] roundHundred(final int[][] a, final int rows,
      final int columns) {
 
     // write ypur code here
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] < 100 / 2) {
+                if (a[i][j] < 50) {
                     a[i][j] = 0;
-                } else if (a[i][j] <= 300 / 2 && a[i][j] >= 100 / 2) {
-                    a[i][j] = 200 / 2;
-                } else if (a[i][j] <= 500 / 2 && a[i][j] > 300 / 2) {
-                    a[i][j] = 400 / 2;
-                } else if (a[i][j] <= 700 / 2 && a[i][j] > 500 / 2) {
-                    a[i][j] = 600 / 2;
-                } else if (a[i][j] <= 900 / 2 && a[i][j] > 700 / 2) {
-                    a[i][j] = 800 / 2;
-                } else if (a[i][j] <= 1100 / 2 && a[i][j] > 900 / 2) {
-                    a[i][j] = 1000 / 2;
+                } else if (a[i][j] <= 150 && a[i][j] >= 50) {
+                    a[i][j] = 100;
+                } else if (a[i][j] <= 250 && a[i][j] > 150) {
+                    a[i][j] = 200;
+                } else if (a[i][j] <= 350 && a[i][j] > 250) {
+                    a[i][j] = 300;
+                } else if (a[i][j] <= 450 && a[i][j] > 350) {
+                    a[i][j] = 400;
+                } else if (a[i][j] <= 550 && a[i][j] > 450) {
+                    a[i][j] = 500;
                 }
             }
         }
