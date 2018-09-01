@@ -32,7 +32,7 @@ public final class Solution {
             if (temp == 0) {
                 if (i % 2 != 0 && i != 1) {
                     System.out.println(i);
-                }  
+                }
             }
        }
     }
@@ -47,3 +47,4 @@ public final class Solution {
     }
 
 }
+
