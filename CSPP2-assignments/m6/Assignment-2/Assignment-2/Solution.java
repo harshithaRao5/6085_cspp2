@@ -27,7 +27,7 @@ final class Solution {
 
     // write ypur code here
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++){
+            for (int j = 0; j < columns; j++) {
                 if (a[i][j] < 50) {
                     a[i][j] = 0;
                 } else if (a[i][j] <= 150 && a[i][j] >= 50) {
