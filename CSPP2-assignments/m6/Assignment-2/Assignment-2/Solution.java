@@ -27,8 +27,8 @@ final class Solution {
      final int columns) {
 
     // write ypur code here
-    	int p = 50, q = 100, r = 150, s = 200, t = 250,
-    	u = 300, v = 350, w = 400, x = 450, y = 500, z = 550;
+    	int p = 100 / 2, q = 200 / 2, r = 300 / 2, s = 400 / 2, t = 500 / 2,
+    	u = 600 / 2, v = 700 / 2, w = 800 / 2, x = 900 / 2, y = 1000 / 2, z = 1100 / 2;
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
