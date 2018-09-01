@@ -22,7 +22,7 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, final int rows,
+    public static final int[][] roundHundred(final int[][] a, final int rows,
      final int columns) {
 
     // write ypur code here
