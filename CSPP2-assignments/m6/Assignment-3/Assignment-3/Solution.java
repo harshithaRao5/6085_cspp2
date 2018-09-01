@@ -31,7 +31,7 @@ final class Solution {
                 charArray[i] = newChar;
             }
         }
-        return charArray;  
+        return charArray;
     }
     /**
      * Main function.
