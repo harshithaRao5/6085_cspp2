@@ -25,21 +25,23 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
 	// write ypur code here
-        for(int i = 0; i<rows; i++) {
-            for(int j = 0; j<columns; j++){
-                if (a[i][j] < 50) {
-                    a[i][j]=0;
-                } else if (a[i][j] <= 150 && a[i][j] >= 50) {
-                    a[i][j]= 100;
-                } else if(a[i][j] <= 250 && a[i][j] > 150) {
-                    a[i][j]= 200;
-                } else if(a[i][j] <= 350 && a[i][j] > 250) {
-                    a[i][j]= 300;
-                } else if(a[i][j] <= 450 && a[i][j] > 350) {
-                    a[i][j]= 400;
-                } else if(a[i][j] <= 550 && a[i][j] > 450) {
-                    a[i][j]= 500;
-                } 
+        int p = 50, q = 100, r = 150, s = 200, z=550;
+        int t = 250, u = 300, v = 350, w = 400, x = 450, y = 500;
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < columns; j++){
+                if (a[i][j] < p) {
+                    a[i][j] = 0;
+                } else if (a[i][j] <= r && a[i][j] >= p) {
+                    a[i][j] = q;
+                } else if (a[i][j] <= t && a[i][j] > r) {
+                    a[i][j] = s;
+                } else if (a[i][j] <= v && a[i][j] > t) {
+                    a[i][j] = u;
+                } else if (a[i][j] <= x && a[i][j] > v) {
+                    a[i][j] = w;
+                } else if (a[i][j] <= z && a[i][j] > x) {
+                    a[i][j] = y;
+                }
             }
         }
         return a;
