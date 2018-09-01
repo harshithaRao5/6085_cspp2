@@ -26,15 +26,16 @@ final class Solution {
      final int columns) {
 
     // write ypur code here
+    	final int p = 50, q = 100, r = 150, s = 200, t = 250;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] < 50) {
+                if (a[i][j] < p) {
                     a[i][j] = 0;
-                } else if (a[i][j] <= 150 && a[i][j] >= 50) {
-                    a[i][j] = 100;
-                } else if (a[i][j] <= 250 && a[i][j] > 150) {
-                    a[i][j] = 200;
-                } else if (a[i][j] <= 350 && a[i][j] > 250) {
+                } else if (a[i][j] <= r && a[i][j] >= p) {
+                    a[i][j] = q;
+                } else if (a[i][j] <= t && a[i][j] > r) {
+                    a[i][j] = s;
+                } else if (a[i][j] <= 350 && a[i][j] > t) {
                     a[i][j] = 300;
                 } else if (a[i][j] <= 450 && a[i][j] > 350) {
                     a[i][j] = 400;
