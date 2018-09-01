@@ -38,7 +38,7 @@ final class Solution {
                     a[i][j] = s;
                 } else if (a[i][j] <= v && a[i][j] > t) {
                     a[i][j] = u;
-                } else if (a[i][j] <= x && a[i][j] > y) {
+                } else if (a[i][j] <= x && a[i][j] > v) {
                     a[i][j] = w;
                 } else if (a[i][j] <= z && a[i][j] > x) {
                     a[i][j] = y;
