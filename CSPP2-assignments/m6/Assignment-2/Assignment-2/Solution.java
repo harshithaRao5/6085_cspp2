@@ -22,6 +22,7 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
+    @SuppressWarnings("checkstyle:magicnumber")
     public static int[][] roundHundred(final int[][] a, final int rows,
      final int columns) {
 
