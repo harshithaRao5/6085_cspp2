@@ -16,18 +16,18 @@ public final class Solution {
     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        String reverse = reverseString(s);
+        String input = sc.nextLine();
+        String reverse = reverseString(input);
         System.out.println(reverse);
     }
     /**Write reverseString function.
     *@param s String.
     *@return rev String.
     */
-    public static String reverseString(final String s) {
+    public static String reverseString(final String input) {
         String rev = " ";
-        for (int i = 0; i < s.length(); i++) {
-            rev = s.charAt(i) + rev;
+        for (int i = 0; i < input.length(); i++) {
+            rev = input.charAt(i) + rev;
         }
         return rev;
     }
