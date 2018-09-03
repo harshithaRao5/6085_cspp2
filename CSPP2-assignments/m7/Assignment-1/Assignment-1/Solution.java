@@ -13,7 +13,7 @@ class InputValidator {
     /**the constructor is to initialize the given input.
     *@param text String
     */
-    InputValidator(final String text) {
+    public InputValidator(final String text) {
         this.name = text;
     }
     /**
