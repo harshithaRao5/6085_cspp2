@@ -15,35 +15,35 @@ public final class Solution {
     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int r = sc.nextInt();
-        int c = sc.nextInt();
-        int[][] a = new int[r][c];
-        int[][] result = new int[r][c];
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
-                a[i][j] = sc.nextInt();
+        int rows1 = sc.nextInt();
+        int columns1 = sc.nextInt();
+        int[][] matrix1 = new int[rows1][columns1];
+        int[][] result = new int[rows1][columns1];
+        for (int i = 0; i < rows1; i++) {
+            for (int j = 0; j < columns1; j++) {
+                matrix1[i][j] = sc.nextInt();
                 //System.out.println(a[i][j]);
             }
         }
-        int r1 = sc.nextInt();
-        int c1 = sc.nextInt();
-        int[][] b = new int[r1][c1];
-        for (int i = 0; i < r1; i++) {
-            for (int j = 0; j < c1; j++) {
-                b[i][j] = sc.nextInt();
+        int rows2 = sc.nextInt();
+        int columns2 = sc.nextInt();
+        int[][] matrix2= new int[rows2][columns2];
+        for (int i = 0; i < rows2; i++) {
+            for (int j = 0; j < columns2; j++) {
+                matrix2[i][j] = sc.nextInt();
                 //System.out.println(b[i][j]);
             }
         }
-        if (r == r1 && c == c1) {
-            for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c - 1; j++) {
+        if (rows1 == rows2 && columns1 == columns2) {
+            for (int i = 0; i < rows1; i++) {
+            for (int j = 0; j < columns1 - 1; j++) {
                 // if(a[r][c] == b[r][c]){
                 //  System.out.println("hello");
-                    result[i][j] = a[i][j] + b[i][j];
+                    result[i][j] = matrix1[i][j] + matrix2[i][j];
                     System.out.print(result[i][j] + " ");
                 }
-            result[i][c - 1] = a[i][c - 1] + b[i][c1 - 1];
-            System.out.println(result[i][c - 1]);
+            result[i][columns1 - 1] = matrix1[i][columns1 - 1] + matrix2[i][columns2 - 1];
+            System.out.println(result[i][columns1 - 1]);
             }
         } else {
          System.out.println("not possible");
