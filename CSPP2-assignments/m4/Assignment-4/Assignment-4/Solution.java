@@ -21,7 +21,7 @@ public final class Solution {
         System.out.println(reverse);
     }
     /**Write reverseString function.
-    *@param s String.
+    *@param input String.
     *@return rev String.
     */
     public static String reverseString(final String input) {
