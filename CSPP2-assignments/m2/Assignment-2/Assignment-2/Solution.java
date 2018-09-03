@@ -31,11 +31,13 @@ public final class Solution {
     *@param numberTwo int
     *@param numberThree int
     */
-    public static void roots(final int numberOne, final int numberTwo, final int numberThree) {
+    public static void roots(final int numberOne,
+     final int numberTwo, final int numberThree) {
         /**
         *function to get the results.
         */
-        double descriminant = Math.sqrt(numberTwo * numberTwo - 2 * 2 * numberOne * numberThree);
+        double descriminant = Math.sqrt(numberTwo * numberTwo
+        - 2 * 2 * numberOne * numberThree);
         double result1 = (-numberTwo + descriminant) / (2 * numberOne);
         double result2 = (-numberTwo - descriminant) / (2 * numberOne);
         System.out.println(result1 + " " + result2);
