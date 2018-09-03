@@ -1,10 +1,16 @@
-import java.util.*;
+import java.util.Scanner;
+/** the program is to find whether the given input is valid
+*or not.
+*/
 class InputValidator {
     /**
      * Write the atrributes and methods for InputValidator.
      */
     static String name;
-    public InputValidator(final String name) {
+    static String i;
+    /**the constructor is to initialize the given input.
+    */
+    InputValidator(final String name) {
         this.name = name;
     }
     /**
@@ -13,8 +19,8 @@ class InputValidator {
      */
     public static boolean validateData() {
         int namelength = name.length();
-        final int SIX = 6;
-        if (namelength >= SIX) {
+        final int six = 6;
+        if (namelength >= six) {
             return true;
         } else {
             return false;
@@ -23,7 +29,8 @@ class InputValidator {
 
 }
 /**
- * program to check the minimum length of 
+ * program to check the minimum length of
+ * given string is six or not. 
  */
 public final class Solution {
     /**
@@ -36,7 +43,7 @@ public final class Solution {
      * a main class to read input and give output.
      * @param args String.
      */
-    public static void main(final String args[]) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);
