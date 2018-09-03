@@ -21,7 +21,12 @@ public final class Solution {
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
-        Arrays.sort(a);
-        System.out.println(a[n - 1]);
+        int maximum = 0;
+        for (int j = 0; j < n; j++) {
+            if (a[j] > maximum) {
+                maximum = a[j];
+            }
+        }
+        System.out.println(maximum);
     }
 }
