@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 /**
 *java program to return the maximum number.
 */
@@ -30,3 +29,5 @@ public final class Solution {
         System.out.println(maximum);
     }
 }
+
+
