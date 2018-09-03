@@ -25,11 +25,10 @@ class InputValidator {
         final int six = 6;
         return namelength >= six;
     }
-
 }
 /**
  * program to check the minimum length of
- * given string is six or not. 
+ * given string is six or not.
  */
 public final class Solution {
     /**
