@@ -19,25 +19,25 @@ public final class Solution {
         *main method
         */
         Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int c = scan.nextInt();
-        roots(a, b, c);
+        int numberOne = scan.nextInt();
+        int numberTwo = scan.nextInt();
+        int numberThree = scan.nextInt();
+        roots(numberOne, numberTwo, numberThree);
     }
     /**
     *Need to write the rootsOfQuadraticEquation.
     *function and print the output.
-    *@param a int
-    *@param b int
-    *@param c int
+    *@param numberOne int
+    *@param numberTwo int
+    *@param numberThree int
     */
-    public static void roots(final int a, final int b, final int c) {
+    public static void roots(final int numberOne, final int numberTwo, final int numberThree) {
         /**
         *function to get the results.
         */
-        double descriminant = Math.sqrt(b * b - 2 * 2 * a * c);
-        double result1 = (-b + descriminant) / (2 * a);
-        double result2 = (-b - descriminant) / (2 * a);
+        double descriminant = Math.sqrt(numberTwo * numberTwo - 2 * 2 * numberOne * numberThree);
+        double result1 = (-numberTwo + descriminant) / (2 * numberOne);
+        double result2 = (-numberTwo - descriminant) / (2 * numberOne);
         System.out.println(result1 + " " + result2);
     }
 }
