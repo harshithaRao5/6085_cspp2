@@ -6,12 +6,15 @@ class InputValidator {
     /**
      * Write the atrributes and methods for InputValidator.
      */
-    static String name;
-    static String i;
-    /**the constructor is to initialize the given input.
+    private static String name;
+    /** the class variable with private access specifier.
     */
-    InputValidator(final String name) {
-        this.name = name;
+    // private static String i;
+    /**the constructor is to initialize the given input.
+    *@param text String
+    */
+    InputValidator(final String text) {
+        this.name = text;
     }
     /**
      * method for checking the length is minimum of 6.
@@ -20,11 +23,7 @@ class InputValidator {
     public static boolean validateData() {
         int namelength = name.length();
         final int six = 6;
-        if (namelength >= six) {
-            return true;
-        } else {
-            return false;
-        }
+        return namelength >= six;
     }
 
 }
