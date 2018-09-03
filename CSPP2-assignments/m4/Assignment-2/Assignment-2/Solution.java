@@ -42,8 +42,8 @@ public final class Solution {
                     result[i][j] = matrix1[i][j] + matrix2[i][j];
                     System.out.print(result[i][j] + " ");
                 }
-            result[i][columns1 - 1] = matrix1[i][columns1 - 1] +
-            matrix2[i][columns2 - 1];
+            result[i][columns1 - 1] = matrix1[i][columns1 - 1]
+            + matrix2[i][columns2 - 1];
             System.out.println(result[i][columns1 - 1]);
             }
         } else {
