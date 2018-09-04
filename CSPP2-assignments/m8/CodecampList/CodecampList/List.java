@@ -134,12 +134,17 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        for (int i = index; i < size-1; i++) {
-            arrayList[i] = arrayList[i+1];
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+            arrayList[i] = arrayList[i + 1];
         }
         arrayList[size] = 0;
         size--;
+    } else {
+        System.out.println("Invalid Position Exception");
+        }
     }
+        
 
     /*
      * Get method has to return the items that is
@@ -154,7 +159,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if(index>0 && index < size) {
+        if (index > 0 && index < size) {
             return arrayList[index];
         }
         return -1;
