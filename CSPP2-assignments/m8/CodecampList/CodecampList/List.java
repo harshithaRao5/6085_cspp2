@@ -163,11 +163,10 @@ public final class List {
      * @param index int
      * @return list
      */
-    public int get(final int index) {
+    public void get(final int index) {
         if (index > 0 && index < size) {
-            return arrayList[index];
+            System.out.println(arrayList[index]);
         }
-        return -1;
     }
 
     /**
@@ -285,7 +284,7 @@ public final class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
+                l.get(Integer.parseInt(tokens[1]));
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
