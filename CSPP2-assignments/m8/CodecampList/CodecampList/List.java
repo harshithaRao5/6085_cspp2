@@ -161,7 +161,6 @@ public final class List {
     /**
      * get the items.
      * @param index int
-     * @return list
      */
     public void get(final int index) {
         if (index > 0 && index < size) {
@@ -294,4 +293,3 @@ public final class List {
         }
     }
 }
-
