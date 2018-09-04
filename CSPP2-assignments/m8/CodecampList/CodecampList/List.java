@@ -72,7 +72,8 @@ public final class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        arrayList = new int[10];
+        final int n = 10;
+        arrayList = new int[n];
     }
     /**
      * The add method does what the name suggests.
