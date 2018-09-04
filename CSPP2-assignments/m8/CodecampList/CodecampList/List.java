@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -135,7 +135,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         for (int i = index; i < size-1; i++) {
-        	arrayList[i] = arrayList[i+1];
+            arrayList[i] = arrayList[i+1];
         }
         arrayList[size] = 0;
         size--;
@@ -155,7 +155,7 @@ public class List {
     public int get(int index) {
         // Replace the code below to write the code for get
         if(index>0 && index < size) {
-        	return arrayList[index];
+            return arrayList[index];
         }
         return -1;
     }
@@ -184,7 +184,7 @@ public class List {
         // Replace the code below.
         String temp = "[";
         for (int i = 0; i < size; i++) {
-        	temp += arrayList[i] + ",";
+            temp += arrayList[i] + ",";
         }
         return (temp.substring(0, temp.length() - 1) + "]");
     } 
@@ -198,9 +198,9 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-        	if (arrayList[i] == item) {
-        		 return true;
-        	}
+            if (arrayList[i] == item) {
+                 return true;
+            }
         }
         return false;
     }
@@ -213,14 +213,14 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-        	if (arrayList[i] == item) {
-        		return i;
-        	}
+            if (arrayList[i] == item) {
+                return i;
+            }
         }
         return -1;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -263,5 +263,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
