@@ -87,6 +87,10 @@ public final class List {
      * 
      * The method returns void (nothing)
      */
+    /**
+     *add items into array
+     * @param item int
+     */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
 
@@ -101,6 +105,10 @@ public final class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * return size
+     * @return size
      */
     public int size() {
         // replace the code below to implement the size method
@@ -127,6 +135,10 @@ public final class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * remove the value of guven index.
+     * @param index int
+     */
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -151,7 +163,12 @@ public final class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    /**
+     * get the items
+     * @param index int
+     * @return list
+     */
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index > 0 && index < size) {
             return arrayList[index];
@@ -179,6 +196,11 @@ public final class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return String
+     */
     public String toString() {
         // Replace the code below.
         String temp = "[";
@@ -193,7 +215,12 @@ public final class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    /**
+     * checking for the value.
+     * @param item int
+     * @return boolean
+     */
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (arrayList[i] == item) {
@@ -208,7 +235,14 @@ public final class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    /**
+     * Searches for the first match.
+     *
+     * @param item int
+     *
+     * @return index
+     */
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (arrayList[i] == item) {
@@ -217,7 +251,11 @@ public final class List {
         }
         return -1;
     }
-
+    /**
+     * main method.
+     *
+     * @param args  String
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
