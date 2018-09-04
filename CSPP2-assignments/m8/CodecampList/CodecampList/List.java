@@ -26,6 +26,7 @@ public final class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
+    private static int[] arrayList;
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -46,19 +47,18 @@ public final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
     // declare a private int size
     // again, don't initialize it here
-    // variable initialization should be done in the constructor
-
-    /*
+    // variable initialization should be done in the constructor.
+    /**
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    private static int[] arrayList;
     private static int size;
-
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -83,11 +83,10 @@ public final class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
     /**
-     *add items into array
+     *add items into array.
      * @param item int
      */
     public void add(final int item) {
@@ -103,7 +102,7 @@ public final class List {
      * The method returns an int. Empty list should return 0.
      */
     /**
-     * return size
+     * return size.
      * @return size
      */
     public int size() {
@@ -135,7 +134,7 @@ public final class List {
      * remove the value of guven index.
      * @param index int
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -160,7 +159,7 @@ public final class List {
      * number of items in the list? Would size variable be useful?
      */
     /**
-     * get the items
+     * get the items.
      * @param index int
      * @return list
      */
@@ -291,6 +290,7 @@ public final class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default:
             }
         }
     }
