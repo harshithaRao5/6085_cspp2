@@ -1,9 +1,10 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * in order to store elements.
+ */
 public final class List {
     //Implement all the methods mentioned to build a ListADT
-
     /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -25,11 +26,9 @@ public final class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-
     /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -49,7 +48,6 @@ public final class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -91,14 +89,11 @@ public final class List {
      *add items into array
      * @param item int
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
-
         arrayList[size] = item;
         size++;
-
     }
-
     /**
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -169,7 +164,6 @@ public final class List {
      * @return list
      */
     public int get(final int index) {
-        // Replace the code below to write the code for get
         if (index > 0 && index < size) {
             return arrayList[index];
         }
@@ -185,7 +179,6 @@ public final class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
