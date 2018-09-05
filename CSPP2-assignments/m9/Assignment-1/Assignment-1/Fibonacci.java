@@ -32,9 +32,15 @@ public class Fibonacci extends List
         // todo - complete this method
         l.add(0);
         l.add(1);
+        int fibOne = 0;
+        int fibTwo = 1;
+        int fibFinal = 0;
         for(int i = 2; i < n; i++) {
             //l[i] = l[i - 1] + l[i - 2];
-            l.add(i);
+            fibFinal = fibOne;
+            fibOne = fibTwo;
+            fibTwo = fibFinal + fibOne;
+            l.add(fibTwo);
         }
         return l;
     }
