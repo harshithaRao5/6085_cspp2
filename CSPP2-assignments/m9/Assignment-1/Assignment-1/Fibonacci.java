@@ -18,7 +18,7 @@ import java.util.Arrays;
  *
  */
 
-public class Fibonacci
+public class Fibonacci extends List
 {
     /*
      * fib is a static method takes a argument n
@@ -27,16 +27,16 @@ public class Fibonacci
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    static List l = new List();
     public static List fib(int n) {
         // todo - complete this method
-        int[] arrayList = new int[n];
-        arrayList[0] = 0;
-        arrayList[1] = 1;
+        l.add(0);
+        l.add(1);
         for(int i = 2; i < n; i++) {
-            arrayList[i] = arrayList[i - 1] + arrayList[i - 2];
+            //l[i] = l[i - 1] + l[i - 2];
+            l.add(i);
         }
-        System.out.println(Arrays.toString(arrayList));
-        return null;
+        return l;
     }
 
 	public static void main(String[] args) {
