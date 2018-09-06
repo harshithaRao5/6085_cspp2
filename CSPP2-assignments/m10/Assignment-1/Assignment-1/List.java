@@ -5,7 +5,7 @@ import java.util.Arrays;
  * main class solution.
  */
 public final class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /**
      * The goal for the list is to store items.
@@ -27,7 +27,7 @@ public final class List {
      * will protect the array such corruption.
      * This is a hard concept to understand. Discuss with your mentor.
      *
-    */ 
+    */
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -49,7 +49,7 @@ public final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     // declare a private int size
     // again, don't initialize it here
@@ -81,11 +81,11 @@ public final class List {
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
      * at the time of creating the list.
-     * 
+     *
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
-     * 
+     *
      */
     /**
      * Constructs the object.
@@ -104,7 +104,7 @@ public final class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
     /**
@@ -114,7 +114,7 @@ public final class List {
     public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         if (size == list.length) {
-        	list = resize();
+            list = resize();
         }
         list[size++] = item;
     }
@@ -153,10 +153,10 @@ public final class List {
     *@return newarray
     */
     private int[] resize() {
-    	int newsize = list.length * 2;
-    	int[] newlist = new int[newsize];
-    	newlist = Arrays.copyOf(list, newsize);
-    	return newlist;
+        int newsize = list.length * 2;
+        int[] newlist = new int[newsize];
+        newlist = Arrays.copyOf(list, newsize);
+        return newlist;
     }
     /**
      * The size method returns the value of the size.
@@ -319,7 +319,7 @@ public final class List {
     }
      /**
         Inserts the specified element at the specified index 
-	by moving all the elements to the right.
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
         /**
@@ -329,17 +329,17 @@ public final class List {
          */
     public void add(final int index, final int item) {
          // write the logic
-    	if(index < 0) {
-        	System.out.println("Negative Index Exception");
+        if(index < 0) {
+            System.out.println("Negative Index Exception");
         }
         if(index == 0 && size == 0) {
-        	list[index] = item;
-        	size++;
+            list[index] = item;
+            size++;
         }
         if(index > 0) {
-        	for(int i = size; i > index; i--) {
-    		  list[i] = list[i-1];
-    	    }
+            for(int i = size; i > index; i--) {
+              list[i] = list[i-1];
+            }
         list[index] = item;
         size++;
 
@@ -354,23 +354,23 @@ public final class List {
     public int count(final int item)
     {
          // write the logic 
-    	int count1 = 0;
-    	for (int i = 0; i < size; i++) {
-    		if(list[i] == item){
-    			count1++;
-    		}
-    	}
-    	if (count1 > 0) {
-    		return count1;
-    	} else {
-    		return 0;
-    	}
+        int count1 = 0;
+        for (int i = 0; i < size; i++) {
+            if(list[i] == item){
+                count1++;
+            }
+        }
+        if (count1 > 0) {
+            return count1;
+        } else {
+            return 0;
+        }
     }
     /**
      * main function.
      * @param args String
      */
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -435,5 +435,5 @@ public final class List {
                 default:
             }
         }
-	}
+    }
 }
