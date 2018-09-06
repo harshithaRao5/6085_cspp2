@@ -95,7 +95,7 @@ public final class List {
     public List(final int capacity) {
         size = 0;
         list = new int[capacity];
-    }  
+    }
     /**
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -273,7 +273,7 @@ public final class List {
             str += "\nInvalid Position Exception";
         }
         return str;
-    } 
+    }
     /**
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -348,7 +348,7 @@ public final class List {
         size++;
 
         }
-    }  
+    }
     /* Returns the count of occurances of a given item in the list*/
     /**
      *count of item repeated.
