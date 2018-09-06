@@ -282,7 +282,7 @@ public class List {
     public void addAll(int items[]) {
         // write the logic
         
-        if (size() + items.length > 10) {
+        if (size() + items.length > list.length) {
         	list = resize();
         }
         int temp = 0;
