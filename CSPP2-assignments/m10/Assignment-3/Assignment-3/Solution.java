@@ -78,7 +78,7 @@ public class Solution {
                     break;
                 case "get":
                     System.out.println(listString.get
-                                       (Integer.parseInt(tokens[1])));
+                    (Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
                     System.out.println(listString.contains(tokens[1]));
@@ -128,15 +128,15 @@ public class Solution {
                     break;
                 case "indexOf":
                     System.out.println(listInteger.indexOf
-                                       (Integer.parseInt((tokens[1]))));
+                    (Integer.parseInt((tokens[1]))));
                     break;
                 case "get":
                     System.out.println(listInteger.get
-                                       (Integer.parseInt(tokens[1])));
+                    (Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
                     System.out.println(listInteger.contains
-                                       (Integer.parseInt((tokens[1]))));
+                    (Integer.parseInt((tokens[1]))));
                     break;
                 default:
                 }
@@ -183,15 +183,15 @@ public class Solution {
                     break;
                 case "indexOf":
                     System.out.println(listFloat.indexOf
-                                       (Float.parseFloat(tokens[1])));
+                    (Float.parseFloat(tokens[1])));
                     break;
                 case "get":
                     System.out.println(listFloat.get
-                                       (Integer.parseInt(tokens[1])));
+                    (Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
                     System.out.println(listFloat.contains
-                                       (Float.parseFloat(tokens[1])));
+                    (Float.parseFloat(tokens[1])));
                     break;
                 default:
                 }
@@ -238,15 +238,15 @@ public class Solution {
                     break;
                 case "indexOf":
                     System.out.println(listCharacter.indexOf
-                                       (tokens[1].charAt(0)));
+                    (tokens[1].charAt(0)));
                     break;
                 case "get":
                     System.out.println(listCharacter.get
-                                       (Integer.parseInt(tokens[1])));
+                    (Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
                     System.out.println(listCharacter.contains
-                                       (tokens[1].charAt(0)));
+                    (tokens[1].charAt(0)));
                     break;
                 default:
                 }
@@ -294,15 +294,15 @@ public class Solution {
                     break;
                 case "indexOf":
                     System.out.println(listDouble.indexOf
-                                       (Double.parseDouble(tokens[1])));
+                    (Double.parseDouble(tokens[1])));
                     break;
                 case "get":
                     System.out.println(listDouble.get
-                                       (Integer.parseInt(tokens[1])));
+                    (Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
                     System.out.println(listDouble.contains
-                                       (Double.parseDouble(tokens[1])));
+                    (Double.parseDouble(tokens[1])));
                     break;
                 default:
                 }
@@ -350,15 +350,15 @@ public class Solution {
                     break;
                 case "indexOf":
                     System.out.println(listStudent.indexOf
-                        (new Student(tokens[1])));
+                    (new Student(tokens[1])));
                     break;
                 case "get":
                     System.out.println(listStudent.get
-                        (Integer.parseInt(tokens[1])));
+                    (Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
                     System.out.println(listStudent.contains
-                        (new Student(tokens[1])));
+                    (new Student(tokens[1])));
                     break;
                 default:
                 }
