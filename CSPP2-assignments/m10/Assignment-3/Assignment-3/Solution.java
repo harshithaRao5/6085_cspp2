@@ -1,10 +1,16 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
+/**
+*main solution class.
+*/
 class Student {
     private String name;
-
-    public Student(String name) {
+    /**
+     * Constructs the object.
+     * @param name String
+     */
+    public Student(final String name) {
         //A constructor used to initialize the instance variables
         this.name = name;
     }
@@ -15,7 +21,7 @@ class Student {
     }
 
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -32,8 +38,11 @@ class Student {
 
 public class Solution {
 
-
-    public static void main(String[] args) {
+    /**
+     * main function.
+     * @param args String
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
@@ -158,7 +167,7 @@ public class Solution {
                 case "addAll":
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
-                        Float temp[] = new Float[t1.length];
+                        Float[] temp = new Float[t1.length];
                         for (int i = 0; i < t1.length ; i++ ) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
@@ -214,7 +223,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Character[] temp = new Character[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = t1[i].charAt(0);
                         }
                         listCharacter.addAll(temp);
@@ -270,7 +279,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         listDouble.addAll(temp);
