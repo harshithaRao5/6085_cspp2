@@ -2,20 +2,20 @@
 import java.util.Arrays;
 interface StringListInterface
 {
-	 public void add(String item);
-	 public void addAll(String items[]);
-	 public String get(int index);
-	 public int size();
-	 public void remove(int index);
-	 public boolean contains(String item);
-	 public int indexOf(String item);
+     public void add(String item);
+     public void addAll(String items[]);
+     public String get(int index);
+     public int size();
+     public void remove(int index);
+     public boolean contains(String item);
+     public int indexOf(String item);
 }
 //Write a StringList class which implements StringListInterface 
 
 public class StringList implements StringListInterface{
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -42,7 +42,7 @@ public class StringList implements StringListInterface{
     // that's the job of the List constructor
     private String[] list;
 
-    /*
+    /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
      * If you add 2 items to the list then the size should be 2.
@@ -90,7 +90,7 @@ public class StringList implements StringListInterface{
         size = 0;
     }
 
-    /*
+    /**
      * Overloaded constructor with list capacity as argument
      * The default constructor sets the list capacity to 10
      * So, adding an item when the list size is 10
@@ -111,7 +111,7 @@ public class StringList implements StringListInterface{
         list = new String[capacity];
     }
     
-    /*
+    /**
      * The add method does what the name suggests.
      * Add an String item to the list.
      * The assumption is to store the item at the end of the list
@@ -146,8 +146,8 @@ public class StringList implements StringListInterface{
             temp++;
         }
         size = size + items.length;
-	}
-    /*
+    }
+    /**
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
@@ -158,7 +158,7 @@ public class StringList implements StringListInterface{
         return size;
     }
 
-    /*
+    /**
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
      * It also does an additional step.
@@ -192,7 +192,7 @@ public class StringList implements StringListInterface{
         }
     }
 
-    /*
+    /**
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
      * If the item doesn't exist then return a -1 to indicate that
@@ -211,7 +211,7 @@ public class StringList implements StringListInterface{
         }
     }
 
-    /*
+    /**
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
      * invoked when an object variable is used in println.
@@ -243,7 +243,7 @@ public class StringList implements StringListInterface{
         return str;
     }
     
-    /*
+    /**
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
@@ -253,7 +253,7 @@ public class StringList implements StringListInterface{
         return indexOf(item) == -1;
     }
 
-    /*
+    /**
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
@@ -263,6 +263,6 @@ public class StringList implements StringListInterface{
             if(item == list[i])
                 return i;
         }
-        return -1;        
+        return -1;
     }
 }
