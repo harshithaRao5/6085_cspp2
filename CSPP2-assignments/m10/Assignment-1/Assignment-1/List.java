@@ -261,7 +261,7 @@ public final class List {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
-        if (size == 0) {
+        if (size == 1 && list[i] == 0) {
             str += "\nInvalid Position Exception";
         }
         return str;
@@ -308,15 +308,9 @@ public final class List {
      */
     public void addAll(final int items[]) {
         // write the logic
-        if (size() + items.length > list.length) {
-        	list = resize();
+        for (int i = 0; i < items.length; i++) {
+            add(items[i]);
         }
-        int temp = 0;
-    	for(int i = size; i < (size + items.length); i++) {
-    		list[i] = items[temp];
-    		temp++;
-    	}
-    	size = size + items.length;
     }
      /**
         Inserts the specified element at the specified index 
@@ -339,10 +333,11 @@ public final class List {
         }
         if(index > 0) {
         	for(int i = size; i > index; i--) {
-    		list[i] = list[i-1];
-    		list[index] = item;
-    		size++;
-    	}
+    		  list[i] = list[i-1];
+    	    }
+        list[index] = item;
+        size++;
+
         }
     }    
     /* Returns the count of occurances of a given item in the list*/
