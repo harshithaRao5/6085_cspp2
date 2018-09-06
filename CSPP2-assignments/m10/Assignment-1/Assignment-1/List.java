@@ -277,7 +277,7 @@ public class List {
     array to the end of list*/
     public void addAll(int items[]) {
         // write the logic
-        if (size == list.length) {
+        if (size + items.length > list.length) {
         	list = resize();
         }
         int temp = 0;
