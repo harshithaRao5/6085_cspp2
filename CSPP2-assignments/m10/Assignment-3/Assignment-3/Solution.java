@@ -89,16 +89,9 @@ public final class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method and print the list size
-                    // BTW, list size is not the array size
-                    // it is the number of items in the list
                     System.out.println(listString.size());
                     break;
                 case "print":
-                    // print the list (implement toString in List class
-                    //for this to work)
-                    // expected format is [item-1,item-2,...,item-n]
-                    // review the output testcase file
                     System.out.println(listString);
                     break;
                 case "remove":
@@ -142,16 +135,9 @@ public final class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method and print the list size
-                    // BTW, list size is not the array size
-                    // it is the number of items in the list
                     System.out.println(listInteger.size());
                     break;
                 case "print":
-                    // print the list (implement toString in List class
-                    //for this to work)
-                    // expected format is [item-1,item-2,...,item-n]
-                    // review the output testcase file
                     System.out.println(listInteger);
                     break;
                 case "remove":
@@ -177,11 +163,8 @@ public final class Solution {
         case "F"://This case will be executed for Float type list
             List<Float> listFloat = new List();
             while (stdin.hasNext()) {
-                // read the line
                 String line = stdin.nextLine();
-                // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation invoke the corresponding method
                 switch (tokens[0]) {
                 case "add":
                     listFloat.add(Float.parseFloat(tokens[1]));
@@ -197,16 +180,9 @@ public final class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method and print the list size
-                    // BTW, list size is not the array size
-                    // it is the number of items in the list
                     System.out.println(listFloat.size());
                     break;
                 case "print":
-                    // print the list (implement toString in List class
-                    //for this to work)
-                    // expected format is [item-1,item-2,...,item-n]
-                    // review the output testcase file
                     System.out.println(listFloat);
                     break;
                 case "remove":
