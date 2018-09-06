@@ -115,7 +115,7 @@ public class List {
         if (size == list.length) {
         	list = resize();
         }
-        list[size++] = item;   
+        list[size++] = item;
     }
 
     /**
@@ -150,7 +150,7 @@ public class List {
      */
     // todo create resize method
     private int[] resize() {
-    	int newsize = size * 2;
+    	int newsize = list.length * 2;
     	int[] newlist = new int[newsize];
     	newlist = Arrays.copyOf(list, newsize);
     	return newlist;
@@ -248,7 +248,11 @@ public class List {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
+        if (size == 1 && list[i] == 0) {
+            str += "\nInvalid Position Exception";
+        }
         return str;
+
     }
     
     /**
@@ -277,7 +281,8 @@ public class List {
     array to the end of list*/
     public void addAll(int items[]) {
         // write the logic
-        if (size + items.length > list.length) {
+        
+        if (size() > list.length) {
         	list = resize();
         }
         int temp = 0;
