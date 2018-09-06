@@ -44,7 +44,7 @@ public class List<E> {
     array to the end of list*/
     private E[] resize() {
         
-        return Arrays.copyOf(list, size);
+        return Arrays.copyOf(list, list.length * 2);
      }   
     public void addAll(E[] items) {
         //Write logic for addAll method
