@@ -130,7 +130,7 @@ public class StringList implements StringListInterface{
     /*Inserts all the elements of specified int 
     array to the end of list*/
     private String[] resize() {
-        int newsize = size * 2;
+        int newsize = list.length * 2;
         String[] newlist = new String[newsize];
         newlist = Arrays.copyOf(list, newsize);
         return newlist;
