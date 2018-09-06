@@ -16,14 +16,14 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] a = new int[n];
+        int[] array = new int[n];
         for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
+            array[i] = sc.nextInt();
         }
         int maximum = 0;
         for (int j = 0; j < n; j++) {
-            if (a[j] > maximum) {
-                maximum = a[j];
+            if (array[j] > maximum) {
+                maximum = array[j];
             }
         }
         System.out.println(maximum);
