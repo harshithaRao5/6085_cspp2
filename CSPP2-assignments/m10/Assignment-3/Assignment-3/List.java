@@ -48,7 +48,7 @@ public class List<E> {
      }   
     public void addAll(E[] items) {
         //Write logic for addAll method
-        if (size() > list.length) {
+        if (size() + items.length > 10) {
             list = resize();
         }
         int temp = 0;
