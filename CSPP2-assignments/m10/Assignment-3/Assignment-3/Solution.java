@@ -5,6 +5,9 @@ import java.util.Scanner;
 *main solution class.
 */
 class Student {
+    /**
+     * private string name.
+     */
     private String name;
     /**
      * Constructs the object.
@@ -48,6 +51,12 @@ class Student {
  * Class for solution.
  */
 public class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
 
     /**
      * main function.
