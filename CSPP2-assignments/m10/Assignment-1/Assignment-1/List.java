@@ -95,7 +95,7 @@ public final class List {
     public List(final int capacity) {
         size = 0;
         list = new int[capacity];
-    }   
+    }  
     /**
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -273,7 +273,7 @@ public final class List {
             str += "\nInvalid Position Exception";
         }
         return str;
-    }  
+    } 
     /**
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -315,7 +315,7 @@ public final class List {
      * add another list.
      * @param items int
      */
-    public void addAll(final int items[]) {
+    public void addAll(final int[] items) {
         // write the logic
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
@@ -348,7 +348,7 @@ public final class List {
         size++;
 
         }
-    }   
+    }  
     /* Returns the count of occurances of a given item in the list*/
     /**
      *count of item repeated.
@@ -405,7 +405,7 @@ public final class List {
                 case "addAll":
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[] = new int[t1.length];
+                int[] temp = new int[t1.length];
                 for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
                 }
