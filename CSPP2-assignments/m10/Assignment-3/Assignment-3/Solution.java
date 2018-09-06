@@ -66,18 +66,14 @@ public final class Solution {
      * @param args String
      */
     public static void main(final String[] args) {
-        // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
         switch (objectType) {
         case "S"://This case will be executed for String type list
             List<String> listString = new List();
             while (stdin.hasNext()) {
-                // read the line
                 String line = stdin.nextLine();
-                // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation invoke the corresponding method
                 switch (tokens[0]) {
                 case "add":
                     listString.add(tokens[1]);
@@ -111,15 +107,11 @@ public final class Solution {
                 }
             }
             break;
-
         case "I"://This case will be executed for Integer type list
             List<Integer> listInteger = new List();
             while (stdin.hasNext()) {
-                // read the line
                 String line = stdin.nextLine();
-                // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation invoke the corresponding method
                 switch (tokens[0]) {
                 case "add":
                     listInteger.add(Integer.parseInt(tokens[1]));
