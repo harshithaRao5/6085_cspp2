@@ -14,12 +14,18 @@ class Student {
         //A constructor used to initialize the instance variables
         this.name = name;
     }
-
+    /**
+     *constructor.
+     * @return The name.
+     */
     public String getName() {
         //Getter method which returns the value of instance variable
         return this.name;
     }
-
+    /**
+     * @param other
+     * @return boolean
+     */
     @Override
     public boolean equals(final Object other) {
         //This method is to check if two students names are equal or not
@@ -30,12 +36,17 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+    /**
+     * constructor.
+     * @return String
+     */
     public String toString() {
         return this.name;
     }
 }
-
+/**
+ * Class for solution.
+ */
 public class Solution {
 
     /**
@@ -113,7 +124,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
-                        for (int i = 0; i < temp.length; i++ ) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Integer.parseInt(t1[i]);
                         }
                         listInteger.addAll(temp);
@@ -168,7 +179,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Float[] temp = new Float[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
                         listFloat.addAll(temp);
