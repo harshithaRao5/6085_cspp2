@@ -241,7 +241,7 @@ public class List {
      */
     public String toString() {
         if(size == 0)
-            return "";
+            return "[]";
         String str = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
@@ -276,12 +276,16 @@ public class List {
    /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(int items[]) {
-        // write the logic 
+        // write the logic
+        if (size == list.length) {
+        	list = resize();
+        }
         int temp = 0;
     	for(int i = size; i < (size + items.length); i++) {
     		list[i] = items[temp];
     		temp++;
     	}
+    	size = size + items.length;
     }
 
      /**
@@ -291,6 +295,9 @@ public class List {
      */
     public void add(int index,int item) {
          // write the logic
+    	if(index < 0) {
+        	System.out.println("Negative Index Exception");
+        }
     	for(int i = size; i > index; i--) {
     		list[i] = list[i-1];
     	}
@@ -334,12 +341,12 @@ public class List {
                case "add":
                 if((tokens.length)==2){
                 String[] t = tokens[1].split(",");
-                if(t.length==1){
+                if(t.length == 1){
                     l.add(Integer.parseInt(tokens[1]));
                 }
                 else{
-                    if(t.length>1)
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                    if(t.length > 1)
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                 }
                 break;
