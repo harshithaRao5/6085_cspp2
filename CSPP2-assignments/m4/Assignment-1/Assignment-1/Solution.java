@@ -15,13 +15,13 @@ public final class Solution {
     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] array = new int[n];
-        for (int i = 0; i < n; i++) {
+        int size = sc.nextInt();
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
             array[i] = sc.nextInt();
         }
         int maximum = 0;
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < size; j++) {
             if (array[j] > maximum) {
                 maximum = array[j];
             }
