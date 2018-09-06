@@ -204,7 +204,7 @@ public class StringList implements StringListInterface{
      * number of items in the list? Would size variable be useful?
      */
     public String get(int index) {
-        if(index < 0 || index >= size) {
+        if (index < 0 || index >= size) {
             return "-1";
         } else {
             return list[index];
@@ -232,11 +232,11 @@ public class StringList implements StringListInterface{
      *
      */
     public String toString() {
-       if(size == 0)
+       if (size == 0)
             return "[]";
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
@@ -259,8 +259,8 @@ public class StringList implements StringListInterface{
      * or -1 if this list does not contain the element.
      */
     public int indexOf(String item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+        for (int i = 0; i < size; i++) {
+            if (item == list[i])
                 return i;
         }
         return -1;
