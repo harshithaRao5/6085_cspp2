@@ -87,6 +87,11 @@ public final class List {
      * constructor.
      * 
      */
+    /**
+     * Constructs the object.
+     *
+     * @param capacity int
+     */
     public List(final int capacity) {
         size = 0;
         list = new int[capacity];
