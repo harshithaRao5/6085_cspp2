@@ -2,12 +2,21 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 public class Solution {
-	
+    /**
+     * Constructs the object.
+     */
+	private Solution() {
+
+    }
+    /**
+     * returns what method to be used.
+     * @param args String
+     */
 
 	public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
-        StringListInterface l=(StringListInterface)sl;//Typecasting is done for StringListInterface
+        StringListInterface l = (StringListInterface)sl;//Typecasting is done for StringListInterface
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -22,7 +31,7 @@ public class Solution {
 	                l.add(tokens[1]);
                 break;
                 case "addAll":
-                if(tokens.length==2){
+                if (tokens.length == 2){
                 String[] t1 = tokens[1].split(",");
                 l.addAll(t1);
                 }
@@ -33,7 +42,7 @@ public class Solution {
                 // it is the number of items in the list
                 System.out.println(l.size());
                 break;
-                case "print":
+                 case "print":
                 // print the list (implement toString in StringList class
                 //for this to work)
                 // expected format is [item-1,item-2,...,item-n]
