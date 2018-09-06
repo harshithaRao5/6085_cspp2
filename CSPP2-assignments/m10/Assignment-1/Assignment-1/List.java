@@ -65,7 +65,8 @@ public final class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -260,7 +261,7 @@ public final class List {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
-        if (size == 1 && list[i] == 0) {
+        if (size == 0) {
             str += "\nInvalid Position Exception";
         }
         return str;
@@ -307,7 +308,6 @@ public final class List {
      */
     public void addAll(final int items[]) {
         // write the logic
-        
         if (size() + items.length > list.length) {
         	list = resize();
         }
