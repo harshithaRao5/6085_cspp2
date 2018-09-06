@@ -112,6 +112,9 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
+        if (size == list.length) {
+        	list = resize();
+        }
         list[size++] = item;   
     }
 
@@ -145,9 +148,13 @@ public class List {
      * You know enough of Object Oriented Programming to answer these questions :-)
      *
      */
-
     // todo create resize method
-
+    private int[] resize() {
+    	int newsize = size * 2;
+    	int[] newlist = new int[newsize];
+    	newlist = Arrays.copyOf(list, newsize);
+    	return newlist;
+    }
     /**
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -268,16 +275,13 @@ public class List {
     }
    /*Inserts all the elements of specified int 
     array to the end of list*/
-    public void addAll(int items[])
-    {
+    public void addAll(int items[]) {
         // write the logic 
         int temp = 0;
     	for(int i = size; i < (size + items.length); i++) {
     		list[i] = items[temp];
     		temp++;
     	}
-    	System.out.println(Arrays.toString(list));
-
     }
 
      /**
