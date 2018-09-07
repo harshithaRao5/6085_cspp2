@@ -241,11 +241,13 @@ public class List {
         // 		}	
         // 	}      	
         // }
+        for(int each: newArray){
         for (int i = 0; i < newArray.length; i++) {
         	if (contains(newArray[i])) {
         		remove(indexOf(newArray[i]));
         	}
         }
+    }
 
      }
     /*
