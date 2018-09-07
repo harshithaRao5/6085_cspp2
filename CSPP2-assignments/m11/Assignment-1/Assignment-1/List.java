@@ -445,7 +445,7 @@ public final class List {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -454,7 +454,7 @@ public final class List {
                             Integer.parseInt(arrstring3[1]));
                     if (object != null) {
                         System.out.println(object);
-                    }
+
                     break;
                 }
                 case "equals":
@@ -476,3 +476,4 @@ public final class List {
         }
     }
 }
+
