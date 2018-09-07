@@ -193,13 +193,13 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        // for (int i = 0; i < size; i++) {
-        // 	if (list[i] == item) {
-        // 		return true;
-        // 	} 
-        // }
-        // return false;
-        return indexOf(item) == -1;
+        for (int i = 0; i < size; i++) {
+        	if (list[i] == item) {
+        		return true;
+        	} 
+        }
+        return false;
+        //return indexOf(item) == -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
