@@ -245,7 +245,6 @@ public final class List {
         //         return true;
         //     }
         // }
-        return false;
         return indexOf(item) == -1;
     }
     /*
