@@ -67,6 +67,9 @@ public final class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here? think about the
@@ -111,7 +114,11 @@ public final class List {
         }
         list[size++] = item;
     }
-
+/**
+ * resize method.
+ *
+ * @return new array.
+ */
     private int[] resize() {
         int newsize = list.length * 2;
         int[] newlist = new int[newsize];
@@ -307,13 +314,12 @@ public final class List {
     and also if start is greater than end.
     */
     /**
-     * get the sublist
+     * get the sublist.
      * @param start int
      * @param end int
      * @return result
      */
-    public List subList(final int start, final int end)
-    {
+    public List subList(final int start, final int end) {
     // write the logic for subList
     //  for (int i = start; i < end; i++) {
     //      list = list[i];
@@ -324,7 +330,7 @@ public final class List {
         System.out.println("Index Out of Bounds Exception");
         return null;
     } else {
-        for(int i =start; i < end; i++) {
+        for (int i = start; i < end; i++) {
         result.add(list[i]);
     }
     }
@@ -423,7 +429,7 @@ public final class List {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         int[] temp = new int[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
@@ -433,14 +439,16 @@ public final class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for(int i = 0; i < t2.length; i++) {
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
                         }
                         l.removeAll(a);
                     }
                 break;
                 case "subList": {
-                    if (tokens.length != 2) break;
+                    if (tokens.length != 2) {
+                        break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
@@ -453,7 +461,7 @@ public final class List {
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Integer.parseInt(lt[k]));
                         }
                         System.out.println(l.equals(l2));
