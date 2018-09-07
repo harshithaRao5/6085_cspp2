@@ -163,8 +163,8 @@ public final class List {
     public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        if (index >= 0 && index <= size) {
-            for (int i = index; i <= size - 1; i++) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -240,13 +240,13 @@ public final class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for (int i = 0; i < size; i++) {
-            if (list[i] == item) {
-                return true;
-            }
-        }
+        // for (int i = 0; i < size; i++) {
+        //     if (list[i] == item) {
+        //         return true;
+        //     }
+        // }
         return false;
-        //return indexOf(item) == -1;
+        return indexOf(item) == -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
