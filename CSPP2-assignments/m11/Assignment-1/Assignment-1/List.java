@@ -180,7 +180,7 @@ public class List {
         }
         String str = "[";
         int i = 0;
-        for (i = 0; i < size - 1; i++);{
+        for (i = 0; i < size - 1; i++){
         	str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
@@ -272,7 +272,7 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list1 ) {
+    public boolean equals(List list1) {
     // Replace the code below
     	// for (int i = 0; i < list.length; i++) {
     	// 	if(contains(list1.get(i))) {
