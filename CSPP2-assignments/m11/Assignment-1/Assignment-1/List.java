@@ -163,8 +163,8 @@ public final class List {
     public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
+        if (index >= 0 && index <= size) {
+            for (int i = index; i <= size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -240,12 +240,13 @@ public final class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        // for (int i = 0; i < size; i++) {
-        //     if (list[i] == item) {
-        //         return true;
-        //     }
-        // }
-        return indexOf(item) != -1;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                return true;
+            }
+        }
+        return false;
+        //return indexOf(item) != -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
@@ -331,7 +332,7 @@ public final class List {
     } else {
         for (int i = start; i < end; i++) {
         result.add(list[i]);
-    }
+        }
     }
     return result;
     }
@@ -453,9 +454,8 @@ public final class List {
                             Integer.parseInt(arrstring3[1]));
                     if (object != null) {
                         System.out.println(object);
-
+                    }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
