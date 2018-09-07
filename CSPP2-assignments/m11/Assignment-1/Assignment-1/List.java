@@ -234,7 +234,7 @@ public final class List {
      * exists and otherwise false
      */
     /**
-     * returns true
+     * returns true.
      * @param item int
      * @return boolean
      */
@@ -286,7 +286,7 @@ public final class List {
     */
      /**
       * Removes all.
-      * @param newArray
+      * @param newArray int
       */
      public void removeAll(final int[] newArray) {
         // write the logic
