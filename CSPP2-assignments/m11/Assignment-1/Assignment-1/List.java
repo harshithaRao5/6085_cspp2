@@ -234,12 +234,17 @@ public class List {
     */
      public void removeAll(int[] newArray) {
         // write the logic 
+        // for (int i = 0; i < newArray.length; i++) {
+        // 	for (int j = 0; j < size; j++) {
+        // 		if(newArray[i] == list[j]) {
+        // 		remove(j);
+        // 		}	
+        // 	}      	
+        // }
         for (int i = 0; i < newArray.length; i++) {
-        	for (int j = 0; j < size; j++) {
-        		if(newArray[i] == list[j]) {
-        		remove(j);
-        		}	
-        	}      	
+        	if (contains(newArray[i])) {
+        		remove(indexOf(newArray[i]));
+        	}
         }
 
      }
