@@ -15,18 +15,11 @@ final class Set {
  * Constructs the object.
  */
     public Set() {
-        set = new int[50];
+        final int fifty = 50;
+        set = new int[fifty];
         size = 0;
     }
-/**
- * Constructs the object.
- *
- * @param      capacity  The capacity
- */
-    public Set(final int capacity) {
-        size = 0;
-        set = new int[capacity];
-    }
+
 /**
  * { function_description }.
  *
