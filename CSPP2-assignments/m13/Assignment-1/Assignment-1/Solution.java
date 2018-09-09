@@ -67,7 +67,9 @@ final class Set {
  * @param      item  The item
  */
     public void add(final int item) {
-        set[size++] = item;
+        if(!this.contains(item)) {
+             set[size++] = item;
+        }
     }
 /**
  * { function_description }.
@@ -78,9 +80,7 @@ final class Set {
         // int [] noDuplicate = new int[50];
         // int j = 0;
         for (int i = 0; i < items.length; i++) {
-            if (set[i] != items[i]) {
-                add(items[i]);
-                }
+            add(items[i]);
             }
     }
 /**
@@ -96,7 +96,15 @@ final class Set {
         //      return anotherSet[i];
         //  }
         // }
-        return null;
+        Set result = new Set();
+        for (int element : set) {
+            for (int item : anotherSet.set) {
+                if (element == item) {
+                    result.add(element);
+                }
+            }
+        }
+        return result;
 
     }
 /**
@@ -112,14 +120,15 @@ final class Set {
         //      return items[i];
         //  }
         // }
-        // for (int each:items) {
-        //     for (int i = 0; i < items.length; i++) {
-        //         if (contains(items[i])) {
-        //             return set;
-        //         }
-        //     }
-        // }
-        return null;
+        Set result = new Set();
+        for (int element:set) {
+            for (int i = 0; i < items.length; i++) {
+                if (element == i) {
+                    result.add(element);
+                }
+            }
+        }
+        return result;
 
     }
 /**
