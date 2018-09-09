@@ -79,8 +79,8 @@ final class Set {
     public void add(final int[] items) {
         // int [] noDuplicate = new int[50];
         // int j = 0;
-        for (int i = 0; i < items.length; i++) {
-            add(items[i]);
+        for (int element : items) {
+            add(element);
             }
     }
 /**
@@ -122,14 +122,17 @@ final class Set {
         // }
         Set result = new Set();
         for (int element:set) {
-            for (int i = 0; i < items.length; i++) {
-                if (element == i) {
+            for (int item : items) {
+                if (element == item) {
                     result.add(element);
                 }
             }
         }
         return result;
 
+    }
+    public int get(final int index) {
+        return set[index];
     }
 /**
  * { function_description }.
@@ -139,7 +142,18 @@ final class Set {
  * @return     { description_of_the_return_value }
  */
     public int[][] cartesianProduct(final Set anotherSet) {
-        return null;
+        int row = this.size()*anotherSet.size();
+        int col = 2;
+        int[][] product = new int[row][col];
+        int k = 0;
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < anotherSet.size(); j++) {
+                product[k][0] = this.get(i);
+                product[k][1] = anotherSet.set[j];
+                k = k + 1;
+            }
+        }
+        return product;
     }
 
 }
