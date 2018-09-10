@@ -20,12 +20,16 @@ class SortedSet {
     private final int x = 10;
     /**
      * Constructs the object.
+     * @param items int
      */
     SortedSet(final int[] items) {
         set = new int[x];
         size = 0;
         addAll(items);
     }
+    /** this is a constructor for set.
+    *class
+    */
     SortedSet() {
         set = new int[x];
         size = 0;
