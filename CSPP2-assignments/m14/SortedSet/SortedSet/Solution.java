@@ -129,8 +129,10 @@ class Set {
         return result;
     }
     /**
-     * Returns​ ​ a ​ ​ view​ ​ of​ ​ the​ ​ portion​ ​ of​ ​ this​ ​ set​
-     * whose​ ​ elements​ ​ are strictly​ ​ less​ ​ than​ ​ toElement.
+     * Returns​ ​ a ​ ​ view​ ​ of​ ​ the​
+     * portion​ ​ of​ ​ this​ ​ set​
+     * whose​ ​ elements​ ​ are strictly​ ​
+     * less​ ​ than​ ​ toElement.
      * @param toElement  To element.
      * @return result
      */
@@ -146,7 +148,7 @@ class Set {
         return result;
     }
     /**
-     * Returns​ ​ the​ ​ last​ (highest)​ element​ ​
+     * Returns​ ​ the​ ​ last​ (highest)​ element​.
      * currently​ ​ in​ ​ this​ ​ set.​
      * If​ ​ set​ ​ is​ Empty,​ ​ then​ ​ print a
      *  message "Set​ ​ Empty​ ​ Exception"
@@ -175,8 +177,8 @@ public final class Solution {
     }
     /**
      * helper function to convert string input to int array.
-     * @param      s
-     * @return
+     * @param      s String
+     * @return array
      */
     public static int[] intArray(final String s) {
         String input = s;
