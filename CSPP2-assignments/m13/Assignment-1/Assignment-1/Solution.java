@@ -106,8 +106,8 @@ final class Set {
         // }
         // return result;
         for(int i = 0; i < set.length; i++) {
-            for(int item : anotherSet.set) {
-                if (set[i] == item) {
+            for(int j = 0; j < anotherSet.set.length; j++) {
+                if (set[i] == anotherSet.set[j]) {
                     result.add(i);
                 }
             }
