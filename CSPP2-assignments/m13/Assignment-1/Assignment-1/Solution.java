@@ -97,21 +97,21 @@ final class Set {
         //  }
         // }
         Set result = new Set();
-        // for (int element : set) {
-        //     for (int item : anotherSet.set) {
-        //         if (element == item) {
-        //             result.add(element);
-        //         }
-        //     }
-        // }
-        // return result;
-        for(int i = 0; i < set.length; i++) {
-            for(int j = 0; j < anotherSet.set.length; j++) {
-                if (set[i] == anotherSet.set[j]) {
-                    result.add(i);
+        for (int element : set) {
+            for (int item : anotherSet.set) {
+                if (element == item) {
+                    result.add(element);
                 }
             }
         }
+        // return result;
+        // for(int i = 0; i < set.length; i++) {
+        //     for(int j = 0; j < anotherSet.set.length; j++) {
+        //         if (set[i] == anotherSet.set[j]) {
+        //             result.add(i);
+        //         }
+        //     }
+        // }
         return result;
 
 
