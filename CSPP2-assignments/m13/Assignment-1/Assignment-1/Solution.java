@@ -96,15 +96,15 @@ final class Set {
         //      return anotherSet[i];
         //  }
         // }
-        Set result = new Set();
+        Set intersect = new Set();
         for (int element : set) {
             for (int item : anotherSet.set) {
                 if (element == item) {
-                    result.add(element);
+                    intersect.add(element);
                 }
             }
         }
-        return result;
+        return intersect;
         // return result;
         // for(int i = 0; i < set.length; i++) {
         //     for(int j = 0; j < anotherSet.set.length; j++) {
