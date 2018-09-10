@@ -104,6 +104,7 @@ final class Set {
                 }
             }
         }
+        return result;
         // return result;
         // for(int i = 0; i < set.length; i++) {
         //     for(int j = 0; j < anotherSet.set.length; j++) {
@@ -112,7 +113,7 @@ final class Set {
         //         }
         //     }
         // }
-        return result;
+        //return result;
 
 
     }
