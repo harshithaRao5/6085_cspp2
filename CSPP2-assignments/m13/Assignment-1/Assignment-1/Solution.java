@@ -55,7 +55,7 @@ final class Set {
         }
         String result = "{";
         int i = 0;
-        for (i = 0; i < size; i++) {
+        for (i = 0; i < size - 1; i++) {
             result = result + set[i] + ", ";
         }
         result = result + set[i] + "}";
@@ -97,14 +97,23 @@ final class Set {
         //  }
         // }
         Set result = new Set();
-        for (int element : set) {
-            for (int item : anotherSet.set) {
-                if (element == item) {
-                    result.add(element);
+        // for (int element : set) {
+        //     for (int item : anotherSet.set) {
+        //         if (element == item) {
+        //             result.add(element);
+        //         }
+        //     }
+        // }
+        // return result;
+        for(int i = 0; i < set.length; i++) {
+            for(int item : anotherSet.set) {
+                if (set[i] == item) {
+                    result.add(i);
                 }
             }
         }
         return result;
+
 
     }
 /**
