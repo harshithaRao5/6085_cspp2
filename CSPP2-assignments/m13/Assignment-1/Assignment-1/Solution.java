@@ -96,24 +96,25 @@ final class Set {
         //      return anotherSet[i];
         //  }
         // }
-        Set intersect = new Set();
-        for (int element : set) {
-            for (int item : anotherSet.set) {
-                if (element == item) {
-                    intersect.add(element);
-                }
-            }
-        }
-        return intersect;
-        // return result;
-        // for(int i = 0; i < set.length; i++) {
-        //     for(int j = 0; j < anotherSet.set.length; j++) {
-        //         if (set[i] == anotherSet.set[j]) {
-        //             result.add(i);
+        // Set intersect = new Set();
+        // for (int element : set) {
+        //     for (int i = 0; i < anotherSet.size(); i++) {
+        //         if (element == anotherSet.get(i)) {
+        //             intersect.add(element);
         //         }
         //     }
         // }
-        //return result;
+        // return intersect;
+        // return result;
+        Set result = new Set();
+        for(int i = 0; i < set.length; i++) {
+            for(int j = 0; j < anotherSet.size(); j++) {
+                if (set[i] == anotherSet.set[j]) {
+                    result.add(set[i]);
+                }
+            }
+        }
+        return result;
 
 
     }
