@@ -10,7 +10,13 @@ class Set {
      * set.
      */
     private int[] set;
+    /**
+     *size.
+     */
     private int size;
+    /**
+     * magic number case.
+     */
     private final int x = 10;
     /**
      * Constructs the object.
@@ -81,7 +87,6 @@ class Set {
     }
     /**
     * resize method.
-    * @return new array.
     */
     private void resize() {
         int resizefactor = 2;
@@ -100,15 +105,19 @@ class Set {
         return set[index];
     }
     /**
-     *  Returns​ ​a view​ of​ ​the​ portion​ of​ ​this​ ​set whose​ ​elements​ ​ range​ ​
-     *  from​ fromElement,​ inclusive,​ to​ toElement,​ exclusive.​ ​
+     *  Returns​ ​a view​ of​ ​the​ portion​ of​ ​this​
+     *  set whose​ ​elements​ ​ range​ ​
+     *  from​ fromElement,​ inclusive,​
+     *  to​ toElement,​ exclusive.​ ​
      *  If fromElement​ is​ ​greater​ ​than​ toElement,​ ​
-     *  then​ print a message​ "Invalid​ ​ Arguments​ to​ Subset​ Exception".
+     *  then​ print a message​ "Invalid​ ​
+     *  Arguments​ to​ Subset​ Exception".
      * @param   fromElement  The from element.
      * @param   toElement    To element.
-     * @return
+     * @return result
      */
-    public int[] subSet(final int fromElement, final  int toElement) {
+    public int[] subSet(final int fromElement,
+        final  int toElement) {
         int[] result = new int[x];
         int s = 0;
         for (int i = 0; i < size; i++) {
@@ -123,7 +132,7 @@ class Set {
      * Returns​ ​ a ​ ​ view​ ​ of​ ​ the​ ​ portion​ ​ of​ ​ this​ ​ set​
      * whose​ ​ elements​ ​ are strictly​ ​ less​ ​ than​ ​ toElement.
      * @param toElement  To element.
-     * @return
+     * @return result
      */
     public int[] headSet(final int toElement) {
         int[] result = new int[x];
@@ -137,8 +146,10 @@ class Set {
         return result;
     }
     /**
-     * Returns​ ​ the​ ​ last​ (highest)​ element​ ​currently​ ​ in​ ​ this​ ​ set.​
-     * If​ ​ set​ ​ is​ Empty,​ ​ then​ ​ print a message "Set​ ​ Empty​ ​ Exception"
+     * Returns​ ​ the​ ​ last​ (highest)​ element​ ​
+     * currently​ ​ in​ ​ this​ ​ set.​
+     * If​ ​ set​ ​ is​ Empty,​ ​ then​ ​ print a
+     *  message "Set​ ​ Empty​ ​ Exception"
      * @return last value.
      */
     public int last() {
@@ -164,10 +175,8 @@ public final class Solution {
     }
     /**
      * helper function to convert string input to int array.
-     *
-     * @param      s     { string input from test case file }
-     *
-     * @return     { int array from the given string }
+     * @param      s
+     * @return
      */
     public static int[] intArray(final String s) {
         String input = s;
