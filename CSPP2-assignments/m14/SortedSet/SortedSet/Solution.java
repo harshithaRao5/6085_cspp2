@@ -5,7 +5,7 @@ import java.util.Arrays;
  * Class for set.
  * @author :
  */
-class Set {
+class SortedSet {
     /**
      * set.
      */
@@ -21,9 +21,15 @@ class Set {
     /**
      * Constructs the object.
      */
-    Set() {
+    SortedSet(final int[] items) {
         set = new int[x];
         size = 0;
+        addAll(items);
+    }
+    SortedSet() {
+        set = new int[x];
+        size = 0;
+
     }
     /**
      * gives the size of set.
