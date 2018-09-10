@@ -55,7 +55,7 @@ final class Set {
         }
         String result = "{";
         int i = 0;
-        for (i = 0; i < size - 1; i++) {
+        for (i = 0; i < size; i++) {
             result = result + set[i] + ", ";
         }
         result = result + set[i] + "}";
