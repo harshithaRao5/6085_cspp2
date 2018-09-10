@@ -10,13 +10,7 @@ class Set {
      * set.
      */
     private int[] set;
-    /**
-     * size.
-     */
     private int size;
-    /**
-     * magicnumber.
-     */
     private final int x = 10;
     /**
      * Constructs the object.
@@ -26,19 +20,17 @@ class Set {
         size = 0;
     }
     /**
-     * size.
-     *
+     * gives the size of set.
      * @return     int size.
      */
     public int size() {
         return size;
     }
     /**
-     * contains.
-     *
-     * @param      item  The item.
-     *
-     * @return     true or false.
+     * returns true or false when item present in
+     * the set.
+     * @param item  The item.
+     * @return true or false.
      */
     public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
@@ -50,8 +42,7 @@ class Set {
     }
     /**
      * Returns a string representation of the object.
-     *
-     * @return     String representation of the object.
+     * @return String representation of the object.
      */
     public String toString() {
         if (size == 0) {
@@ -66,9 +57,8 @@ class Set {
         return result;
     }
     /**
-     * add.
-     *
-     * @param      newArray  The new array.
+     * add a set of new array to existing set.
+     * @param newArray  The new array.
      */
     public void addAll(final int[] newArray) {
         for (int element : newArray) {
@@ -78,9 +68,8 @@ class Set {
         Arrays.sort(set);
     }
     /**
-     * add.
-     *
-     * @param      item  The item.
+     * add method to add items into array.
+     * @param item  The item.
      */
     public void add(final int item) {
         if (!contains(item)) {
@@ -91,9 +80,10 @@ class Set {
         }
     }
     /**
-     * resize.
-     */
-    public void resize() {
+    * resize method.
+    * @return new array.
+    */
+    private void resize() {
         int resizefactor = 2;
         int[] temp = new int[resizefactor * size];
         for (int i = 0; i < size; i++) {
@@ -102,22 +92,21 @@ class Set {
         set = temp;
     }
     /**
-     * get.
-     *
-     * @param      index  The index.
-     *
-     * @return     item.
+     * get the index.
+     * @param index  The index.
+     * @return item.
      */
     public int get(final int index) {
         return set[index];
     }
     /**
-     * subset.
-     *
-     * @param      fromElement  The from element.
-     * @param      toElement    To element.
-     *
-     * @return     { description_of_the_return_value }.
+     *  Returns​ ​a view​ of​ ​the​ portion​ of​ ​this​ ​set whose​ ​elements​ ​ range​ ​
+     *  from​ fromElement,​ inclusive,​ to​ toElement,​ exclusive.​ ​
+     *  If fromElement​ is​ ​greater​ ​than​ toElement,​ ​
+     *  then​ print a message​ "Invalid​ ​ Arguments​ to​ Subset​ Exception".
+     * @param   fromElement  The from element.
+     * @param   toElement    To element.
+     * @return
      */
     public int[] subSet(final int fromElement, final  int toElement) {
         int[] result = new int[x];
@@ -131,11 +120,10 @@ class Set {
         return result;
     }
     /**
-     * headset.
-     *
-     * @param      toElement  To element.
-     *
-     * @return     { description_of_the_return_value }.
+     * Returns​ ​ a ​ ​ view​ ​ of​ ​ the​ ​ portion​ ​ of​ ​ this​ ​ set​
+     * whose​ ​ elements​ ​ are strictly​ ​ less​ ​ than​ ​ toElement.
+     * @param toElement  To element.
+     * @return
      */
     public int[] headSet(final int toElement) {
         int[] result = new int[x];
@@ -149,9 +137,9 @@ class Set {
         return result;
     }
     /**
-     * last.
-     *
-     * @return     last value.
+     * Returns​ ​ the​ ​ last​ (highest)​ element​ ​currently​ ​ in​ ​ this​ ​ set.​
+     * If​ ​ set​ ​ is​ Empty,​ ​ then​ ​ print a message "Set​ ​ Empty​ ​ Exception"
+     * @return last value.
      */
     public int last() {
     if (size != 0) {
