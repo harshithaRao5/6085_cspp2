@@ -127,7 +127,7 @@ class Set {
                 result[s++] = set[i];
             }
         }
-        //result = Arrays.copyOf(result, s);
+        result = Arrays.copyOf(result, s);
         return result;
     }
     /**
@@ -146,7 +146,7 @@ class Set {
                 result[s++] = set[i];
             }
         }
-        //result = Arrays.copyOf(result, s);
+        result = Arrays.copyOf(result, s);
         return result;
     }
     /**
