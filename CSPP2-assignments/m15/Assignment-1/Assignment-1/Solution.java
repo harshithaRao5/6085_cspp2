@@ -200,6 +200,20 @@ class List extends Exception{
     	}
     	return result;
     }
+    public int count(final int item) {
+         // write the logic
+        int count1 = 0;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                count1++;
+            }
+        }
+        if (count1 > 0) {
+            return count1;
+        } else {
+            return 0;
+        }
+    }
 }
     public class Solution {
     	private Solution() {
@@ -299,6 +313,9 @@ class List extends Exception{
                 break;
                 case "clear":
                     obj.clear();
+                break;
+                case "count":
+                System.out.println(obj.count(Integer.parseInt(tokens[1])));
                 break;
                 default:
                 break;
