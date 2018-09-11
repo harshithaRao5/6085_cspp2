@@ -153,7 +153,7 @@ class List extends Exception {
         } else {
             throw new Exception("Invalid Position Exception");
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
@@ -243,12 +243,14 @@ public final class Solution {
                 break;
                 case "indexOf":
                 if (tokens.length == 2) {
-                    System.out.println(obj.indexOf(Integer.parseInt(tokens[1])));
+                    System.out.println(obj.indexOf
+                        (Integer.parseInt(tokens[1])));
                 }
                 break;
                 case "contains":
                 if (tokens.length == 2) {
-                    System.out.println(obj.contains(Integer.parseInt(tokens[1])));
+                    System.out.println(obj.contains
+                        (Integer.parseInt(tokens[1])));
                 }
                 break;
                 case "addAll":
@@ -282,8 +284,7 @@ public final class Solution {
                     if (object != null) {
                         System.out.println(object);
                     }
-                }
-                    catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                     break;
