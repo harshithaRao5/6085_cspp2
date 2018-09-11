@@ -172,8 +172,8 @@ class Set {
  */
     public Set intersection(final Set anotherSet) {
         Set result = new Set();
-        for(int i = 0; i < set.length; i++) {
-            for(int j = 0; j < anotherSet.size(); j++) {
+        for (int i = 0; i < set.length; i++) {
+            for (int j = 0; j < anotherSet.size(); j++) {
                 if (set[i] == anotherSet.set[j]) {
                     result.add(set[i]);
                 }
@@ -271,7 +271,8 @@ public final class Solution {
                 String[] arrstring = tokens[1].split(",");
                 if (Integer.parseInt(arrstring[0])
                       > Integer.parseInt(arrstring[1])) {
-                    throw new Exception("Invalid Arguments to Subset Exception");
+                    throw new Exception(
+                        "Invalid Arguments to Subset Exception");
                 } else {
                     int[] subarray = s.subSet(Integer.parseInt(arrstring[0]),
                             Integer.parseInt(arrstring[1]));
@@ -281,8 +282,7 @@ public final class Solution {
                         System.out.println(subset);
                     }
                 }
-            }
-            catch(Exception e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
                 break;
@@ -303,10 +303,9 @@ public final class Solution {
             }
             break;
             case "last":
-            try{
+            try {
                 System.out.println(s.last());
-            }
-            catch(Exception e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
                 break;
