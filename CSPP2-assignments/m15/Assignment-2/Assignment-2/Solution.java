@@ -288,13 +288,15 @@ public final class Solution {
                 break;
             case "headSet":
             try {
-                int[] headarray = s.headSet(Integer.parseInt(tokens[1]));
+                if (Integer.parseInt(tokens[1]) <= s.get(0)) {
+                    throw new Exception("Set Empty Exception");
+                } else {
+                    int[] headarray = s.headSet(Integer.parseInt(tokens[1]));
                 Set headset = new Set();
                 headset.addAll(headarray);
                 if (headset != null) {
                     System.out.println(headset);
-                } else {
-                    throw new Exception("Set Empty Exception");
+                    }
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
