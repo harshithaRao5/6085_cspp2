@@ -117,6 +117,7 @@ class Set {
      * @param   fromElement  The from element.
      * @param   toElement    To element.
      * @return result
+     * @throws     Exception    { exception_description }
      */
     public int[] subSet(final int fromElement,
         final  int toElement)throws Exception {
@@ -137,6 +138,7 @@ class Set {
      * less​ ​ than​ ​ toElement.
      * @param toElement  To element.
      * @return result
+     * @throws     Exception  { exception_description }
      */
     public int[] headSet(final int toElement)throws Exception {
         int[] result = new int[x];
@@ -155,6 +157,7 @@ class Set {
      * If​ ​ set​ ​ is​ Empty,​ ​ then​ ​ print a
      *  message "Set​ ​ Empty​ ​ Exception"
      * @return last value.
+     * @throws     Exception  { exception_description }
      */
     public int last()throws Exception {
     if (size != 0) {
