@@ -187,13 +187,12 @@ class List extends Exception{
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(final int start, final int end) {
+    public List subList(final int start, final int end)throws Exception {
 
     	List result = new List();
     	if (start < 0 || end < 0 || start > size
         	|| end > size || start > end || size == 0) {
-        	System.out.println("Index Out of Bounds Exception");
-        	return null;
+        	throw new Exception("Index Out of Bounds Exception");
     	} else {
         	for (int i = start; i < end; i++) {
         	result.add(list[i]);
@@ -273,6 +272,7 @@ class List extends Exception{
 				}
 				break;
 				case "subList":
+				try {
                     if (tokens.length != 2) {
                         break;
                     }
@@ -282,9 +282,13 @@ class List extends Exception{
                     if (object != null) {
                         System.out.println(object);
                     }
+                }
+                    catch(Exception e) {
+                	System.out.println(e.getMessage());
+                }
                     break;
                 case "equals":
-                    if (tokens.length == 2) {
+                	if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
                         for (int k = 0; k < lt.length; k++) {
