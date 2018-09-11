@@ -213,10 +213,10 @@ public final class Solution {
     public static void main(final String[] args) {
         List obj = new List();
         Scanner scan = new Scanner(new BufferedInputStream(System.in));
-        while(scan.hasNext()) {
+        while (scan.hasNext()) {
             String line = scan.nextLine();
             String[] tokens = line.split(" ");
-            switch(tokens[0]) {
+            switch (tokens[0]) {
                 case "add":
                 if (tokens.length == 2) {
                     String[] t = tokens[1].split(",");
@@ -243,14 +243,14 @@ public final class Solution {
                 break;
                 case "indexOf":
                 if (tokens.length == 2) {
-                    System.out.println(obj.indexOf
-                        (Integer.parseInt(tokens[1])));
+                    System.out.println(obj.indexOf(
+                        Integer.parseInt(tokens[1])));
                 }
                 break;
                 case "contains":
                 if (tokens.length == 2) {
-                    System.out.println(obj.contains
-                        (Integer.parseInt(tokens[1])));
+                    System.out.println(obj.contains(
+                        Integer.parseInt(tokens[1])));
                 }
                 break;
                 case "addAll":
