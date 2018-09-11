@@ -4,13 +4,13 @@ import java.io.BufferedInputStream;
 /**
  * List of .
  */
-class List extends Exception{
+class List extends Exception {
 	/**
-	 * { var_description }
+	 * list array.
 	 */
 	private int[] list;
 	/**
-	 * { var_description }
+	 * size int.
 	 */
 	private int size;
 	/**
@@ -22,45 +22,32 @@ class List extends Exception{
 		size = 0;
 	}
 	/**
-     * Constructs the object.
-     *
-     * @param capacity int
-     */
-    public List(final int capacity) {
-        size = 0;
-        list = new int[capacity];
-    }
-	/**
-	 * { function_description }
+	 * resize method.
 	 */
 	private void resize() {
         list = Arrays.copyOf(list, list.length * 2);
     }
     /**
-     * { function_description }
-     *
+     * add element to the list.
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
     	if (size == list.length) {
     		resize();
     	}
     	list[size++] = item;
     }
     /**
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
+     *gives the size of array.
+     * @return size
      */
     public int size() {
     	return size;
     }
     /**
-     * { function_description }
-     *
+     *gives the index of the item.
      * @param      index  The index
-     *
-     * @return     { description_of_the_return_value }
+     * @return index
      */
     public int get(final int index) {
     	if (size < 0 || index >= size) {
@@ -87,13 +74,13 @@ class List extends Exception{
     	return result;
     }
     /**
-     * { function_description }
+     * checks whether the item is present in the array.
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return boolean
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
     	for (int i = 0; i < size; i++) {
     		if (list[i] == item) {
     			return true;
@@ -106,7 +93,7 @@ class List extends Exception{
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return index
      */
     public int indexOf(int item) {
     	for (int i = 0; i < size; i++) {
@@ -118,19 +105,15 @@ class List extends Exception{
     }
     /**
      * Adds all.
-     *
-     * @param      items  The items
-     *
-     * @return     { description_of_the_return_value }
+     * @param      newArray  The items
      */
-    public void addAll(int[] newArray) {
+    public void addAll(final int[] newArray) {
     	 for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
         }
     }
     /**
-     * Removes all.
-     *
+     * Removes the array elements from original.
      * @param      newArray  The new array
      */
     public void removeAll(final int[] newArray) {
@@ -143,24 +126,21 @@ class List extends Exception{
     	}
     }
     /**
-     * { function_description }
-     *
-     * @param      list1  The list 1
-     *
-     * @return     { description_of_the_return_value }
+     *checks whether two arrays are equal.
+     * @param list1  The list 1
+     * @return boolean
      */
     public boolean equals(final List list1) {
         return this.toString().equals(list1.toString());
     }
     /**
-     * { function_description }
+     * clear the entire list.
      */
     public void clear() {
         size = 0;
     }
     /**
-     * { function_description }
-     *
+     * remove particular index value.
      * @param      index  The index
      */
     public void remove(final int index) {
@@ -180,12 +160,11 @@ class List extends Exception{
 
     }
     /**
-     * { function_description }
-     *
+     *gives the sublist within the range.
      * @param      start  The start
      * @param      end    The end
      *
-     * @return     { description_of_the_return_value }
+     * @return sublist
      */
     public List subList(final int start, final int end)throws Exception {
 
@@ -200,6 +179,11 @@ class List extends Exception{
     	}
     	return result;
     }
+    /**
+     *gives the count of element.
+     * @param  item  The item
+     * @return count of variable.
+     */
     public int count(final int item) {
          // write the logic
         int count1 = 0;
@@ -215,16 +199,18 @@ class List extends Exception{
         }
     }
 }
-    public class Solution {
+/**
+ * main class function.
+ */
+public final class Solution {
     	private Solution() {
 
     	}
     /**
-     * { function_description }
-     *
-     * @param      args  The arguments
+     * main method.
+     * @param args String
      */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		List obj = new List();
 		Scanner scan = new Scanner(new BufferedInputStream(System.in));
 		while(scan.hasNext()) {
