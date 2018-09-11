@@ -203,6 +203,9 @@ class List extends Exception {
  * main class function.
  */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
         private Solution() {
 
         }
