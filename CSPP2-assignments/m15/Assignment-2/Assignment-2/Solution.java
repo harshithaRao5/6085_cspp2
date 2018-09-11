@@ -163,7 +163,7 @@ class Set {
     if (size != 0) {
         return set[size - 1];
     }
-    throw new Exception("Set Empty​ Exception");
+    throw new Exception("Set Empty Exception");
     }
     /**
  * get the common elements of two lists.
@@ -271,7 +271,7 @@ public final class Solution {
                 String[] arrstring = tokens[1].split(",");
                 if (Integer.parseInt(arrstring[0])
                       > Integer.parseInt(arrstring[1])) {
-                    throw new Exception("Invalid Arguments​ to Subset Exception");
+                    throw new Exception("Invalid Arguments to Subset Exception");
                 } else {
                     int[] subarray = s.subSet(Integer.parseInt(arrstring[0]),
                             Integer.parseInt(arrstring[1]));
