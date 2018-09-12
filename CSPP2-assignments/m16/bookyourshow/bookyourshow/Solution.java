@@ -120,7 +120,7 @@ class BookYourShow {
     /**
      * Constructs the object.
      */
-    public BookYourShow() {
+    BookYourShow() {
         /**
          *creating variable type object.
          */
