@@ -4,210 +4,212 @@ import java.util.Arrays;
  * Class for show.
  */
 class Show {
-	/**
-	 * variable that can be accessed within the class.
-	 */
-	private String movieName;
-	/**
-	 *variable that can be accessed within the class.
-	 */
-	private String dateTime;
-	/**
-	 *string array that can be accessed within the class.
-	 */
-	private String[] seats;
-	/**
-	 * Constructs the object.
-	 *
-	 * @param name  The name
-	 * @param t     date and time
-	 * @param seat  The seat
-	 */
-	public Show(String name, String t, String[] seat) {
-		this.movieName = name;
-		this.dateTime = t;
-		this.seats = seat;
-	}
-	/**
-	 * Gets the movie name.
-	 * @return The movie name.
-	 */
-	public String getMovieName() {
-		return this.movieName;
-	}
-	/**
-	 * Gets the date time.
-	 * @return The date time.
-	 */
-	public String getDateTime() {
-		return this.dateTime;
-	}
-	/**
-	 * Gets the seats.
-	 * @return The seats.
-	 */
-	public String[] getSeats() {
-		return this.seats;
-	}
-	/**
-	 * Sets the seat.
-	 * @param index The index
-	 * @param set The et
-	 */
-	public void setSeat(int index, String set) {
-		seats[index] = set;
-	}
-	/**
-	 * Returns a string representation of the object.
-	 * @return String representation of the object.
-	 */
-	public String toString() {
-		return this.movieName + "," + this.dateTime;
-	}
+    /**
+     * variable that can be accessed within the class.
+     */
+    private String movieName;
+    /**
+     *variable that can be accessed within the class.
+     */
+    private String dateTime;
+    /**
+     *string array that can be accessed within the class.
+     */
+    private String[] seats;
+    /**
+     * Constructs the object.
+     *
+     * @param name  The name
+     * @param t     date and time
+     * @param seat  The seat
+     */
+    Show(final String name, final String t, final String[] seat) {
+        this.movieName = name;
+        this.dateTime = t;
+        this.seats = seat;
+    }
+    /**
+     * Gets the movie name.
+     * @return The movie name.
+     */
+    public String getMovieName() {
+        return this.movieName;
+    }
+    /**
+     * Gets the date time.
+     * @return The date time.
+     */
+    public String getDateTime() {
+        return this.dateTime;
+    }
+    /**
+     * Gets the seats.
+     * @return The seats.
+     */
+    public String[] getSeats() {
+        return this.seats;
+    }
+    /**
+     * Sets the seat.
+     * @param index The index
+     * @param set The et
+     */
+    public void setSeat(final int index, final String set) {
+        seats[index] = set;
+    }
+    /**
+     * Returns a string representation of the object.
+     * @return String representation of the object.
+     */
+    public String toString() {
+        return this.movieName + "," + this.dateTime;
+    }
 }
 /**
  * Class for patron.
  */
 class Patron {
-	/**
-	 *variable that can be accessed within the class.
-	 */
-	private String userName;
-	/**
-	 *variable that can be accessed within the class.
-	 */
-	private String mobileNumber;
-	/**
-	 * Constructs the object.
-	 *
-	 * @param name    The name
-	 * @param number  The number
-	 */
-	public Patron(String name, String number) {
-		this.userName = name;
-		this.mobileNumber = number;
-	}
-	/**
-	 * Gets the user name.
-	 *
-	 * @return The user name.
-	 */
-	public String getUserName() {
-		return this.userName;
-	}
-	/**
-	 * Gets the mobile number.
-	 *
-	 * @return The mobile number.
-	 */
-	public String getMobileNumber() {
-		return this.mobileNumber;
-	}
+    /**
+     *variable that can be accessed within the class.
+     */
+    private String userName;
+    /**
+     *variable that can be accessed within the class.
+     */
+    private String mobileNumber;
+    /**
+     * Constructs the object.
+     *
+     * @param name    The name
+     * @param number  The number
+     */
+    Patron(final String name, final String number) {
+        this.userName = name;
+        this.mobileNumber = number;
+    }
+    /**
+     * Gets the user name.
+     *
+     * @return The user name.
+     */
+    public String getUserName() {
+        return this.userName;
+    }
+    /**
+     * Gets the mobile number.
+     *
+     * @return The mobile number.
+     */
+    public String getMobileNumber() {
+        return this.mobileNumber;
+    }
 
 }
 /**
  * Class for book your show.
  */
 class BookYourShow {
-	/**
-	 * creating variable type object.
-	 */
-	List<Show> showDetails;
-	/**
-	 * creating variable type object.
-	 */
-	List<String> bookedTickets;
-	/**
-	 * Constructs the object.
-	 */
-	public BookYourShow() {
-		/**
-		 *creating variable type object.
-		 */
-		showDetails = new List<Show>();
-		/**
-		 *creating variable type object.
-		 */
-		bookedTickets = new List<String>();
-	}
-	/**
-	 * Adds a show.
-	 *
-	 * @param obj   The object
-	 */
-	public void addAShow(Show obj) {
-		showDetails.add(obj);
+    /**
+     * creating variable type object.
+     */
+    List<Show> showDetails;
+    /**
+     * creating variable type object.
+     */
+    List<String> bookedTickets;
+    /**
+     * Constructs the object.
+     */
+    public BookYourShow() {
+        /**
+         *creating variable type object.
+         */
+        showDetails = new List<Show>();
+        /**
+         *creating variable type object.
+         */
+        bookedTickets = new List<String>();
+    }
+    /**
+     * Adds a show.
+     *
+     * @param obj   The object
+     */
+    public void addAShow(final Show obj) {
+        showDetails.add(obj);
 
-	}
-	/**
-	 * Users should be able to ​getAShow() by
-	 * specifying the movie name ​,date and time.
-	 * This method should return all the
-	 * shows that matches the given details.
-	 * @param      movie  The movie
-	 * @param      time   The time
-	 * @return     A show.
-	 */
-	public Show getAShow(String movie, String time) {
-		for (int i = 0; i < showDetails.size(); i++) {
-			if (showDetails.get(i).getMovieName().equals(movie) &&
-				showDetails.get(i).getDateTime().equals(time)) {
-				return showDetails.get(i);
-			}
-		}
-		return null;
-	}
-	/**
-	 * Users should be able to bookAShow() by
-	 * specifying his name,movie name, Mobile
-	 * Number, Date-Time and Seat numbers. If the
-	 * seats are not available then the booking
-	 *  should not be possible.
-	 * @param      movie  The movie
-	 * @param      time   The time
-	 * @param      obj    The object
-	 * @param      seats  The seats
-	 *
-	 */
-	public void bookAShow(String movie, String time, Patron obj, String[] seats) {
-		Show movieData = getAShow(movie, time);
-		if (movieData != null) {
-			for (int i = 0; i < movieData.getSeats().length; i++) {
-				for (int j = 0; j < seats.length; j++) {
-					if (seats[j].equals(movieData.getSeats()[i])) {
-						movieData.setSeat(i, "N/A");
-						bookedTickets.add(obj.getMobileNumber() + " " + movie + " " + time);
-					}
-				}
-			}
-		}
-		else {
-			System.out.println("No show");
-		}
-	}
-	/**
-	 *
-	 * @param movie The movie
-	 * @param time The time
-	 * @param mobileNumber  The mobile number
-	 */
-	public void printTicket(String movie, String time, String mobileNumber) {
-		for (int i = 0; i < bookedTickets.size(); i++) {
-			if ((mobileNumber + " " + movie + " " + time).equals(bookedTickets.get(i))) {
-				System.out.println(mobileNumber + " " + movie + " " + time);
-				return;
-			}
-		}
-		System.out.println("Invalid");
-	}
-	/**
-	 * Shows all.
-	 */
-	public void showAll() {
-		for (int i = 0; i < showDetails.size(); i++) {
-			System.out.println(showDetails.get(i).toString()+ "," + Arrays.toString(showDetails.get(i).getSeats()).replace(" ",""));
-		}
-	}
+    }
+    /**
+     * Users should be able to ​getAShow() by
+     * specifying the movie name ​,date and time.
+     * This method should return all the
+     * shows that matches the given details.
+     * @param      movie  The movie
+     * @param      time   The time
+     * @return     A show.
+     */
+    public Show getAShow(final String movie, final String time) {
+        for (int i = 0; i < showDetails.size(); i++) {
+            if (showDetails.get(i).getMovieName().equals(movie)
+                && showDetails.get(i).getDateTime().equals(time)) {
+                return showDetails.get(i);
+            }
+        }
+        return null;
+    }
+    /**
+     * Users should be able to bookAShow() by
+     * specifying his name,movie name, Mobile
+     * Number, Date-Time and Seat numbers. If the
+     * seats are not available then the booking
+     *  should not be possible.
+     * @param      movie  The movie
+     * @param      time   The time
+     * @param      obj    The object
+     * @param      seats  The seats
+     *
+     */
+    public void bookAShow(final String movie, final String
+     time, final Patron obj, final String[] seats) {
+        Show movieData = getAShow(movie, time);
+        if (movieData != null) {
+            for (int i = 0; i < movieData.getSeats().length; i++) {
+                for (int j = 0; j < seats.length; j++) {
+                    if (seats[j].equals(movieData.getSeats()[i])) {
+                        movieData.setSeat(i, "N/A");
+                        bookedTickets.add(obj.getMobileNumber() + " " + movie + " " + time);
+                    }
+                }
+            }
+        } else {
+            System.out.println("No show");
+        }
+    }
+    /**
+     *
+     * @param movie The movie
+     * @param time The time
+     * @param mobileNumber  The mobile number
+     */
+    public void printTicket(final String movie, final
+     String time, final String mobileNumber) {
+        for (int i = 0; i < bookedTickets.size(); i++) {
+            if ((mobileNumber + " " + movie + " " + time).equals(bookedTickets.get(i))) {
+                System.out.println(mobileNumber + " " + movie + " " + time);
+                return;
+            }
+        }
+        System.out.println("Invalid");
+    }
+    /**
+     * Shows all.
+     */
+    public void showAll() {
+        for (int i = 0; i < showDetails.size(); i++) {
+            System.out.println(showDetails.get(i).toString() + ","
+                + Arrays.toString(showDetails.get(i).getSeats()).replace(" ", ""));
+        }
+    }
 
 }
 /**
