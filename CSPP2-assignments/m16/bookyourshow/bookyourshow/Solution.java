@@ -182,7 +182,7 @@ class BookYourShow {
 			}
 		}
 		else {
-			System.out.println("No Show");
+			System.out.println("No show");
 		}
 	}
 	/**
