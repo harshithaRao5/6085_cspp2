@@ -112,11 +112,11 @@ class BookYourShow {
     /**
      * creating variable type object.
      */
-    List<Show> showDetails;
+    private List<Show> showDetails;
     /**
      * creating variable type object.
      */
-    List<String> bookedTickets;
+    private List<String> bookedTickets;
     /**
      * Constructs the object.
      */
