@@ -51,8 +51,14 @@ public final class Solution {
             }
         }
     }
-List<Quiz> quiz = new List<Quiz>();
-List<Scanner> s = new List<Scanner>();
+    /**
+     * { var_description }
+     */
+private List<Quiz> quiz = new List<Quiz>();
+/**
+ * { var_description }
+ */
+private List<Scanner> s = new List<Scanner>();
 
     /**
      * Loads questions.
@@ -61,7 +67,8 @@ List<Scanner> s = new List<Scanner>();
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s,
+        final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -82,11 +89,12 @@ List<Scanner> s = new List<Scanner>();
     /**
      * Starts a quiz.
      *
-     * @param      s            The scanner object for user input
+     * @param      sc            The scanner object for user input
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner sc, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner sc,
+        final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
@@ -101,7 +109,8 @@ List<Scanner> s = new List<Scanner>();
             String[] data = line.split(":");
             String[] tokens = data[1].split(",");
             System.out.println(data[0] + "(" + data[3] + ")");
-            System.out.println(tokens[0] + "    " + tokens[1] + "   " + tokens[2] + "   " + tokens[3] + "\n");
+            System.out.println(tokens[0] + "    " + tokens[1] + "   "
+                + tokens[2] + "   " + tokens[3] + "\n");
         }
         }
 
@@ -118,6 +127,9 @@ List<Scanner> s = new List<Scanner>();
 
     }
 }
+/**
+ * Class for quiz.
+ */
 class Quiz {
     private int questionCount;
     private int answerCount;
@@ -126,17 +138,31 @@ class Quiz {
     //     this.questionCount = qc;
     //     this.answerCount = ac;
     // }
-
+    //
     public int getQuestionCount() {
         return this.questionCount;
     }
     public int getAnswerCount() {
         return this.answerCount;
     }
-    public int setQuestionCount(int change) {
+/**
+ * Sets the question count.
+ *
+ * @param      change  The change
+ *
+ * @return     { description_of_the_return_value }
+ */
+    public int setQuestionCount(final int change) {
         return this.questionCount = change;
     }
-    public int setAnswerCount(int change) {
+    /**
+     * Sets the answer count.
+     *
+     * @param      change  The change
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int setAnswerCount(final int change) {
         return this.answerCount = change;
     }
 }
