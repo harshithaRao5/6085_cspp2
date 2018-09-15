@@ -65,9 +65,10 @@ List<Scanner> s = new List<Scanner>();
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        //Quiz questionobj = new Quiz();
         if (questionCount >= 1) {
             //for (int i = 0; i < questionCount; i++) {
-
+                //quiz.add(questionCount);
                 System.out.println(questionCount + " are added to the quiz");
         //}
 
@@ -85,14 +86,23 @@ List<Scanner> s = new List<Scanner>();
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner sc, final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        for (int i = 1; i <= answerCount; i++) {
-                System.out.println("question text " + i + "(" + i + ")");
-                System.out.println("choice 1    choice 2    choice 3    choice 4" + "\n");
-            }
+        // for (int i = 1; i <= answerCount; i++) {
+        //         System.out.println("question text " + i + "(" + i + ")");
+        //         System.out.println("choice 1    choice 2    choice 3    choice 4" + "\n");
+        //     }
+        // }
+
+        for (int i = 0; i < quiz.getAnswerCount(); i++) {
+            String line = sc.nextLine();
+            String[] data = line.split(":");
+            String[] tokens = data[1].split(",");
+            System.out.println(data[0] + "(" + data[3] + ")");
+            System.out.println(tokens[0] + "    " + tokens[1] + "   " + tokens[2] + "   " + tokens[3] + "\n");
+        }
         }
 
     /**
@@ -102,7 +112,10 @@ List<Scanner> s = new List<Scanner>();
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        System.out.println(quiz);
+        for (int i = 0; i < quiz.getAnswerCount(); i++) {
+
+        }
+
     }
 }
 class Quiz {
