@@ -1,11 +1,21 @@
+/**
+ * main method.
+ */
 import java.util.Scanner;
-
+/**
+ * class Solution.
+ */
 public final class Solution {
-
+/**
+ * Constructs the object.
+ */
     private Solution() {
 
     }
-
+/**
+ *main method.
+ * @param args  The arguments
+ */
     public static void main(final String[] args) {
         ShoppingCart sc = new ShoppingCart();
         Scanner scan = new Scanner(System.in);
