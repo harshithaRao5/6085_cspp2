@@ -131,13 +131,13 @@ class ShoppingCart {
     public void applyCoupon(final String coupon) {
         if (isCouponApplied == false) {
             if (coupon.equals("IND10")) {
-            couponCode = 10/100;
+            couponCode = 0.1f;
             } else if (coupon.equals("IND20")) {
-                couponCode = 20/100;
+                couponCode = 0.2f;
             } else if (coupon.equals("IND30")) {
-                couponCode = 30/100;
+                couponCode = 0.3f;
             } else if (coupon.equals("IND50")) {
-                couponCode = 50/100;
+                couponCode = 0.5f;
             } else {
                 System.out.println("Invalid coupon");
                 return;
