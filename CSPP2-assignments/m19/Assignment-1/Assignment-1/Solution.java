@@ -10,6 +10,9 @@ public final class Solution {
     private Solution() {
         // leave this blank
     }
+    public static List<Quiz> quizob = new List<Quiz>();
+    public static Quiz questionobj;
+    public static Quiz responseobj;
     /**
      * main function to execute test cases.
      *
@@ -51,14 +54,6 @@ public final class Solution {
             }
         }
     }
-    /**
-     * { var_description }
-     */
-private List<Quiz> quiz = new List<Quiz>();
-/**
- * { var_description }
- */
-private List<Scanner> s = new List<Scanner>();
 
     /**
      * Loads questions.
@@ -103,17 +98,20 @@ private List<Scanner> s = new List<Scanner>();
         //         System.out.println("choice 1    choice 2    choice 3    choice 4" + "\n");
         //     }
         // }
-
-        for (int i = 0; i < quiz.getAnswerCount(); i++) {
+        for (int i = 0; i < quizob.size(); i++) {
+            String[] choices = quizob.get(i).getChoices();
+            System.out.println(quizob.get(i).getquestion() + "(" + quizob.get(i).getMarks() + ")");
+            System.out.println(choices[0] + "\t" + choices[1] + "\t"
+                + choices[2] + "\t" + choices[3] + "\n");
+        }
+        String[] data = new String[answerCount];
+        for(int i = 0; i < answerCount; i++) {
             String line = sc.nextLine();
-            String[] data = line.split(":");
-            String[] tokens = data[1].split(",");
-            System.out.println(data[0] + "(" + data[3] + ")");
-            System.out.println(tokens[0] + "    " + tokens[1] + "   "
-                + tokens[2] + "   " + tokens[3] + "\n");
+            String[] dataList = line.split(" ");
+            data[i] = dataList[1];
         }
-        }
-
+        responseobj = new Quiz(data);
+}
     /**
      * Displays the score report
      *
@@ -121,29 +119,67 @@ private List<Scanner> s = new List<Scanner>();
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        for (int i = 0; i < quiz.getAnswerCount(); i++) {
+       if (quizob.size() > 0) {
+        int totalScore = 0;
+        for (int i = 0; i < quizob.size(); i++) {
+            System.out.println(quizob.get(i).getquestion());
+            if (quizob.get(i).getAnswer().equals(responseobj.getResponses())) {
+                System.out.println(" Correct Answer! - Marks Awarded: " + quizob.get(i).getMarks());
+                totalScore = totalScore + Integer.parseInt(quizob.get(i).getMarks());
+            } else {
+                System.out.println(" Wrong Answer! - Penalty: " + quizob.get(i).getPenalty());
+                totalScore = totalScore + Integer.parseInt(quizob.get(i).getPenalty());
+            }
 
         }
-
+        System.out.println("Total Score: " + totalScore);
+       }
     }
 }
 /**
  * Class for quiz.
  */
 class Quiz {
-    private int questionCount;
-    private int answerCount;
+    private String question;
+    private String answer;
+    private String[] choices;
+    private String[] responses;
+    private String marks;
+    private String penalty;
+    Quiz() {
 
-    // Quiz(int qc, int ac) {
-    //     this.questionCount = qc;
-    //     this.answerCount = ac;
-    // }
-    //
-    public int getQuestionCount() {
-        return this.questionCount;
     }
-    public int getAnswerCount() {
-        return this.answerCount;
+
+    Quiz(String[] res) {
+        this.responses = res;
+
+    }
+
+    Quiz(String qc, String ac, String[] ch, String m, String p) {
+        this.question = qc;
+        this.answer = ac;
+        this.choices = ch;
+        this.marks = m;
+        this.penalty = p;
+    }
+
+    public String getquestion() {
+        return this.question;
+    }
+    public String getAnswer() {
+        return this.answer;
+    }
+    public String[] getChoices() {
+        return this.choices;
+    }
+    public String[] getResponses() {
+        return this.responses;
+    }
+    public String getMarks() {
+        return this.marks;
+    }
+    public String getPenalty() {
+        return this.penalty;
     }
 /**
  * Sets the question count.
@@ -152,8 +188,8 @@ class Quiz {
  *
  * @return     { description_of_the_return_value }
  */
-    public int setQuestionCount(final int change) {
-        return this.questionCount = change;
+    public String setquestion(final String change) {
+        return this.question = change;
     }
     /**
      * Sets the answer count.
@@ -162,7 +198,7 @@ class Quiz {
      *
      * @return     { description_of_the_return_value }
      */
-    public int setAnswerCount(final int change) {
-        return this.answerCount = change;
+    public String setAnswer(final String change) {
+        return this.answer = change;
     }
 }
