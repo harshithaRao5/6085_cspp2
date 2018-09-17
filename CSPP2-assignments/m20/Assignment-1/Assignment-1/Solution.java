@@ -262,6 +262,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+
         if (q == 0) {
         	throw new Exception("Quiz does not have questions");
         }
@@ -319,13 +320,14 @@ public final class Solution {
         // }
         //questionob.getResponse()
        	if (quiz.getSize() > 0) {
+       		return;
+       	}
        	for (int i = 0; i < q; i++) {
-       		String userAnswer = scan.nextLine();
         	System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
         	System.out.println(Arrays.toString(quiz.getQuestion(i).getChoice()).replace("[", "").replace("]","").replace(", ", "\t"));
       		System.out.println();
-      		quiz.getQuestion(i).setResponse(scan.next());
-        }
+      		quiz.getQuestion(i).setResponse(scan.nextLine());
+
        	}
 
     }
@@ -336,6 +338,9 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
+        if (quiz.getSize() == 0) {
+        	return;
+        }
         int score = 0;
         for (int i = 0; i < quiz.getSize(); i++) {
         	System.out.println(quiz.getQuestion(i).getQuestionText());
