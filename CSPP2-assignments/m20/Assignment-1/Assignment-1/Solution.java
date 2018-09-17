@@ -277,7 +277,7 @@ public final class Solution {
 	        		String[] choices = tokens[1].split(",");
 	        		if (choices.length < 2) {
 	        			throw new Exception(tokens[0]
-	        				+ "  does not have enough answer choices");
+	        				+"  does not have enough answer choices");
 
 	        		}
 	        		if (Integer.parseInt(tokens[2]) < 0 &&
