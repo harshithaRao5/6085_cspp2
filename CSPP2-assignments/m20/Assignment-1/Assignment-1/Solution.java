@@ -60,21 +60,16 @@ class Question {
      */
     public boolean evaluateResponse(final String choice) {
 
-        return getCorrectAnswer().equals(choice);
+        return choices[correctAnswer - 1].equals(choice);
     }
     /**
      * Gets the correct answer.
      *
      * @return     The correct answer.
      */
-    public String getCorrectAnswer() {
-    	// String correctAnswer2 = correctAnswer + "";
-    	//return correctAnswer2;
-    	if (this.choices.length >= this.correctAnswer) {
-    		return this.choices[this.correctAnswer - 1];
-    	}
-    	return null;
-
+    public int getCorrectAnswer() {
+    	//String correctAnswer2 = correctAnswer + "";
+        return this.correctAnswer;
     }
     /**
      * Gets the question text.
@@ -133,6 +128,7 @@ class Question {
         String s = "";
         return s;
     }
+
 }
 /**
  * Class for quiz.
