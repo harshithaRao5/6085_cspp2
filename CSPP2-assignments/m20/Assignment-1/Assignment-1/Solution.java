@@ -77,7 +77,7 @@ class Question {
         return this.qu
      * @return     The question text.
      */
-    public String getQuestionText(){
+    public String getQuestionText() {
     return this.questiontext;
     }
     /**
@@ -171,15 +171,20 @@ class Quiz {
     public Question getQuestion(final int index) {
         return questions[index];
     }
-    // /**
-    //  * Shows the report.
-    //  *
-    //  * @return  String
-    //  */
-    // public String showReport() {
-    //     String s = "";
-    //     return s;
-    // }
+    /**
+     * Shows the report.
+     *
+     * @return  String
+     */
+    public String showReport() {
+        String s = "";
+        return s;
+    }
+    /**
+     * Gets the size.
+     *
+     * @return     The size.
+     */
     public int getSize() {
     	return this.size;
     }
@@ -193,14 +198,19 @@ class Quiz {
  */
 
 public final class Solution {
+	private static final int three = 3;
+    private static final int four = 4;
+    private static final int five = 5;
      /**
      * Constructs the object.
      */
     private Solution() {
         // leave this blank
     }
-    //public static Quiz quizob;
-	public static Question questionob;
+    /**
+     * declaring object for class question.
+     */
+	private static Question questionob;
     /**
      * main function to execute test cases.
      *
@@ -270,8 +280,10 @@ public final class Solution {
         	for (int i = 0; i < q; i++) {
         		String line = scan.nextLine();
         		String[] tokens = line.split(":");
-	        	if (tokens.length < 5 || tokens[0].length() <= 0 || tokens[1].length() <= 0 ||
-	        	 tokens[2].length() <= 0 || tokens[3].length() <= 0 || tokens[4].length() <= 0) {
+
+	        	if (tokens.length < five || tokens[0].length() <= 0
+	        		|| tokens[1].length() <= 0 || tokens[2].length() <= 0
+	        		|| tokens[3].length() <= 0 || tokens[4].length() <= 0) {
 	        		throw new Exception("Error! Malformed question");
 	        		}
 	        		String[] choices = tokens[1].split(",");
@@ -280,24 +292,24 @@ public final class Solution {
 	        				+" does not have enough answer choices");
 
 	        		}
-	        		if (Integer.parseInt(tokens[2]) < 0 ||
-	        			Integer.parseInt(tokens[2]) > choices.length) {
-	        			throw new Exception(
-	        				"Error! Correct answer choice number is out of range for " + tokens[0]);
+	        		if (Integer.parseInt(tokens[2]) < 0
+	        			|| Integer.parseInt(tokens[2]) > choices.length) {
+	        			throw new Exception("Error! Correct answer"
+	        				+ "choice number is out of range for " + tokens[0]);
 
 	        		}
-	        		if (Integer.parseInt(tokens[3]) <= 0) {
+	        		if (Integer.parseInt(tokens[three]) <= 0) {
 	        			throw new Exception("Invalid max marks for " + tokens[0]);
 
 	        		}
-	        		if (Integer.parseInt(tokens[4]) > 0) {
+	        		if (Integer.parseInt(tokens[four]) > 0) {
 	        			throw new Exception("Invalid penalty for " +  tokens[0]);
 
 	        		}
 
 	        		questionob = new Question(tokens[0], tokens[1]
 	        			.split(","), Integer.parseInt(tokens[2]),
-	        			Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+	        			Integer.parseInt(tokens[three]), Integer.parseInt(tokens[four]));
 	        		quiz.addQuestion(questionob);
         		}
         		System.out.println(q + " are added to the quiz");
@@ -351,8 +363,7 @@ public final class Solution {
         int score = 0;
         for (int i = 0; i < quiz.getSize(); i++) {
         	System.out.println(quiz.getQuestion(i).getQuestionText());
-        	if(quiz.getQuestion(i).evaluateResponse(quiz.getQuestion(i).getResponse())) {
-
+        	if (quiz.getQuestion(i).evaluateResponse(quiz.getQuestion(i).getResponse())) {
         		score += quiz.getQuestion(i).getMaxMarks();
         		System.out.println(" Correct Answer! - Marks Awarded: "
         			+ quiz.getQuestion(i).getMaxMarks());
