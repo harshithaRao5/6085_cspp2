@@ -291,8 +291,8 @@ public final class Solution {
         		String[] tokens = line.split(":");
 	        	if (tokens.length < FIVE || tokens[
 	        		0].length() <= 0 || tokens[1].length()
-	        		 <= 0 || tokens[2].length() <= 0 ||
-	        		 tokens[THREE].length() <= 0 || tokens[
+	        		 <= 0 || tokens[2].length() <= 0
+	        		 || tokens[THREE].length() <= 0 || tokens[
 	        		 FOUR].length() <= 0) {
 	        		throw new Exception("Error! Malformed question");
 	        		}
@@ -305,25 +305,26 @@ public final class Solution {
 	        		if (Integer.parseInt(tokens[2]) < 0
 	        			|| Integer.parseInt(tokens[2]) > choices.length) {
 	        			throw new Exception("Error! Correct answer"
-	        				+ " choice number is out of range for " +
-	        				 tokens[0]);
+	        				+ " choice number is out of range for "
+	        				 + tokens[0]);
 
 	        		}
 	        		if (Integer.parseInt(tokens[THREE]) <= 0) {
-	        			throw new Exception("Invalid max marks for " +
-	        			 tokens[0]);
+	        			throw new Exception("Invalid max marks for "
+	        				+ tokens[0]);
 
 	        		}
 	        		if (Integer.parseInt(tokens[FOUR]) > 0) {
-	        			throw new Exception("Invalid penalty for " +
-	        			  tokens[0]);
+	        			throw new Exception("Invalid penalty for "
+	        			  + tokens[0]);
 
 	        		}
 
 	        		questionob = new Question(tokens[0],
 	        			tokens[1].split(","), Integer.parseInt(
-	        				tokens[2]),Integer.parseInt(
-	        				tokens[THREE]), Integer.parseInt(tokens[FOUR]));
+	        				tokens[2]), Integer.parseInt(
+	        				tokens[THREE]),
+	        				Integer.parseInt(tokens[FOUR]));
 	        		quiz.addQuestion(questionob);
         		}
         		System.out.println(q + " are added to the quiz");
