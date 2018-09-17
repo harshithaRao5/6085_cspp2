@@ -73,11 +73,12 @@ class Question {
     }
     /**
      * Gets the question text.
-     *
+     *uestionText() {
+        return this.qu
      * @return     The question text.
      */
-    public String getQuestionText() {
-        return this.questiontext;
+    public String getQuestionText(){
+    return this.questiontext;
     }
     /**
      * Gets the choice.
@@ -170,15 +171,15 @@ class Quiz {
     public Question getQuestion(final int index) {
         return questions[index];
     }
-    /**
-     * Shows the report.
-     *
-     * @return  String
-     */
-    public String showReport() {
-        String s = "";
-        return s;
-    }
+    // /**
+    //  * Shows the report.
+    //  *
+    //  * @return  String
+    //  */
+    // public String showReport() {
+    //     String s = "";
+    //     return s;
+    // }
     public int getSize() {
     	return this.size;
     }
@@ -323,7 +324,7 @@ public final class Solution {
         // 	questionob.get(i).setResponse();
         // }
         //questionob.getResponse()
-       	if (quiz.getSize() > 0) {
+       	if (quiz.getSize() <= 0) {
        		return;
        	}
        	for (int i = 0; i < q; i++) {
@@ -351,12 +352,13 @@ public final class Solution {
         for (int i = 0; i < quiz.getSize(); i++) {
         	System.out.println(quiz.getQuestion(i).getQuestionText());
         	if(quiz.getQuestion(i).evaluateResponse(quiz.getQuestion(i).getResponse())) {
+
         		score += quiz.getQuestion(i).getMaxMarks();
         		System.out.println(" Correct Answer! - Marks Awarded: "
-        			+ quiz.getQuestion(i).getMaxMarks() );
+        			+ quiz.getQuestion(i).getMaxMarks());
         	} else {
         	score += quiz.getQuestion(i).getPenalty();
-        	System.out.println(" Correct Answer! - Marks Awarded: "
+        	System.out.println(" Wrong Answer! - Penalty: "
         		+ quiz.getQuestion(i).getMaxMarks() );
         }
         }
