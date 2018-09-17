@@ -359,7 +359,7 @@ public final class Solution {
         	} else {
         	score += quiz.getQuestion(i).getPenalty();
         	System.out.println(" Wrong Answer! - Penalty: "
-        		+ quiz.getQuestion(i).getMaxMarks() );
+        		+ quiz.getQuestion(i).getPenalty() );
         }
         }
     	System.out.println("Total Score: " + score);
