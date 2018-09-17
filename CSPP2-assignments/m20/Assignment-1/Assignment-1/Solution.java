@@ -68,8 +68,13 @@ class Question {
      * @return     The correct answer.
      */
     public String getCorrectAnswer() {
-    	String correctAnswer2 = correctAnswer + "";
-        return correctAnswer2;
+    	// String correctAnswer2 = correctAnswer + "";
+    	//return correctAnswer2;
+    	if (this.choices.length >= this.correctAnswer) {
+    		return this.choices[this.correctAnswer - 1];
+    	}
+    	return null;
+
     }
     /**
      * Gets the question text.
@@ -178,12 +183,12 @@ class Quiz {
         String s = "";
         int score = 0;
         for (int i = 0; i < this.size; i++) {
-        	s += questions[i].getQuestionText();
+        	s += questions[i].getQuestionText() + "\n";
         	if (questions[i].evaluateResponse(questions[i].getResponse())) {
-        		s += " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks();
+        		s += " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks() + "\n";
         		score += questions[i].getMaxMarks();
         	} else {
-        		s += " Wrong Answer! - Penalty: " + questions[i].getPenalty();
+        		s += " Wrong Answer! - Penalty: " + questions[i].getPenalty() + "\n";
         		score += questions[i].getPenalty();
         	}
         }
