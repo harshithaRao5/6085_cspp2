@@ -283,6 +283,8 @@ public final class Solution {
         		}
         		if (Integer.parseInt(tokens[4]) <= 0) {
         			System.out.println("Invalid penalty for " +  quiz.getQuestion(i).getQuestionText());
+        		} else {
+        			System.out.println("Error! Malformed question");
         		}
 
         	}
