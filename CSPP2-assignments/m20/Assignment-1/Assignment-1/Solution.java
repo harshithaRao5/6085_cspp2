@@ -198,9 +198,18 @@ class Quiz {
  */
 
 public final class Solution {
-	private static final int three = 3;
-    private static final int four = 4;
-    private static final int five = 5;
+	/**
+	 * magic number case.
+	 */
+	private static final int THREE = 3;
+	/**
+	 * magic number case.
+	 */
+    private static final int FOUR = 4;
+    /**
+     * magic number case.
+     */
+    private static final int FIVE = 5;
      /**
      * Constructs the object.
      */
@@ -280,36 +289,41 @@ public final class Solution {
         	for (int i = 0; i < q; i++) {
         		String line = scan.nextLine();
         		String[] tokens = line.split(":");
-
-	        	if (tokens.length < five || tokens[0].length() <= 0
-	        		|| tokens[1].length() <= 0 || tokens[2].length() <= 0
-	        		|| tokens[3].length() <= 0 || tokens[4].length() <= 0) {
+	        	if (tokens.length < FIVE || tokens[
+	        		0].length() <= 0 || tokens[1].length()
+	        		 <= 0 || tokens[2].length() <= 0 ||
+	        		 tokens[THREE].length() <= 0 || tokens[
+	        		 FOUR].length() <= 0) {
 	        		throw new Exception("Error! Malformed question");
 	        		}
 	        		String[] choices = tokens[1].split(",");
 	        		if (choices.length < 2) {
 	        			throw new Exception(tokens[0]
-	        				+" does not have enough answer choices");
+	        				+ " does not have enough answer choices");
 
 	        		}
 	        		if (Integer.parseInt(tokens[2]) < 0
 	        			|| Integer.parseInt(tokens[2]) > choices.length) {
 	        			throw new Exception("Error! Correct answer"
-	        				+ "choice number is out of range for " + tokens[0]);
+	        				+ " choice number is out of range for " +
+	        				 tokens[0]);
 
 	        		}
-	        		if (Integer.parseInt(tokens[three]) <= 0) {
-	        			throw new Exception("Invalid max marks for " + tokens[0]);
+	        		if (Integer.parseInt(tokens[THREE]) <= 0) {
+	        			throw new Exception("Invalid max marks for " +
+	        			 tokens[0]);
 
 	        		}
-	        		if (Integer.parseInt(tokens[four]) > 0) {
-	        			throw new Exception("Invalid penalty for " +  tokens[0]);
+	        		if (Integer.parseInt(tokens[FOUR]) > 0) {
+	        			throw new Exception("Invalid penalty for " +
+	        			  tokens[0]);
 
 	        		}
 
-	        		questionob = new Question(tokens[0], tokens[1]
-	        			.split(","), Integer.parseInt(tokens[2]),
-	        			Integer.parseInt(tokens[three]), Integer.parseInt(tokens[four]));
+	        		questionob = new Question(tokens[0],
+	        			tokens[1].split(","), Integer.parseInt(
+	        				tokens[2]),Integer.parseInt(
+	        				tokens[THREE]), Integer.parseInt(tokens[FOUR]));
 	        		quiz.addQuestion(questionob);
         		}
         		System.out.println(q + " are added to the quiz");
@@ -342,8 +356,9 @@ public final class Solution {
        	for (int i = 0; i < q; i++) {
         	System.out.println(quiz.getQuestion(i).getQuestionText()
         		+ "(" + quiz.getQuestion(i).getMaxMarks() + ")");
-        	System.out.println(Arrays.toString(quiz.getQuestion(i).
-        		getChoice()).replace("[", "").replace("]","").replace(", ", "\t"));
+        	System.out.println(Arrays.toString(quiz.
+        		getQuestion(i).getChoice()).replace("[", "").
+        		replace("]", "").replace(", ", "\t"));
       		System.out.println();
       		quiz.getQuestion(i).setResponse(scan.nextLine());
 
@@ -363,14 +378,15 @@ public final class Solution {
         int score = 0;
         for (int i = 0; i < quiz.getSize(); i++) {
         	System.out.println(quiz.getQuestion(i).getQuestionText());
-        	if (quiz.getQuestion(i).evaluateResponse(quiz.getQuestion(i).getResponse())) {
+        	if (quiz.getQuestion(i).evaluateResponse(
+        		quiz.getQuestion(i).getResponse())) {
         		score += quiz.getQuestion(i).getMaxMarks();
         		System.out.println(" Correct Answer! - Marks Awarded: "
         			+ quiz.getQuestion(i).getMaxMarks());
         	} else {
         	score += quiz.getQuestion(i).getPenalty();
         	System.out.println(" Wrong Answer! - Penalty: "
-        		+ quiz.getQuestion(i).getPenalty() );
+        		+ quiz.getQuestion(i).getPenalty());
         }
         }
     	System.out.println("Total Score: " + score);
