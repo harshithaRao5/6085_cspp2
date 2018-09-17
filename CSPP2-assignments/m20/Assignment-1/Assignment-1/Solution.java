@@ -272,7 +272,7 @@ public final class Solution {
         		if (tokens[0] == null) {
         			System.out.println("Error! Malformed question");
         		}
-        		if (tokens[1].length() > 1) {
+        		if (tokens[1].length() > 0) {
         			System.out.println(quiz.getQuestion(i).getQuestionText() + "  does not have enough answer choices");
         		}
         		if (Integer.parseInt(tokens[2]) == 1 && Integer.parseInt(tokens[2]) >= 4) {
