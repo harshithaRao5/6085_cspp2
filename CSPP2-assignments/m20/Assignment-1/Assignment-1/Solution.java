@@ -294,29 +294,30 @@ public final class Solution {
 	        		 <= 0 || tokens[2].length() <= 0
 	        		 || tokens[THREE].length() <= 0 || tokens[
 	        		 FOUR].length() <= 0) {
-	        		throw new Exception("Error! Malformed question");
+	        		throw new Exception("Error! "
+	        		+ "Malformed question");
 	        		}
 	        		String[] choices = tokens[1].split(",");
 	        		if (choices.length < 2) {
 	        			throw new Exception(tokens[0]
-	        				+ " does not have enough answer choices");
+	        			+ " does not have enough answer choices");
 
 	        		}
 	        		if (Integer.parseInt(tokens[2]) < 0
 	        			|| Integer.parseInt(tokens[2]) > choices.length) {
-	        			throw new Exception("Error! Correct answer"
-	        				+ " choice number is out of range for "
-	        				 + tokens[0]);
+	        			throw new Exception("Error!"
+	        			+" Correct answer choice number"
+	        			+" is out of range for " + tokens[0]);
 
 	        		}
 	        		if (Integer.parseInt(tokens[THREE]) <= 0) {
-	        			throw new Exception("Invalid max marks for "
-	        				+ tokens[0]);
+	        			throw new Exception("In"
+	        			+ "valid max marks for " + tokens[0]);
 
 	        		}
 	        		if (Integer.parseInt(tokens[FOUR]) > 0) {
-	        			throw new Exception("Invalid penalty for "
-	        			  + tokens[0]);
+	        			throw new Exception("In"
+	        			+ "valid penalty for " + tokens[0]);
 
 	        		}
 
