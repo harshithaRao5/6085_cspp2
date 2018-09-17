@@ -5,27 +5,27 @@ import java.util.Arrays;
  */
 class Question {
     /**
-     * { var_description }.
+     * questiontext.
      */
     private String questiontext;
     /**
-     * { var_description }.
+     * choices.
      */
     private String[] choices;
     /**
-     * { var_description }.
+     * correctAnswer.
      */
     private int correctAnswer;
     /**
-     * { var_description }.
+     * maximun marks.
      */
     private int maxMarks;
     /**
-     * { var_description }.
+     * penalty marks.
      */
     private int penalty;
     /**
-     * { var_description }.
+     * user responses.
      */
     private String response;
     /**
@@ -52,11 +52,11 @@ class Question {
     	this.penalty = penalty1;
     }
     /**
-     * { function_description }.
+     * checking for response is equals to choice.
      *
      * @param      choice  The choice
      *
-     * @return     { description_of_the_return_value }
+     * @return boolean
      */
     public boolean evaluateResponse(final String choice) {
 
@@ -135,15 +135,15 @@ class Question {
  */
 class Quiz {
     /**
-     * { var_description }.
+     * magic number case.
      */
     private final int onehundred = 100;
     /**
-     * { var_description }.
+     * questions array.
      */
     private Question[] questions;
     /**
-     * { var_description }.
+     * size.
      */
     private int size;
     /**
@@ -173,7 +173,7 @@ class Quiz {
     /**
      * Shows the report.
      *
-     * @return     { description_of_the_return_value }
+     * @return  String
      */
     public String showReport() {
         String s = "";
@@ -248,14 +248,14 @@ public final class Solution {
     }
     // public static List <Quiz> quizob = new List<Quiz>();
     // public static List <Question> questionob = new List<Question>();
-
     /**
      * Loads questions.
      *
      * @param      scan       The scan
      * @param      quiz       The quiz
-     * @param      q          The question count
+     * @param      q          The quarter
      *
+     * @throws     Exception  { exception_description }
      */
     public static void loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) throws Exception {
@@ -275,11 +275,14 @@ public final class Solution {
 	        		}
 	        		String[] choices = tokens[1].split(",");
 	        		if (choices.length < 0) {
-	        			throw new Exception(tokens[0] + "  does not have enough answer choices");
+	        			throw new Exception(tokens[0]
+	        				+ "  does not have enough answer choices");
 
 	        		}
-	        		if (Integer.parseInt(tokens[2]) < 0 && Integer.parseInt(tokens[2]) > choices.length) {
-	        			throw new Exception("Error! Correct answer choice number is out of range for " + tokens[0]);
+	        		if (Integer.parseInt(tokens[2]) < 0 &&
+	        			Integer.parseInt(tokens[2]) > choices.length) {
+	        			throw new Exception(
+	        				"Error! Correct answer choice number is out of range for " + tokens[0]);
 
 	        		}
 	        		if (Integer.parseInt(tokens[3]) <= 0) {
@@ -291,7 +294,8 @@ public final class Solution {
 
 	        		}
 
-	        		questionob = new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]),
+	        		questionob = new Question(tokens[0], tokens[1]
+	        			.split(","), Integer.parseInt(tokens[2]),
 	        			Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
 	        		quiz.addQuestion(questionob);
         		}
@@ -323,8 +327,10 @@ public final class Solution {
        		return;
        	}
        	for (int i = 0; i < q; i++) {
-        	System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
-        	System.out.println(Arrays.toString(quiz.getQuestion(i).getChoice()).replace("[", "").replace("]","").replace(", ", "\t"));
+        	System.out.println(quiz.getQuestion(i).getQuestionText()
+        		+ "(" + quiz.getQuestion(i).getMaxMarks() + ")");
+        	System.out.println(Arrays.toString(quiz.getQuestion(i).
+        		getChoice()).replace("[", "").replace("]","").replace(", ", "\t"));
       		System.out.println();
       		quiz.getQuestion(i).setResponse(scan.nextLine());
 
@@ -346,10 +352,12 @@ public final class Solution {
         	System.out.println(quiz.getQuestion(i).getQuestionText());
         	if(quiz.getQuestion(i).evaluateResponse(quiz.getQuestion(i).getResponse())) {
         		score += quiz.getQuestion(i).getMaxMarks();
-        		System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getQuestion(i).getMaxMarks() );
+        		System.out.println(" Correct Answer! - Marks Awarded: "
+        			+ quiz.getQuestion(i).getMaxMarks() );
         	} else {
         	score += quiz.getQuestion(i).getPenalty();
-        	System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getQuestion(i).getMaxMarks() );
+        	System.out.println(" Correct Answer! - Marks Awarded: "
+        		+ quiz.getQuestion(i).getMaxMarks() );
         }
         }
     	System.out.println("Total Score: " + score);
