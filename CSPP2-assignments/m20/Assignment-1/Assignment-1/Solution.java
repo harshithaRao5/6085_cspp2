@@ -178,12 +178,12 @@ class Quiz {
         String s = "";
         int score = 0;
         for (int i = 0; i < this.size; i++) {
-        	s += questions[i].getQuestionText() + "\n";
+        	s += questions[i].getQuestionText();
         	if (questions[i].evaluateResponse(questions[i].getResponse())) {
-        		s += " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks() + "\n";
+        		s += " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks();
         		score += questions[i].getMaxMarks();
         	} else {
-        		s += " Wrong Answer! - Penalty: " + questions[i].getPenalty() + "\n";
+        		s += " Wrong Answer! - Penalty: " + questions[i].getPenalty();
         		score += questions[i].getPenalty();
         	}
         }
