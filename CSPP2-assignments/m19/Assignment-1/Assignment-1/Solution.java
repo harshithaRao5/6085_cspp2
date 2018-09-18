@@ -88,7 +88,7 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner sc,
+    public static void startQuiz(final Scanner s,
         final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
@@ -104,17 +104,15 @@ public final class Solution {
             System.out.println(choices[0] + "\t" + choices[1] + "\t"
                 + choices[2] + "\t" + choices[3] + "\n");
         }
-        String[] data = new String[answerCount];
+        String[] responses = new String[answerCount];
         for(int i = 0; i < answerCount; i++) {
-            String line = sc.nextLine();
+            String line = s.nextLine();
             String[] dataList = line.split(" ");
-            data[i] = dataList[1];
+            responses[i] = dataList[1];
         }
-        responseobj = new Quiz(data);
+        responseobj = new Quiz(responses);
 }
     /**
-     * Displays the score report
-     *
      * @param      quiz     The quiz object
      */
     public static void displayScore(final Quiz quiz) {
@@ -126,6 +124,7 @@ public final class Solution {
             if (quizob.get(i).getAnswer().equals(responseobj.getResponses())) {
                 System.out.println(" Correct Answer! - Marks Awarded: " + quizob.get(i).getMarks());
                 totalScore = totalScore + Integer.parseInt(quizob.get(i).getMarks());
+
             } else {
                 System.out.println(" Wrong Answer! - Penalty: " + quizob.get(i).getPenalty());
                 totalScore = totalScore + Integer.parseInt(quizob.get(i).getPenalty());
@@ -180,6 +179,9 @@ class Quiz {
     }
     public String getPenalty() {
         return this.penalty;
+    }
+    public String setResponses(int index, String set) {
+        return this.responses[index] = set;
     }
 /**
  * Sets the question count.

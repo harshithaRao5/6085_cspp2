@@ -73,7 +73,44 @@ public final class List {
         // That is the initial value to use for size.
         size = 0;
         final int n = 10;
-        arrayList = new int[n];
+        arrayList = new int[10];
+    }
+    public List(int n) {
+    	arrayList = new int[n];
+    	size=0
+    }
+    public void addAll(int[] items) {
+    	int temp = 0;
+    	for(int i = size; i < (size + items.length); i++) {
+    		arrayList[i] = items[temp];
+    		temp++;
+    	}
+    	//System.out.println(Arrays.toString(arrayList));
+
+
+
+    }
+    public void add(int index, int item) {
+    	for(int i = size; i > index; i--`) {
+    		arrayList[i] = arrayList[i-1];
+    	}
+    	arrayList[index] = item;
+    	size++;
+
+
+    }
+    public int count(int item) {
+    	int count1 = 0;
+    	for (int i = 0; i < size; i++) {
+    		if(arrayList[i] == item){
+    			count1++;
+    		}
+    	}
+    	if (count1 > 0) {
+    		return count1;
+    	} else {
+    		return -1;
+    	}
     }
     /**
      * The add method does what the name suggests.
@@ -250,6 +287,7 @@ public final class List {
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
+        int[] items = new int[]{1, 2, 3};
 
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
@@ -262,7 +300,12 @@ public final class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                l.add(Integer.parseInt(tokens[1]));
+                if (tokens.length > 2){
+                	l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                } else {
+                	l.add(Integer.parseInt(tokens[1]));
+                }
+                
                 break;
                 case "size":
                 // invoke size method and print the list size
@@ -288,6 +331,13 @@ public final class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                case "addAll":
+                l.addAll(items);
+                break;
+                case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
+                break;
+
                 default:
             }
         }

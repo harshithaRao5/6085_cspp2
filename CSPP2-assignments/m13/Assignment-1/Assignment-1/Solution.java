@@ -7,8 +7,7 @@ import java.util.Arrays;
  * @author :
  */
 final class Set {
-    //your code goes here...
-    //Good luck :-)
+
     private int[] set;
     private int size;
 /**
@@ -35,7 +34,6 @@ final class Set {
  *
  * @return     { description_of_the_return_value }
  */
-
     public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
             if (set[i] == item) {
@@ -77,8 +75,7 @@ final class Set {
  * @param      items  The items
  */
     public void add(final int[] items) {
-        // int [] noDuplicate = new int[50];
-        // int j = 0;
+
         for (int element : items) {
             add(element);
             }
@@ -91,21 +88,6 @@ final class Set {
  * @return     { description_of_the_return_value }
  */
     public Set intersection(final Set anotherSet) {
-        // for (int i = 0; i < set.length; i++) {
-        //  if (set[i] == anotherSet[i]) {
-        //      return anotherSet[i];
-        //  }
-        // }
-        // Set intersect = new Set();
-        // for (int element : set) {
-        //     for (int i = 0; i < anotherSet.size(); i++) {
-        //         if (element == anotherSet.get(i)) {
-        //             intersect.add(element);
-        //         }
-        //     }
-        // }
-        // return intersect;
-        // return result;
         Set result = new Set();
         for(int i = 0; i < set.length; i++) {
             for(int j = 0; j < anotherSet.size(); j++) {
@@ -115,8 +97,6 @@ final class Set {
             }
         }
         return result;
-
-
     }
 /**
  * { function_description }.
@@ -126,11 +106,7 @@ final class Set {
  * @return     { description_of_the_return_value }
  */
     public Set retainAll(final int[] items) {
-        // for (int i = 0; i < set.length; i++) {
-        //  if (set[i] == items[i]) {
-        //      return items[i];
-        //  }
-        // }
+
         Set result = new Set();
         for (int element:set) {
             for (int item : items) {
@@ -166,7 +142,6 @@ final class Set {
         }
         return product;
     }
-
 }
 /**
  * Solution class for code-eval.

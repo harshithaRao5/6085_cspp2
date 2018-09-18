@@ -88,11 +88,12 @@ class SortedSet {
      * @param item  The item.
      */
     public void add(final int item) {
-        if (!contains(item)) {
+
             if (size == set.length) {
                 resize();
             }
-            set[size++] = item;
+            if (!contains(item)) {
+                set[size++] = item;
         }
     }
     /**
@@ -135,7 +136,7 @@ class SortedSet {
                 result[s++] = set[i];
             }
         }
-        result = Arrays.copyOf(result, s);
+        //result = Arrays.copyOf(result, s);
         return result;
     }
     /**
@@ -154,7 +155,7 @@ class SortedSet {
                 result[s++] = set[i];
             }
         }
-        result = Arrays.copyOf(result, s);
+        //result = Arrays.copyOf(result, s);
         return result;
     }
     /**

@@ -393,8 +393,8 @@ public final class List {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Integer.parseInt(tokens[1]));
+                            }
                         }
-                    }
                 break;
                 case "size":
                     System.out.println(l.size());

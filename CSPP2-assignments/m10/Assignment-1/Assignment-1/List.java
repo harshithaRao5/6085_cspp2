@@ -68,9 +68,9 @@ public final class List {
         final int ten = 10;
         list = new int[ten];
         // Think about the initial value for size.
+        // That is the initial value to use for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
-        // That is the initial value to use for size.
         size = 0;
     }
     /**

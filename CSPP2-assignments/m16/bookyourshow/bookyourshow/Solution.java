@@ -214,7 +214,7 @@ class BookYourShow {
         }
     }
 
-}
+
 /**
  * main method to read the input.
  */
