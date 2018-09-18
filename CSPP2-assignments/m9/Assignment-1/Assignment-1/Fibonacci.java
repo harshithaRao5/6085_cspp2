@@ -36,20 +36,20 @@ public final class Fibonacci {
     */
     public static List fib(final int n) {
         // todo - complete this method
-        List l = new List(n);
-        l.add(0);
-        l.add(1);
+        List obj = new List(n);
+        obj.add(0);
+        obj.add(1);
         int fibOne = 0;
         int fibTwo = 1;
-        int fibFinal = 0;
+        int fibNext = 0;
         for (int i = 2; i < n; i++) {
             //l[i] = l[i - 1] + l[i - 2];
-            fibFinal = fibOne;
+            fibNext = fibOne;
             fibOne = fibTwo;
-            fibTwo = fibFinal + fibOne;
-            l.add(fibTwo);
+            fibTwo = fibNext + fibOne;
+            obj.add(fibTwo);
         }
-        return l;
+        return obj;
     }
     /**
      * main function.
