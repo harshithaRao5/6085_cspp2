@@ -23,7 +23,7 @@ class Frequency {
 		return s;
 	}
 	public static Map removeAll(String text) {
-		String[] wordList = text.replaceAll("[^a-zA-Z0-9 ]","").toUpperCase().split(" ");
+		String[] wordList = text.replaceAll("[^a-zA-Z0-9 ]","").split(" ");
 
 		//System.out.println(Arrays.toString(wordList1));
 		//return Arrays.toString(wordList1);
