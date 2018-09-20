@@ -94,7 +94,10 @@ class Solution {
 			}
 		}
 		for (int i = 0; i < length; i++) {
-			System.out.println(listoffiles[i]);
+			System.out.println(listoffiles[0].getName());
+		}
+		for (int i = 0; i < length; i++) {
+			System.out.print(listoffiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
 				System.out.print(result[i][j] + "\t");
 			}
