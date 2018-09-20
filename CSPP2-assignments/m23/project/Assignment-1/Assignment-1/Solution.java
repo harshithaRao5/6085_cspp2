@@ -53,8 +53,6 @@ class Frequency {
 			for (String element2:mapTwo.keySet()) {
 				if (element1.equals(element2)){
 					numerator += mapOne.get(element1)*mapTwo.get(element2);
-
-
 				}
 
 			}
@@ -96,8 +94,9 @@ class Solution {
 			}
 		}
 		for (int i = 0; i < length; i++) {
+			System.out.println(listoffiles[i]);
 			for (int j = 0; j < length; j++) {
-				System.out.print(result[i][j] + "		");
+				System.out.print(result[i][j] + "\t");
 			}
 			System.out.println();
 		}
