@@ -23,7 +23,7 @@ class Frequency {
 		return s;
 	}
 	public static Map removeAll(String text) {
-		String[] wordList = text.replaceAll("[^a-zA-Z0-9 ]","").split(" ");
+		String[] wordList = text.replaceAll("[^a-zA-Z0-9 ]","").toLowerCase().split(" ");
 
 		//System.out.println(Arrays.toString(wordList1));
 		//return Arrays.toString(wordList1);
@@ -96,9 +96,9 @@ class Solution {
 		}
 		System.out.println();
 		for (int i = 0; i < length; i++) {
-			System.out.print(listoffiles[i].getName() + "\t\t");
+			System.out.print(listoffiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.print(result[i][j] + "\t\t");
+				System.out.print(result[i][j] + "\t");
 			}
 			System.out.println();
 		}
