@@ -93,8 +93,9 @@ class Solution {
 				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
 			}
 		}
+		System.out.println("      \t");
 		for (int i = 0; i < length; i++) {
-			System.out.println(listoffiles[0].getName());
+			System.out.print("\t" + listoffiles[i].getName());
 		}
 		for (int i = 0; i < length; i++) {
 			System.out.print(listoffiles[i].getName() + "\t");
