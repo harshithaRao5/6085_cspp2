@@ -98,11 +98,11 @@ class Solution {
 			System.out.print("\t" + listoffiles[i].getName());
 		}
 		for (int i = 0; i < length; i++) {
-			System.out.print(listoffiles[i].getName() + "\t");
+			System.out.println(listoffiles[i].getName());
 			for (int j = 0; j < length; j++) {
-				System.out.print(result[i][j] + "\t");
+				System.out.print("\t"+result[i][j]);
 			}
-			System.out.println();
+			// System.out.println();
 		}
 	}catch(NoSuchElementException e) {
 		System.out.println("empty directory");
