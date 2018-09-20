@@ -97,7 +97,7 @@ class Solution {
 		}
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
-				System.out.println(result[i][j] + "		");
+				System.out.print(result[i][j] + "		");
 			}
 			System.out.println();
 		}
