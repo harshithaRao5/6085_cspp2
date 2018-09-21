@@ -95,7 +95,7 @@ class Solution {
 				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
 				if (maximum < result[i][j]) {
 					maximum = result[i][j];
-					result1 = "Maximum similarity is in between" + listoffiles[i] + "and" +listoffiles[j];
+					result1 = "Maximum similarity is in between" + listoffiles[i].getName() + "and" +listoffiles[j].getName();
 
 				}
 			}
