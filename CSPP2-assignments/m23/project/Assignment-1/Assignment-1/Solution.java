@@ -103,22 +103,6 @@ class Solution {
 
 			}
 		}
-		int maximum = 0;
-		int row = 0;
-		int column = 0;
-		for (int i = 0; i < length; i++) {
-			for (int j = 0; j < length; j++) {
-				if (maximum < result[i][j]) {
-					maximum = result[i][j];
-					if (maximum == result[i][j]) {
-						row = i;
-						column = j;
-					}
-				}
-			}
-		}
-		System.out.println("Maximum Similarity is in between"+listoffiles[row].getName()+"and"+listoffiles[column].getName());
-
 
 		//System.out.println("maximum is"+maximum);
 		} catch(NoSuchElementException e) {
@@ -128,6 +112,22 @@ class Solution {
 		// String stext1 = sc.nextLine().toLowerCase();
 		// String stext2 = sc.nextLine().toLowerCase();
 		// Frequency feq = new Frequency();
+		// int maximum = 0;
+		// int row = 0;
+		// int column = 0;
+		// for (int i = 0; i < listoffiles.length; i++) {
+		// 	for (int j = 0; j < listoffiles.length; j++) {
+		// 		if (maximum < result[i][j]) {
+		// 			maximum = result[i][j];
+		// 			if (maximum == result[i][j]) {
+		// 				row = i;
+		// 				column = j;
+		// 			}
+		// 		}
+		// 	}
+		// }
+		// System.out.println("Maximum Similarity is in between"+listoffiles[row].getName()+"and"+listoffiles[column].getName());
+
 
 	}
 }
