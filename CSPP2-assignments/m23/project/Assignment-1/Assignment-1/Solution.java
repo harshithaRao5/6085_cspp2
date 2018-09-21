@@ -100,7 +100,7 @@ class Solution {
 			System.out.print(listoffiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
 				System.out.print(result[i][j] + "\t");
-				if (maximum > 0) {
+				if (maximum < result[i][j]) {
 					maximum = result[i][j];
 				}
 			}
