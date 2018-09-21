@@ -85,9 +85,7 @@ class Solution {
 		// }
 		int length = listoffiles.length;
 		int[][] result = new int[length][length];
-		int maximum = 0;
-		int row = 0;
-		int column = 0;
+
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
@@ -102,6 +100,14 @@ class Solution {
 			System.out.print(listoffiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
 				System.out.print(result[i][j] + "\t");
+
+			}
+		}
+		int maximum = 0;
+		int row = 0;
+		int column = 0;
+		for (int i = 0; i < length; i++) {
+			for (int j = 0; j < length; j++) {
 				if (maximum < result[i][j]) {
 					maximum = result[i][j];
 					if (maximum == result[i][j]) {
@@ -112,16 +118,16 @@ class Solution {
 			}
 		}
 		System.out.println("Maximum Similarity is in between"+listoffiles[row].getName()+"and"+listoffiles[column].getName());
+
+
 		//System.out.println("maximum is"+maximum);
-	}catch(NoSuchElementException e) {
-		System.out.println("empty directory");
-	}
+		} catch(NoSuchElementException e) {
+			System.out.println("empty directory");
+		}
 
 		// String stext1 = sc.nextLine().toLowerCase();
 		// String stext2 = sc.nextLine().toLowerCase();
 		// Frequency feq = new Frequency();
-
-
 
 	}
 }
