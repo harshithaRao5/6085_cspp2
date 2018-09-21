@@ -23,7 +23,7 @@ class Frequency {
 		return s;
 	}
 	public static Map removeAll(String text) {
-		String[] wordList = text.replaceAll("[^a-zA-Z0-9 ]","").split(" ");
+		String[] wordList = text.replaceAll("[^a-zA-Z0-9 ]","").toLowerCase().split(" ");
 
 		//System.out.println(Arrays.toString(wordList1));
 		//return Arrays.toString(wordList1);
@@ -85,6 +85,7 @@ class Solution {
 		// }
 		int length = listoffiles.length;
 		int[][] result = new int[length][length];
+		int maximum = 0;
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
