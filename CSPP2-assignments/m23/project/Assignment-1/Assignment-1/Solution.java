@@ -99,10 +99,14 @@ class Solution {
 		for (int i = 0; i < length; i++) {
 			System.out.print(listoffiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.print(result[i][j] + "\t    ");
+				System.out.print(result[i][j] + "\t");
+				if (maximum > 0) {
+					maximum = result[i][j];
+				}
 			}
 			System.out.println();
 		}
+		System.out.println("maximum is"+maximum);
 	}catch(NoSuchElementException e) {
 		System.out.println("empty directory");
 	}
