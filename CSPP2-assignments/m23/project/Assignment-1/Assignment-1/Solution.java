@@ -103,10 +103,11 @@ class Solution {
 				if (maximum < result[i][j]) {
 					maximum = result[i][j];
 				}
+				System.out.println("Maximum Similarity is in between"+listoffiles[i]+"and"+listoffiles[j]);
 			}
-			System.out.println();
+
 		}
-		System.out.println("maximum is"+maximum);
+		//System.out.println("maximum is"+maximum);
 	}catch(NoSuchElementException e) {
 		System.out.println("empty directory");
 	}
