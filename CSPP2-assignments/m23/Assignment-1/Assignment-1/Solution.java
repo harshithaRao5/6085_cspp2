@@ -23,7 +23,7 @@ class Frequency {
 		return s;
 	}
 	public static Map removeAll(String text) {
-		String[] wordList = text.replaceAll("[^a-zA-Z ]","").toLowerCase().split(" ");
+		String[] wordList = text.replaceAll("[^a-zA-Z. ]","").toLowerCase().split(" ");
 
 		//System.out.println(Arrays.toString(wordList1));
 		//return Arrays.toString(wordList1);
@@ -81,7 +81,7 @@ class Solution {
 		File input = new File(sc.next());
 		File[] listoffiles = input.listFiles();
 		// for (File name:listoffiles) {
-		// 	//System.out.println(name);
+		// 	System.out.println(name);
 		// }
 		int maximum =0;
 		String result1 = "";
