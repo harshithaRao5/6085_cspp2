@@ -83,6 +83,8 @@ class Solution {
 		// for (File name:listoffiles) {
 		// 	//System.out.println(name);
 		// }
+		int maximum =0;
+		String result1 = "";
 		int length = listoffiles.length;
 		int[][] result = new int[length][length];
 		for (int i = 0; i < length; i++) {
@@ -91,6 +93,11 @@ class Solution {
 					result[i][j] = 100;
 				} else {
 				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
+				if (maximum < result[i][j]) {
+					maximum = result[i][j];
+					result1 = "Maximum similarity is in between" + listoffiles[i] + "and" +listoffiles[j];
+
+				}
 			}
 			}
 		}
@@ -106,8 +113,8 @@ class Solution {
 			}
 			System.out.println();
 		}
-		// int maximum =0;
-		// for (int i = 0; i < length; i++) {
+		System.out.println(result1);
+
 
 	}catch(NoSuchElementException e) {
 		System.out.println("empty directory");
