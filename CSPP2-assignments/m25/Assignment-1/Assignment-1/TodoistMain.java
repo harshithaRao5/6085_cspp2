@@ -14,13 +14,22 @@ class Task {
     Task() {
 
     }
-    Task(String task, String name, int t, boolean imp, boolean urg, String stat) {
+    Task(String task, String name, int t, boolean imp, boolean urg, String stat)throws Exception {
         this.title = task;
         this.personName = name;
         this.time = t;
         this.important = imp;
         this.urgent = urg;
         this.status = stat;
+        if (this.title == null) {
+            throw new Exception("Title not provided");
+        }
+        if (this.time < 0) {
+            throw new Exception("Invalid timeToComplete"+this.time);
+        }
+        if (this.status!="todo" || this.status!="done") {
+            throw new Exception("Invalid status"+this.status);
+        }
     }
     public String getTitle(){
          return this.title;
