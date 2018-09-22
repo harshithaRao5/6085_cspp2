@@ -88,15 +88,11 @@ class Todoist {
     public Task getNextTask(String name) {
         for (int i = 0; i < task.size(); i++) {
             if (name.equals(task.get(i).getPersonName())) {
-                if (task.get(i).getStatus().equals("todo")) {
-                    if (task.get(i).getImpStatus().equals("Important")) {
-                        if (task.get(i).getUrgStat().equals("Urgent")) {
+                if (task.get(i).getStatus().equals("todo") && task.get(i).getImpStatus().equals("Important") && task.get(i).getUrgStat().equals("Urgent")) {
                             return task.get(i);
-                        } else if (task.get(i).getUrgStat().equals("Not Urgent")){
+                        } else if (task.get(i).getStatus().equals("todo") && task.get(i).getImpStatus().equals("Important") && task.get(i).getUrgStat().equals("Not Urgent")){
                             return task.get(i);
                         }
-                    }
-                }
             }
         }
         return null;
