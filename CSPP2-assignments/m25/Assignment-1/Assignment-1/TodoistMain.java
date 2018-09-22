@@ -59,7 +59,7 @@ class Task {
         return this.status = change;
     }
     public String testTask() {
-        return getTitle()+", "+getPersonName()+", "+getTime()+", "+getImportant()+", "+getUrgent()+", "+getStatus();
+        return getTitle() + ", " + getPersonName() + ", "+getTime()+", "+getImportant()+", "+getUrgent()+", "+getStatus();
     }
 }
 class Todoist {
@@ -112,9 +112,9 @@ public class TodoistMain {
                     //     System.out.println(todo.getTask(i).testTask());
                     // }
                 break;
-                case "add-task":
-                    testAddTask(todo, tokens);
-                break;
+                // case "add-task":
+                //     testAddTask(todo, tokens);
+                // break;
                 // case "print-todoist":
                 //     System.out.println(todo);
                 // break;
@@ -141,15 +141,15 @@ public class TodoistMain {
     //  * @param      todo    The todo
     //  * @param      tokens  The tokens
     //  */
-    public static void testAddTask(final Todoist todo, final String[] tokens) {
-        try {
-            todo.addTask(createTask(tokens));
+    // public static void testAddTask(final Todoist todo, final String[] tokens) {
+    //     try {
+    //         todo.addTask(createTask(tokens));
 
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
+    //     } catch (Exception e) {
+    //         System.out.println(e.getMessage());
+    //     }
+    // }
 
     /**
      * method to test the creation of task object.
