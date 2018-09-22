@@ -168,10 +168,10 @@ public class TodoistMain {
             throw new Exception("Title not provided");
         }
         if (Integer.parseInt(tokens[3]) < 0) {
-            throw new Exception("invalid timeToComplete" +assignedTo);
+            throw new Exception("Invalid timeToComplete " + timeToComplete);
         }
         if (tokens[6]!="todo" || tokens[6]!="done") {
-            throw new Exception("Invalid status"+status);
+            throw new Exception("Invalid status "+status);
         }
         return new Task(
                 title, assignedTo, timeToComplete, important, urgent, status);
