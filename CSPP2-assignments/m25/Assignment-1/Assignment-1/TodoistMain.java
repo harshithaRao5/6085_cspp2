@@ -15,12 +15,27 @@ class Task {
 
     }
     Task(String task, String name, int t, boolean imp, boolean urg, String stat)throws Exception {
-        this.title = task;
+        if (name.length() == 0) {
+            throw new Exception("Title not provided");
+        } else {
+             this.title = task;
+        }
+
         this.personName = name;
-        this.time = t;
+        if (t < 0) {
+            throw new Exception("Invalid timeToComplete "+this.time);
+        } else {
+            this.time = t;
+        }
+
         this.important = imp;
         this.urgent = urg;
-        this.status = stat;
+        if (stat!="todo" || stat !="done") {
+            throw new Exception("Invalid status "+this.status);
+        } else {
+            this.status = stat;
+        }
+
         // if (this.title == null) {
         //     throw new Exception("Title not provided");
         // }
