@@ -161,17 +161,17 @@ public class TodoistMain {
         String status = tokens[6];
         // return new Task(
         //     title, assignedTo, timeToComplete, important, urgent, status);
-        System.out.println(obj.testTask());
+        //System.out.println(obj.testTask());
         //return Task();
         //return new Task(obj.getTitle(),obj.getPersonName(),obj.getTime(),obj.getImportant(),obj.getUrgent(),obj.getStatus());
         if (tokens[1].length()==0) {
             throw new Exception("Title not provided");
         }
         if (Integer.parseInt(tokens[3]) < 0) {
-            throw new Exception("invalid timeToComplete" +" ");
+            throw new Exception("invalid timeToComplete" +assignedTo);
         }
         if (tokens[6]!="todo" || tokens[6]!="done") {
-            throw new Exception("Invalid status"+" ");
+            throw new Exception("Invalid status"+status);
         }
         return new Task(
                 title, assignedTo, timeToComplete, important, urgent, status);
