@@ -80,12 +80,27 @@ class Todoist {
     }
     public String toString() {
         String s = "";
-        for (int i = 0; i < task.size();i++) {
-            s += task.get(i).toString()+"\n";
+        for (int i = 0; i < task.size(); i++) {
+            s += task.get(i).toString() + "\n";
         }
         return s;
     }
-
+    public Task getNextTask(String name) {
+        for (int i = 0; i < task.size(); i++) {
+            if (name.equals(task.get(i).getPersonName())) {
+                if (task.get(i).getStatus().equals("todo")) {
+                    if (task.get(i).getImpStatus().equals("Important")) {
+                        if (task.get(i).getUrgStat().equals("Urgent")) {
+                            return task.get(i);
+                        } else {
+                            return task.get(i);
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    }
 }
 
 /**
@@ -111,9 +126,9 @@ public class TodoistMain {
                 case "print-todoist":
                     System.out.println(todo);
                 break;
-                // case "get-next":
-                //     System.out.println(todo.getNextTask(tokens[1]));
-                // break;
+                case "get-next":
+                    System.out.println(todo.getNextTask(tokens[1]));
+                break;
                 // case "get-next-n":
                 //     int n = Integer.parseInt(tokens[2]);
                 //     Task[] tasks = todo.getNextTask(tokens[1], n);
