@@ -40,6 +40,24 @@ class Task {
     public  String getStatus() {
         return this.status;
     }
+    public String setTitle(String change){
+         return this.title = change;
+    }
+    public String setPersonName(String change) {
+        return this.personName = change;
+    }
+    public  int setTime(int change) {
+        return this.time = change;
+    }
+    public  boolean setImportant(Boolean change) {
+        return this.important = change;
+    }
+    public  boolean setUrgent(Boolean change) {
+        return this.urgent = change;
+    }
+    public  String setStatus(String change) {
+        return this.status = change;
+    }
     public String testTask() {
         return getTitle()+", "+getPersonName()+", "+getTime()+", "+getImportant()+", "+getUrgent()+", "+getStatus();
     }
@@ -178,8 +196,6 @@ public class TodoistMain {
         if (tokens[6]!="todo" || tokens[6]!="done") {
             throw new Exception("Invalid status "+status);
         }
-
-
 
         return new Task(
                 title, assignedTo, timeToComplete, important, urgent, status);
