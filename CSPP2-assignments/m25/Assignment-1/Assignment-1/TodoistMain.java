@@ -90,9 +90,9 @@ public class TodoistMain {
             switch (tokens[0]) {
                 case "task":
                     testTask(tokens);
-                    for (int i = 0; i < tokens.length; i++) {
-                        System.out.println(todo.getTask(i).testTask());
-                    }
+                    // for (int i = 0; i < tokens.length; i++) {
+                    //     System.out.println(todo.getTask(i).testTask());
+                    // }
                 break;
                 case "add-task":
                     testAddTask(todo, tokens);
