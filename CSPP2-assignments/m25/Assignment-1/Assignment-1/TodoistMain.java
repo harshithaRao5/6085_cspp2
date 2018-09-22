@@ -75,8 +75,11 @@ class Todoist {
     public Task getTask(int index) {
         return task[index];
     }
-    public String testAddTask() {
-        String s="";
+    public String toString() {
+        String s ="";
+        for (int i =0; i < size; i++) {
+            s+=task[i]+"\n";
+        }
         return s;
     }
      public void totalTime4Completion() {
@@ -88,6 +91,7 @@ class Todoist {
     public void createTask(){
 
     }
+
 }
 
 // }
@@ -108,9 +112,6 @@ public class TodoistMain {
             switch (tokens[0]) {
                 case "task":
                     testTask(tokens);
-                    // for (int i = 0; i < tokens.length; i++) {
-                    //     System.out.println(todo.getTask(i).testTask());
-                    // }
                 break;
                 // case "add-task":
                 //     testAddTask(todo, tokens);
@@ -187,6 +188,7 @@ public class TodoistMain {
         //System.out.println(obj.testTask());
         //return Task();
         //return new Task(obj.getTitle(),obj.getPersonName(),obj.getTime(),obj.getImportant(),obj.getUrgent(),obj.getStatus());
+
         if (tokens[1].length()==0) {
             throw new Exception("Title not provided");
         }
