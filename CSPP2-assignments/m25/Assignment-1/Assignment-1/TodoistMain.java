@@ -40,45 +40,29 @@ class Task {
     public  String getStatus() {
         return this.status;
     }
-
-    public void testTask() {
-        System.out.println(getTitle() + ", " + getPersonName() + ", "+getTime()+", "+getImportant()+", "+getUrgent()+", "+getStatus());
+    public String getImpStatus() {
+        if(this.important==true) {
+            return "Important";
+        } else {
+            return "Not Important";
+        }
+    }
+    public String getUrgStat() {
+        if(this.urgent == true) {
+            return "Urgent";
+        } else {
+            return "Not Urgent";
+        }
+    }
+    public String toString() {
+        return getTitle() + ", " + getPersonName() + ", "+getTime()+", "+getImpStatus()+", "+getUrgStat()+", "+getStatus();
 
     }
 }
 class Todoist {
-    private Task[] task;
-
-    private int size;
-    Todoist() {
-        task = new Task[size];
-    }
-    public void addTask(Task t) {
-        task[size++] = t;
-    }
-    public Task getTask(int index) {
-        return task[index];
-    }
-    public String toString() {
-        String s ="";
-        for (int i =0; i < size; i++) {
-            s+=task[i]+"\n";
-        }
-        return s;
-    }
-     public void totalTime4Completion() {
-
-    }
-    public void getNextTask() {
-
-    }
-    public void createTask(){
-
-    }
 
 }
 
-// }
 /**
  * Class for todoist main.
  */
@@ -89,7 +73,6 @@ public class TodoistMain {
      */
     public static void startTest() {
         Todoist todo = new Todoist();
-        //Task obj = new Task();
         Scanner s = new Scanner(System.in);
         while (s.hasNext()) {
             String[] tokens = s.nextLine().split(",");
@@ -120,17 +103,15 @@ public class TodoistMain {
         }
     }
 
-    // /**
-    //  * method to test add task.
-    //  *
-    //  * @param      todo    The todo
-    //  * @param      tokens  The tokens
-    //  */
+    /**
+     * method to test add task.
+     *
+     * @param      todo    The todo
+     * @param      tokens  The tokens
+     */
     // public static void testAddTask(final Todoist todo, final String[] tokens) {
     //     try {
     //         todo.addTask(createTask(tokens));
-
-
     //     } catch (Exception e) {
     //         System.out.println(e.getMessage());
     //     }
@@ -144,7 +125,6 @@ public class TodoistMain {
     public static void testTask(final String[] tokens) {
         try {
             System.out.println(createTask(tokens));
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -160,31 +140,14 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
-        //Task obj = new Task();
         String title = tokens[1];
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
-        // return new Task(
-        //     title, assignedTo, timeToComplete, important, urgent, status);
-        //System.out.println(obj.testTask());
-        //return Task();
-        //return new Task(obj.getTitle(),obj.getPersonName(),obj.getTime(),obj.getImportant(),obj.getUrgent(),obj.getStatus());
-
-        // if (tokens[1].length()==0) {
-        //     throw new Exception("Title not provided");
-        // }
-        // if (Integer.parseInt(tokens[3]) < 0) {
-        //     throw new Exception("Invalid timeToComplete " + timeToComplete);
-        // }
-        // if (tokens[6]!="todo" || tokens[6]!="done") {
-        //     throw new Exception("Invalid status "+status);
-        // }
-
         return new Task(
-                title, assignedTo, timeToComplete, important, urgent, status);
+            title, assignedTo, timeToComplete, important, urgent, status);
     }
 
     /**
