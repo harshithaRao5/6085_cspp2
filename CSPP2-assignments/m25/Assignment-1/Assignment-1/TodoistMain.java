@@ -164,7 +164,7 @@ public class TodoistMain {
             throw new Exception("Invalid timeToComplete "+ timeToComplete);
         }
         //String ref3 = tokens[6];
-        if (status != "todo" || status != "done") {
+        if (!status.equals("todo") || !status.equals("done")) {
             throw new Exception("Invalid status "+ status);
         }
         return new Task(
