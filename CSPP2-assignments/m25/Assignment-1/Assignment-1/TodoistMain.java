@@ -21,15 +21,15 @@ class Task {
         this.important = imp;
         this.urgent = urg;
         this.status = stat;
-        if (this.title == null) {
-            throw new Exception("Title not provided");
-        }
-        if (this.time < 0) {
-            throw new Exception("Invalid timeToComplete"+this.time);
-        }
-        if (this.status!="todo" || this.status!="done") {
-            throw new Exception("Invalid status"+this.status);
-        }
+        // if (this.title == null) {
+        //     throw new Exception("Title not provided");
+        // }
+        // if (this.time < 0) {
+        //     throw new Exception("Invalid timeToComplete "+this.time);
+        // }
+        // if (this.status!="todo" || this.status!="done") {
+        //     throw new Exception("Invalid status "+this.status);
+        // }
     }
     public String getTitle(){
          return this.title;
@@ -155,6 +155,15 @@ public class TodoistMain {
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
+        if (tokens[1].length()==0) {
+            throw new Exception("Title not provided");
+        }
+        if (Integer.parseInt(tokens[3]) < 0) {
+            throw new Exception("Invalid timeToComplete "+ timeToComplete);
+        }
+        if (tokens[6]!="todo" || tokens[6]!="done") {
+            throw new Exception("Invalid status "+ status);
+        }
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
     }
