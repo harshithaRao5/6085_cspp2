@@ -58,8 +58,9 @@ class Task {
     public  String setStatus(String change) {
         return this.status = change;
     }
-    public String testTask() {
-        return getTitle() + ", " + getPersonName() + ", "+getTime()+", "+getImportant()+", "+getUrgent()+", "+getStatus();
+    public void testTask() {
+        System.out.println(getTitle() + ", " + getPersonName() + ", "+getTime()+", "+getImportant()+", "+getUrgent()+", "+getStatus());
+
     }
 }
 class Todoist {
