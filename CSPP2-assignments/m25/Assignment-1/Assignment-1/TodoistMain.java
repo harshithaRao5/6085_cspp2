@@ -123,6 +123,10 @@ public class TodoistMain {
     public static void testAddTask(final Todoist todo, final String[] tokens) {
         try {
             todo.addTask(createTask(tokens));
+            for (int i = 0; i < tokens.length; i++) {
+            System.out.println(todo.getTask(i).testTask());
+        }
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -152,7 +156,7 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
-        Task obj = new Task();
+        //Task obj = new Task();
         String title = tokens[1];
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
@@ -173,6 +177,9 @@ public class TodoistMain {
         if (tokens[6]!="todo" || tokens[6]!="done") {
             throw new Exception("Invalid status "+status);
         }
+
+
+
         return new Task(
                 title, assignedTo, timeToComplete, important, urgent, status);
     }
