@@ -15,7 +15,7 @@ class Task {
 
     }
     Task(String task, String name, int t, boolean imp, boolean urg, String stat)throws Exception {
-        if (name.length() == 0) {
+        if (task.length() == 0) {
             throw new Exception("Title not provided");
         } else {
              this.title = task;
@@ -24,10 +24,8 @@ class Task {
         this.personName = name;
         if (t < 0) {
             throw new Exception("Invalid timeToComplete "+this.time);
-        } else {
-            this.time = t;
         }
-
+        this.time = t;
         this.important = imp;
         this.urgent = urg;
         if (stat!="todo" || stat !="done") {
