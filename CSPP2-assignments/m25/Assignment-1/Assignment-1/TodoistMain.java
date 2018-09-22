@@ -92,7 +92,7 @@ class Todoist {
                     if (task.get(i).getImpStatus().equals("Important")) {
                         if (task.get(i).getUrgStat().equals("Urgent")) {
                             return task.get(i);
-                        } else {
+                        } else if (task.get(i).getUrgStat().equals("Not Urgent")){
                             return task.get(i);
                         }
                     }
