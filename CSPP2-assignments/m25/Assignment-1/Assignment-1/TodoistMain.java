@@ -5,12 +5,12 @@ import java.util.Arrays;
   * write your code below this comment
   */
 class Task {
-    private  String title;
-    private  String personName;
-    private  int time;
-    private  boolean important;
-    private  boolean urgent;
-    private  String status;
+    String title;
+    String personName;
+    int time;
+    boolean important;
+    boolean urgent;
+    String status;
     Task() {
 
     }
