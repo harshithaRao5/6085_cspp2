@@ -155,13 +155,16 @@ public class TodoistMain {
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
-        if (tokens[1].length()==0) {
+        int len = tokens[1].length();
+        if (len == 0) {
             throw new Exception("Title not provided");
         }
-        if (Integer.parseInt(tokens[3]) < 0) {
+        int len1 = Integer.parseInt(tokens[3]);
+        if (len1 < 0) {
             throw new Exception("Invalid timeToComplete "+ timeToComplete);
         }
-        if (tokens[6]!="todo" || tokens[6]!="done") {
+        String ref3 = tokens[6];
+        if (ref3 != "todo" || ref3 != "done") {
             throw new Exception("Invalid status "+ status);
         }
         return new Task(
