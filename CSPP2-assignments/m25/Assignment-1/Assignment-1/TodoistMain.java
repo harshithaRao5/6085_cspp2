@@ -5,35 +5,22 @@ import java.util.Arrays;
   * write your code below this comment
   */
 class Task {
-    String title;
-    String personName;
-    int time;
-    boolean important;
-    boolean urgent;
-    String status;
+    private  String title;
+    private  String personName;
+    private  int time;
+    private  boolean important;
+    private  boolean urgent;
+    private  String status;
     Task() {
 
     }
     Task(String task, String name, int t, boolean imp, boolean urg, String stat)throws Exception {
-        if (task.length() == 0) {
-            throw new Exception("Title not provided");
-        } else {
-             this.title = task;
-        }
-
+        this.title = task;
         this.personName = name;
-        if (t < 0) {
-            throw new Exception("Invalid timeToComplete "+this.time);
-        }
         this.time = t;
         this.important = imp;
         this.urgent = urg;
-        if (stat!="todo" || stat !="done") {
-            throw new Exception("Invalid status "+this.status);
-        } else {
-            this.status = stat;
-        }
-
+        this.status = stat;
         // if (this.title == null) {
         //     throw new Exception("Title not provided");
         // }
