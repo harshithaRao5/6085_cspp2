@@ -84,8 +84,8 @@ class Frequency {
 			for (int j = 0; j <= columns; j++) {
 				if (i == 0 || j == 0) {
 					maximum[i][j] = 0;
-				} else if (s1.charAt(i-1) == s2.charAt(j-1)) {
-					maximum[i][j] = maximum[i-1][j-1]+1;
+				} else if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
+					maximum[i][j] = maximum[i - 1][j - 1] + 1;
 					//result = max(result, maximum[i][j]);
 				} else {
 					maximum[i][j] = 0;
@@ -96,9 +96,9 @@ class Frequency {
 			}
 		}
 		//System.out.println(result);
-		similarity = Math.round(((result*2)/stringLength)*100D)/100D;
+		similarity = Math.round(((result * 2) / stringLength) * 100D) / 100D;
 		//System.out.println(stringLength);
-		return (similarity*100);
+		return (similarity * 100);
 		}
 }
 
