@@ -2,7 +2,8 @@ import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 // import java.lang.StringBuffer;
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
 
 
 /**
@@ -38,7 +39,7 @@ class Frequency {
             }
             input.close();
             s = sb.toString();
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             System.out.println("no file");
         }
         return s;
