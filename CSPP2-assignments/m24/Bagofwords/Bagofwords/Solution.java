@@ -1,12 +1,23 @@
 import java.util.*;
 import java.io.*;
-
-
+/**
+ * Class for frequency.
+ */
 class Frequency {
-
+/**
+ * Constructs the object.
+ */
 	Frequency() {
 	}
-	public static String toString(File filename) {
+	private static final double HUNDRED = 100;
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @param      filename  The filename
+	 *
+	 * @return     String representation of the object.
+	 */
+	public static String toString(final File filename) {
 		String s = "";
 		try {
 			Scanner input = new Scanner(new FileReader(filename));
@@ -22,7 +33,14 @@ class Frequency {
 		}
 		return s;
 	}
-	public static Map removeAll(String text) {
+	/**
+	 * Removes all.
+	 *
+	 * @param      text  The text
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public static Map removeAll(final String text) {
 		String[] wordList = text.replaceAll("[^a-zA-Z. ]","").toLowerCase().split(" ");
 
 		//System.out.println(Arrays.toString(wordList1));
@@ -41,7 +59,15 @@ class Frequency {
 
 
 	}
-	public static int similarity(String doc1, String doc2) {
+	/**
+	 * { function_description }
+	 *
+	 * @param      doc1  The document 1
+	 * @param      doc2  The document 2
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public static int similarity(final String doc1, final String doc2) {
 		//System.out.println("hello");
 		double numerator = 0;
 		double sum1 = 0;
@@ -66,14 +92,22 @@ class Frequency {
 		// System.out.println(sum2);
 		// System.out.println(numerator);
 		// System.out.println(denominator);
-		return (int)((((numerator / denominator) * 100D) / 100D) * 100);
+		return (int)((((numerator / denominator) * HUNDRED) / HUNDRED) * HUNDRED);
 
 
 	}
 }
-
+/**
+ * Class for solution.
+ */
 class Solution {
-	public static void main(String[] args) {
+	 private static final int HUNDRED1 = 100;
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		try {
 		Frequency f = new Frequency();
 		Scanner sc = new Scanner(System.in);
@@ -90,15 +124,14 @@ class Solution {
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				if (i == j) {
-					result[i][j] = 100;
+					result[i][j] = HUNDRED1;
 				} else {
 				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
 				if (maximum < result[i][j]) {
 					maximum = result[i][j];
 					result1 = "Maximum similarity is in between " + listoffiles[i].getName() + " and " + listoffiles[j].getName();
-
+					}
 				}
-			}
 			}
 		}
 		System.out.print("      \t");
@@ -123,8 +156,5 @@ class Solution {
 		// String stext1 = sc.nextLine().toLowerCase();
 		// String stext2 = sc.nextLine().toLowerCase();
 		// Frequency feq = new Frequency();
-
-
-
 	}
 }
