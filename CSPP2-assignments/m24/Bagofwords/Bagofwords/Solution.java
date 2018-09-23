@@ -60,7 +60,7 @@ class Frequency {
 
 	}
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
 	 * @param      doc1  The document 1
 	 * @param      doc2  The document 2
@@ -77,7 +77,7 @@ class Frequency {
 		for (String element1:mapOne.keySet()) {
 			for (String element2:mapTwo.keySet()) {
 				if (element1.equals(element2)){
-					numerator += mapOne.get(element1)*mapTwo.get(element2);
+					numerator += mapOne.get(element1) * mapTwo.get(element2);
 				}
 			}
 		}
@@ -92,7 +92,8 @@ class Frequency {
 		// System.out.println(sum2);
 		// System.out.println(numerator);
 		// System.out.println(denominator);
-		return (int)((((numerator / denominator) * HUNDRED) / HUNDRED) * HUNDRED);
+		return (int) ((((numerator / denominator)
+			* HUNDRED) / HUNDRED) * HUNDRED);
 
 
 	}
@@ -101,9 +102,16 @@ class Frequency {
  * Class for solution.
  */
 class Solution {
-	 private static final int HUNDRED1 = 100;
 	/**
-	 * { function_description }
+	 * Constructs the object.
+	 */
+	protected Solution() {
+
+
+	}
+	private static final int HUNDRED1 = 100;
+	/**
+	 * { function_description }.
 	 *
 	 * @param      args  The arguments
 	 */
@@ -126,10 +134,14 @@ class Solution {
 				if (i == j) {
 					result[i][j] = HUNDRED1;
 				} else {
-				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
+				result[i][j] =
+				Frequency.similarity(Frequency.toString(listoffiles[i]),
+				 Frequency.toString(listoffiles[j]));
 				if (maximum < result[i][j]) {
 					maximum = result[i][j];
-					result1 = "Maximum similarity is in between " + listoffiles[i].getName() + " and " + listoffiles[j].getName();
+					result1 = "Maximum similarity is in between "
+					+ listoffiles[i].getName() + " and "
+					+ listoffiles[j].getName();
 					}
 				}
 			}
@@ -149,7 +161,7 @@ class Solution {
 		System.out.println(result1);
 
 
-	}catch(NoSuchElementException e) {
+	} catch (NoSuchElementException e) {
 		System.out.println("empty directory");
 	}
 
