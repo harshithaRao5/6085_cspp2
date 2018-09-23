@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
-import java.lang.StringBuilder;
+import java.lang.StringBuffer;
 import java.io.*;
 
 
@@ -14,8 +14,12 @@ class Frequency {
      * Constructs the object.
      */
     protected Frequency() {
+
     }
-    private static final double hundred = 100;
+    /**
+     * { var_description }
+     */
+    private static final double HUNDRED = 100;
     /**
      * Returns a string representation of the object.
      *
@@ -98,9 +102,9 @@ class Frequency {
         }
         //System.out.println(result);
         similarity = Math.round(((result * 2)
-            / stringLength) * hundred) / hundred;
+            / stringLength) * HUNDRED) / HUNDRED;
         //System.out.println(stringLength);
-        return (similarity * hundred);
+        return (similarity * HUNDRED);
         }
 }
 
@@ -114,7 +118,7 @@ class Solution {
     protected Solution() {
 
     }
-
+    private static final double HUNDRED1 = 100;
     /**
      * main function.
      *
@@ -131,14 +135,13 @@ class Solution {
         //  System.out.println(name);
         // }
         double maximum = 0;
-        double hundred1 = 100;
         String result1 = "";
         int length = listoffiles.length;
         double[][] result = new double[length][length];
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
                 if (i == j) {
-                    result[i][j] = hundred1;
+                    result[i][j] = HUNDRED1;
                 } else {
                 result[i][j] =
                 Frequency.similarString(Frequency.toString(listoffiles[i]),
