@@ -121,9 +121,9 @@ class Todoist {
                     if (task.get(i).getImpStatus().equals("Important")) {
                         if (task.get(i).getUrgStat().equals("Not Urgent")) {
                             array[count1++] = task.get(i);
-                            if(count1 == 3) {
-                                break;
-                            }
+                            // if(count1 == 3) {
+                            //     break;
+                            // }
                         }
                     }
                 }
