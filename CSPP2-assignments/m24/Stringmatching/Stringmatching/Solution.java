@@ -131,13 +131,14 @@ class Solution {
         //  System.out.println(name);
         // }
         double maximum = 0;
+        double hundred1 = 100;
         String result1 = "";
         int length = listoffiles.length;
         double[][] result = new double[length][length];
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
                 if (i == j) {
-                    result[i][j] = 100;
+                    result[i][j] = hundred1;
                 } else {
                 result[i][j] =
                 Frequency.similarString(Frequency.toString(listoffiles[i]),
