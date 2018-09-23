@@ -96,7 +96,7 @@ class Frequency {
 			}
 		}
 		//System.out.println(result);
-		similarity = Math.round(((result * 2) / stringLength) * 100) / 100;
+		similarity = Math.round(((result * 2) / stringLength) * 100D) / 100D;
 		//System.out.println(stringLength);
 		return (similarity * 100);
 		}
