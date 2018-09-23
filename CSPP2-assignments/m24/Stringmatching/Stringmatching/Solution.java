@@ -108,7 +108,7 @@ class Solution {
 		for (int i = 0; i < length; i++) {
 			System.out.print(listoffiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.print("\t\t" + result[i][j]);
+				System.out.print(result[i][j] + "\t\t");
 			}
 			System.out.println();
 		}
