@@ -22,7 +22,7 @@ class Frequency {
 	 *
 	 * @return     String representation of the object.
 	 */
-	public static String toString(File filename) {
+	public static String toString(final File filename) {
 		String s = "";
 		try {
 			Scanner input = new Scanner(new FileReader(filename));
@@ -45,8 +45,9 @@ class Frequency {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public static Map removeAll(String text) {
-		String[] wordList = text.replaceAll("[^a-zA-Z. ]","").toLowerCase().split(" ");
+	public static Map removeAll(final String text) {
+		String[] wordList =
+		text.replaceAll("[^a-zA-Z. ]", "").toLowerCase().split(" ");
 
 		//System.out.println(Arrays.toString(wordList1));
 		//return Arrays.toString(wordList1);
@@ -64,7 +65,7 @@ class Frequency {
 
 
 	}
-	/**
+	/**.
 	 * { function_description }
 	 *
 	 * @param      s1    The s 1
@@ -72,11 +73,11 @@ class Frequency {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public static double similarString(String s1, String s2) {
+	public static double similarString(final String s1, final String s2) {
 		int rows = s1.length();
 		int columns = s2.length();
 		double stringLength = rows + columns;
-		int[][] maximum = new int[rows+1][columns+1];
+		int[][] maximum = new int[rows + 1][columns + 1];
 		int result = 0;
 		double similarity = 0;
 		for (int i = 0; i <= rows; i++) {
@@ -111,7 +112,7 @@ class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		try {
 		Frequency f = new Frequency();
 		Scanner sc = new Scanner(System.in);
