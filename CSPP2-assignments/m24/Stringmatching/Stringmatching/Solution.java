@@ -155,7 +155,7 @@ class Solution {
 		System.out.println(result1);
 
 
-	}catch(Exception e) {
+	} catch (Exception e) {
 		System.out.println("Empty Directory");
 	}
 
