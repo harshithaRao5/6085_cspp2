@@ -98,23 +98,33 @@ class Todoist {
         return s;
     }
     public Task getNextTask(String name) {
-        for (int i = 0; i < task.size(); i++) {
-            if (name.equals(task.get(i).getPersonName())) {
-                if ("todo".equals(task.get(i).getStatus()) && ("Important".equals(task.get(i).getImpStatus()))
-                    && ("Not Urgent".equals(task.get(i).getUrgStat()))){
-                            return task.get(i);
-                        } else if ("todo".equals(task.get(i).getStatus()) && ("Important".equals(task.get(i).getImpStatus()))
-                        && ("Urgent".equals(task.get(i).getUrgStat()))){
+        for (int i = 0; i <task.size();i++) {
+            if (task.get(i).getPersonName().equals(name)) {
+                if (task.get(i).getStatus().equals("todo")) {
+                    if (task.get(i).getImpStatus().equals("Important")) {
+                        if (task.get(i).getUrgStat().equals("Not Urgent")) {
                             return task.get(i);
                         }
                     }
                 }
+            }
+        }
+        for (int i = 0; i <task.size();i++) {
+            if (task.get(i).getPersonName().equals(name)) {
+                if (task.get(i).getStatus().equals("todo")) {
+                    if (task.get(i).getImpStatus().equals("Important")) {
+                        if (task.get(i).getUrgStat().equals("Urgent")) {
+                            return task.get(i);
+                        }
+                    }
+                }
+            }
+        }
         return null;
     }
     public Task[] getNextTask(String name, int count) {
         Task[] array = new Task[count];
         int count1 = 0;
-
         for (int i = 0; i < task.size(); i++) {
             if (task.get(i).getPersonName().equals(name)) {
                 if (task.get(i).getStatus().equals("todo")) {
