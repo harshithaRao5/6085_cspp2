@@ -1,17 +1,33 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+import java.lang.StringBuilder;
 import java.io.*;
 
 
+/**
+ * Class for frequency.
+ */
 class Frequency {
 
+	/**
+	 * Constructs the object.
+	 */
 	Frequency() {
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @param      filename  The filename
+	 *
+	 * @return     String representation of the object.
+	 */
 	public static String toString(File filename) {
 		String s = "";
 		try {
 			Scanner input = new Scanner(new FileReader(filename));
 			StringBuilder sb = new StringBuilder();
-			while(input.hasNext()) {
+			while (input.hasNext()) {
 				sb.append(input.next());
 				sb.append(" ");
 			}
@@ -22,6 +38,13 @@ class Frequency {
 		}
 		return s;
 	}
+	/**
+	 * Removes all.
+	 *
+	 * @param      text  The text
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static Map removeAll(String text) {
 		String[] wordList = text.replaceAll("[^a-zA-Z. ]","").toLowerCase().split(" ");
 
@@ -41,6 +64,14 @@ class Frequency {
 
 
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      s1    The s 1
+	 * @param      s2    The s 2
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static double similarString(String s1, String s2) {
 		int rows = s1.length();
 		int columns = s2.length();
@@ -70,8 +101,16 @@ class Frequency {
 		}
 }
 
+/**
+ * Class for solution.
+ */
 class Solution {
 
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		try {
 		Frequency f = new Frequency();
@@ -115,7 +154,7 @@ class Solution {
 		System.out.println(result1);
 
 
-	}catch(NoSuchElementException e) {
+	}catch(Exception e) {
 		System.out.println("Empty Directory");
 	}
 
