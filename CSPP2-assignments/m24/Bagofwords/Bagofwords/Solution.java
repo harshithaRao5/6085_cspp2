@@ -1,5 +1,9 @@
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+// import java.lang.StringBuffer;
+import java.io.File;
+import java.io.FileReader;
 /**
  * Class for frequency.
  */
@@ -10,7 +14,7 @@ class Frequency {
     protected Frequency() {
     }
     /**
-     * { var_description }
+     * { var_description }.
      */
     private static final double HUNDRED = 100;
     /**
@@ -25,13 +29,13 @@ class Frequency {
         try {
             Scanner input = new Scanner(new FileReader(filename));
             StringBuilder sb = new StringBuilder();
-            while(input.hasNext()) {
+            while (input.hasNext()) {
                 sb.append(input.next());
                 sb.append(" ");
             }
             input.close();
             s = sb.toString();
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             System.out.println("no file");
         }
         return s;
@@ -44,7 +48,8 @@ class Frequency {
      * @return     { description_of_the_return_value }
      */
     public static Map removeAll(final String text) {
-        String[] wordList = text.replaceAll("[^a-zA-Z. ]", "").toLowerCase().split(" ");
+        String[] wordList =
+        text.replaceAll("[^a-zA-Z. ]", "").toLowerCase().split(" ");
 
         //System.out.println(Arrays.toString(wordList1));
         //return Arrays.toString(wordList1);
@@ -113,7 +118,7 @@ class Solution {
 
     }
     /**
-     * { var_description }
+     * { var_description }.
      */
     private static final int HUNDRED1 = 100;
     /**
@@ -168,7 +173,7 @@ class Solution {
         System.out.println(result1);
 
 
-    } catch (NoSuchElementException e) {
+    } catch (Exception e) {
         System.out.println("empty directory");
     }
 
