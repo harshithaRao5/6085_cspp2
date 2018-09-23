@@ -15,30 +15,39 @@ class Task {
 
     }
     Task(String task, String name, int t, boolean imp, boolean urg, String stat)throws Exception {
-        this.title = task;
+
+        if (task.length() == 0) {
+            throw new Exception("Title not provided");
+        } else {
+            this.title = task;
+        }
         this.personName = name;
+        if (t < 0) {
+            throw new Exception("Invalid timeToComplete "+ t);
+        }
         this.time = t;
         this.important = imp;
         this.urgent = urg;
-        this.status = stat;
-        // if (this.title == null) {
-        //     throw new Exception("Title not provided");
-        // }
-        // if (this.time < 0) {
-        //     throw new Exception("Invalid timeToComplete "+this.time);
-        // }
-        // if (this.status!="todo" || this.status!="done") {
-        //     throw new Exception("Invalid status "+this.status);
-        // }
+        if (stat.equals("todo") || stat.equals("done")) {
+            this.status = stat;
+        }else {
+            throw new Exception("Invalid status "+ stat);
+        }
     }
     public String getTitle(){
          return this.title;
+    }
+    public String setTitle(String task){
+        return this.title = task;
     }
     public String getPersonName() {
         return this.personName;
     }
     public  int getTime() {
         return this.time;
+    }
+    public int setTime(int t) {
+        return this.time = t;
     }
     public  boolean getImportant() {
         return this.important;
@@ -48,6 +57,9 @@ class Task {
     }
     public  String getStatus() {
         return this.status;
+    }
+    public String setStatus(String stat) {
+        return this.status = stat;
     }
     public String getImpStatus() {
         if(this.important==true) {
