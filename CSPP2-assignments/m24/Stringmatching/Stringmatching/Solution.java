@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
-import java.lang.StringBuffer;
+// import java.lang.StringBuffer;
 import java.io.*;
 
 
@@ -16,7 +16,7 @@ class Frequency {
     protected Frequency() {
 
     }
-    /**
+    /**.
      * { var_description }
      */
     private static final double HUNDRED = 100;
@@ -118,6 +118,9 @@ class Solution {
     protected Solution() {
 
     }
+    /**
+     * { var_description }
+     */
     private static final double HUNDRED1 = 100;
     /**
      * main function.
