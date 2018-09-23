@@ -100,9 +100,9 @@ class Solution {
 			}
 			}
 		}
-		System.out.print("        ");
+		System.out.print("  \t");
 		for (int i = 0; i < length; i++) {
-			System.out.print(listoffiles[i].getName());
+			System.out.print("\t" + listoffiles[i].getName());
 		}
 		System.out.println();
 		for (int i = 0; i < length; i++) {
