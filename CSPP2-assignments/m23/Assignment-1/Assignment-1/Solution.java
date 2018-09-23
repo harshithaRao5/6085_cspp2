@@ -33,7 +33,7 @@ class Frequency {
 			if (!map.containsKey(wordList[i])) {
 				map.put(wordList[i], 1);
 			} else {
-				map.put(wordList[i], map.get(wordList[i])+1);
+				map.put(wordList[i], map.get(wordList[i]) + 1);
 			}
 		}
 		//System.out.println(map);
@@ -66,7 +66,7 @@ class Frequency {
 		// System.out.println(sum2);
 		// System.out.println(numerator);
 		// System.out.println(denominator);
-		return (int)((((numerator/denominator)*100D)/100D)*100);
+		return (int)((((numerator / denominator) * 100D) / 100D) * 100);
 
 
 	}
@@ -83,7 +83,7 @@ class Solution {
 		// for (File name:listoffiles) {
 		// 	System.out.println(name);
 		// }
-		int maximum =0;
+		int maximum = 0;
 		String result1 = "";
 		int length = listoffiles.length;
 		int[][] result = new int[length][length];
@@ -95,7 +95,7 @@ class Solution {
 				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
 				if (maximum < result[i][j]) {
 					maximum = result[i][j];
-					result1 = "Maximum similarity is in between " + listoffiles[i].getName() + " and " +listoffiles[j].getName();
+					result1 = "Maximum similarity is in between " + listoffiles[i].getName() + " and " + listoffiles[j].getName();
 
 				}
 			}
@@ -109,7 +109,7 @@ class Solution {
 		for (int i = 0; i < length; i++) {
 			System.out.print(listoffiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.print(result[i][j] + "\t");
+				System.out.print(result[i][j] + "\t\t");
 			}
 			System.out.println();
 		}
