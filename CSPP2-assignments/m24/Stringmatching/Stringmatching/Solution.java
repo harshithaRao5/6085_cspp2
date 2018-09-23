@@ -100,7 +100,7 @@ class Solution {
 			}
 			}
 		}
-		System.out.print("      \t");
+		System.out.print("  \t");
 		for (int i = 0; i < length; i++) {
 			System.out.print("\t" + listoffiles[i].getName());
 		}
