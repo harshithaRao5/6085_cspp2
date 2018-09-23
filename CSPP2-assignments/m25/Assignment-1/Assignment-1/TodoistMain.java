@@ -99,20 +99,25 @@ class Todoist {
                 }
         return null;
     }
-    public List getNextTask(String name, int count) {
-        List<String> nextArray = new List<String>();
+    public Task[] getNextTask(String name, int count) {
+        Task[] array = new Task[count];
+        int count1 = 0;
+
         for (int i = 0; i < task.size(); i++) {
-            for (int j = 0; j < count; j++) {
-            if (name.equals(task.get(i).getPersonName())) {
-                if ("todo".equals(task.get(i).getStatus())
-                    && ("Important".equals(task.get(i).getImpStatus()))
-                    && ("Not Urgent".equals(task.get(i).getUrgStat()))) {
-                    nextArray.add(task.get(i).toString());
-                }
-                }
+            if (task.get(i).getPersonName().equals(name)) {
+                if (task.get(i).getStatus().equals("to do")) {
+                    if (task.get(i).getImpStatus().equals("Important")) {
+                        if (task.get(i).getUrgStat().equals("Not Urgent")) {
+                            array[count1++] = task.get(i);
+                            if(count1 == 3) {
+                                break;
+                            }
+                        }
                     }
                 }
-                return nextArray;
+            }
+        }
+        return array;
     }
 }
 
@@ -144,9 +149,9 @@ public class TodoistMain {
                 break;
                 case "get-next-n":
                     int n = Integer.parseInt(tokens[2]);
-                    //Task[] tasks = todo.getNextTask(tokens[1], n);
-                    //System.out.println(Arrays.deepToString(tasks));
-                    System.out.println(todo.getNextTask(tokens[1], n));
+                    Task[] tasks = todo.getNextTask(tokens[1], n);
+                    System.out.println(Arrays.deepToString(tasks));
+                    // System.out.println(todo.getNextTask(tokens[1], n));
                 break;
                 // case "total-time":
                 //     System.out.println(todo.totalTime4Completion());
