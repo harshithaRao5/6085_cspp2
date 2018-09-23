@@ -79,9 +79,9 @@ class Solution {
 		// String line = sc.next();
 		File input = new File(sc.next());
 		File[] listoffiles = input.listFiles();
-		for (File name:listoffiles) {
-			System.out.println(name);
-		}
+		// for (File name:listoffiles) {
+		// 	System.out.println(name);
+		// }
 		double maximum = 0;
 		String result1 = "";
 		int length = listoffiles.length;
@@ -100,7 +100,7 @@ class Solution {
 			}
 			}
 		}
-		System.out.print("      \t");
+		System.out.print("    \t");
 		for (int i = 0; i < length; i++) {
 			System.out.print("\t" + listoffiles[i].getName());
 		}
@@ -108,7 +108,7 @@ class Solution {
 		for (int i = 0; i < length; i++) {
 			System.out.print(listoffiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.print(result[i][j] + "\t\t");
+				System.out.print(result[i][j] + "\t");
 			}
 			System.out.println();
 		}
