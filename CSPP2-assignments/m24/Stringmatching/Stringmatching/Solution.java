@@ -41,7 +41,7 @@ class Frequency {
 
 
 	}
-	public static int similarString(String s1, String s2) {
+	public static float similarString(String s1, String s2) {
 		int rows = s1.length();
 		int columns = s2.length();
 		double stringLength = rows + columns;
@@ -66,7 +66,7 @@ class Frequency {
 		//System.out.println(result);
 		similarity = ((result*2)/stringLength)*100;
 		//System.out.println(stringLength);
-		return (int)similarity;
+		return (float)similarity;
 		}
 }
 
@@ -82,10 +82,10 @@ class Solution {
 		for (File name:listoffiles) {
 			System.out.println(name);
 		}
-		int maximum = 0;
+		float maximum = 0;
 		String result1 = "";
 		int length = listoffiles.length;
-		int[][] result = new int[length][length];
+		float[][] result = new float[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				if (i == j) {
@@ -116,7 +116,7 @@ class Solution {
 
 
 	}catch(NoSuchElementException e) {
-		System.out.println("empty directory");
+		System.out.println("Empty directory");
 	}
 
 		// String stext1 = sc.nextLine().toLowerCase();
