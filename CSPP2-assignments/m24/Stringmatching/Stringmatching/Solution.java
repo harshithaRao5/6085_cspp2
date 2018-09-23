@@ -15,6 +15,7 @@ class Frequency {
      */
     protected Frequency() {
     }
+    private final double hundred = 100;
     /**
      * Returns a string representation of the object.
      *
