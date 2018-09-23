@@ -15,7 +15,7 @@ class Frequency {
      */
     protected Frequency() {
     }
-    private final double hundred = 100;
+    private static final double hundred = 100;
     /**
      * Returns a string representation of the object.
      *
@@ -98,9 +98,9 @@ class Frequency {
         }
         //System.out.println(result);
         similarity = Math.round(((result * 2)
-            / stringLength) * 100D) / 100D;
+            / stringLength) * hundred) / hundred;
         //System.out.println(stringLength);
-        return (similarity * 100);
+        return (similarity * hundred);
         }
 }
 
