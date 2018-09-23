@@ -118,7 +118,7 @@ class Solution {
     protected Solution() {
 
     }
-    /**
+    /**.
      * { var_description }
      */
     private static final double HUNDRED1 = 100;
@@ -181,8 +181,5 @@ class Solution {
         // String stext1 = sc.nextLine().toLowerCase();
         // String stext2 = sc.nextLine().toLowerCase();
         // Frequency feq = new Frequency();
-
-
-
     }
 }
